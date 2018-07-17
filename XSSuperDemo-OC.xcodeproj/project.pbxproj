@@ -13,6 +13,8 @@
 		5F16E76620EA799C00D30798 /* XSUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F16E76520EA799C00D30798 /* XSUserViewController.m */; };
 		5F66A05C20FDC24D00FAA4A8 /* iQiYiPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A05A20FDC24D00FAA4A8 /* iQiYiPlayButton.m */; };
 		5F66A05F20FDC25C00FAA4A8 /* YouKuPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A05E20FDC25C00FAA4A8 /* YouKuPlayButton.m */; };
+		5F66A06A20FDC94600FAA4A8 /* YSUUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A06920FDC94600FAA4A8 /* YSUUtils.m */; };
+		5F66A06E20FDCA2000FAA4A8 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A06D20FDCA2000FAA4A8 /* NSString+Trim.m */; };
 		5F701F2820E502F6006E9E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F701F2720E502F6006E9E61 /* AppDelegate.m */; };
 		5F701F3020E502F8006E9E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F701F2F20E502F8006E9E61 /* Assets.xcassets */; };
 		5F701F3620E502F8006E9E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F701F3520E502F8006E9E61 /* main.m */; };
@@ -31,6 +33,11 @@
 		5F66A05B20FDC24D00FAA4A8 /* iQiYiPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQiYiPlayButton.h; sourceTree = "<group>"; };
 		5F66A05D20FDC25C00FAA4A8 /* YouKuPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouKuPlayButton.h; sourceTree = "<group>"; };
 		5F66A05E20FDC25C00FAA4A8 /* YouKuPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouKuPlayButton.m; sourceTree = "<group>"; };
+		5F66A06020FDC5F000FAA4A8 /* XSUIMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSUIMacro.h; sourceTree = "<group>"; };
+		5F66A06820FDC94600FAA4A8 /* YSUUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUUtils.h; sourceTree = "<group>"; };
+		5F66A06920FDC94600FAA4A8 /* YSUUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUUtils.m; sourceTree = "<group>"; };
+		5F66A06C20FDCA2000FAA4A8 /* NSString+Trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
+		5F66A06D20FDCA2000FAA4A8 /* NSString+Trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
 		5F701F2320E502F6006E9E61 /* XSSuperDemo-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XSSuperDemo-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F701F2620E502F6006E9E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F701F2720E502F6006E9E61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,6 +82,7 @@
 			children = (
 				5F701F3420E502F8006E9E61 /* Info.plist */,
 				5F701F3520E502F8006E9E61 /* main.m */,
+				5F66A06020FDC5F000FAA4A8 /* XSUIMacro.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -156,6 +164,24 @@
 			path = UIUtils;
 			sourceTree = "<group>";
 		};
+		5F66A06120FDC88700FAA4A8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5F66A06820FDC94600FAA4A8 /* YSUUtils.h */,
+				5F66A06920FDC94600FAA4A8 /* YSUUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5F66A06B20FDCA0700FAA4A8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5F66A06C20FDCA2000FAA4A8 /* NSString+Trim.h */,
+				5F66A06D20FDCA2000FAA4A8 /* NSString+Trim.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		5F701F1A20E502F6006E9E61 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +201,8 @@
 		5F701F2520E502F6006E9E61 /* XSSuperDemo-OC */ = {
 			isa = PBXGroup;
 			children = (
+				5F66A06B20FDCA0700FAA4A8 /* Category */,
+				5F66A06120FDC88700FAA4A8 /* Utils */,
 				5F66A05920FDC22C00FAA4A8 /* UIUtils */,
 				5F16E75A20EA793200D30798 /* User */,
 				5F16E74F20EA751E00D30798 /* Index */,
@@ -257,10 +285,12 @@
 			files = (
 				5F16E75920EA778600D30798 /* XSRootViewController.m in Sources */,
 				5F16E75620EA75A200D30798 /* XSIndexViewController.m in Sources */,
+				5F66A06A20FDC94600FAA4A8 /* YSUUtils.m in Sources */,
 				5F66A05C20FDC24D00FAA4A8 /* iQiYiPlayButton.m in Sources */,
 				5F66A05F20FDC25C00FAA4A8 /* YouKuPlayButton.m in Sources */,
 				5F0EE93520EA546200854D72 /* XSSplashViewController.m in Sources */,
 				5F701F3620E502F8006E9E61 /* main.m in Sources */,
+				5F66A06E20FDCA2000FAA4A8 /* NSString+Trim.m in Sources */,
 				5F16E76620EA799C00D30798 /* XSUserViewController.m in Sources */,
 				5F701F2820E502F6006E9E61 /* AppDelegate.m in Sources */,
 			);

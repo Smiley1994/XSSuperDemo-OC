@@ -9,6 +9,7 @@
 #import "XSSplashViewController.h"
 #import "iQiYiPlayButton.h"
 #import "YouKuPlayButton.h"
+#import "XSUIMacro.h"
 
 @interface XSSplashViewController () {
     
