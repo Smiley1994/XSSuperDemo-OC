@@ -11,6 +11,8 @@
 		5F16E75620EA75A200D30798 /* XSIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F16E75520EA75A200D30798 /* XSIndexViewController.m */; };
 		5F16E75920EA778600D30798 /* XSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F16E75820EA778600D30798 /* XSRootViewController.m */; };
 		5F16E76620EA799C00D30798 /* XSUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F16E76520EA799C00D30798 /* XSUserViewController.m */; };
+		5F66A05C20FDC24D00FAA4A8 /* iQiYiPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A05A20FDC24D00FAA4A8 /* iQiYiPlayButton.m */; };
+		5F66A05F20FDC25C00FAA4A8 /* YouKuPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A05E20FDC25C00FAA4A8 /* YouKuPlayButton.m */; };
 		5F701F2820E502F6006E9E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F701F2720E502F6006E9E61 /* AppDelegate.m */; };
 		5F701F3020E502F8006E9E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F701F2F20E502F8006E9E61 /* Assets.xcassets */; };
 		5F701F3620E502F8006E9E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F701F3520E502F8006E9E61 /* main.m */; };
@@ -25,6 +27,10 @@
 		5F16E75820EA778600D30798 /* XSRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSRootViewController.m; sourceTree = "<group>"; };
 		5F16E76420EA799C00D30798 /* XSUserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSUserViewController.h; sourceTree = "<group>"; };
 		5F16E76520EA799C00D30798 /* XSUserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSUserViewController.m; sourceTree = "<group>"; };
+		5F66A05A20FDC24D00FAA4A8 /* iQiYiPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iQiYiPlayButton.m; sourceTree = "<group>"; };
+		5F66A05B20FDC24D00FAA4A8 /* iQiYiPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iQiYiPlayButton.h; sourceTree = "<group>"; };
+		5F66A05D20FDC25C00FAA4A8 /* YouKuPlayButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouKuPlayButton.h; sourceTree = "<group>"; };
+		5F66A05E20FDC25C00FAA4A8 /* YouKuPlayButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouKuPlayButton.m; sourceTree = "<group>"; };
 		5F701F2320E502F6006E9E61 /* XSSuperDemo-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XSSuperDemo-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F701F2620E502F6006E9E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F701F2720E502F6006E9E61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +145,17 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		5F66A05920FDC22C00FAA4A8 /* UIUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5F66A05B20FDC24D00FAA4A8 /* iQiYiPlayButton.h */,
+				5F66A05A20FDC24D00FAA4A8 /* iQiYiPlayButton.m */,
+				5F66A05D20FDC25C00FAA4A8 /* YouKuPlayButton.h */,
+				5F66A05E20FDC25C00FAA4A8 /* YouKuPlayButton.m */,
+			);
+			path = UIUtils;
+			sourceTree = "<group>";
+		};
 		5F701F1A20E502F6006E9E61 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +175,7 @@
 		5F701F2520E502F6006E9E61 /* XSSuperDemo-OC */ = {
 			isa = PBXGroup;
 			children = (
+				5F66A05920FDC22C00FAA4A8 /* UIUtils */,
 				5F16E75A20EA793200D30798 /* User */,
 				5F16E74F20EA751E00D30798 /* Index */,
 				5F16E74E20EA744500D30798 /* Reasource */,
@@ -239,6 +257,8 @@
 			files = (
 				5F16E75920EA778600D30798 /* XSRootViewController.m in Sources */,
 				5F16E75620EA75A200D30798 /* XSIndexViewController.m in Sources */,
+				5F66A05C20FDC24D00FAA4A8 /* iQiYiPlayButton.m in Sources */,
+				5F66A05F20FDC25C00FAA4A8 /* YouKuPlayButton.m in Sources */,
 				5F0EE93520EA546200854D72 /* XSSplashViewController.m in Sources */,
 				5F701F3620E502F8006E9E61 /* main.m in Sources */,
 				5F16E76620EA799C00D30798 /* XSUserViewController.m in Sources */,
