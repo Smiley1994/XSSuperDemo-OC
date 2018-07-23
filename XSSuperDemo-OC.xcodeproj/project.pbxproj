@@ -15,6 +15,7 @@
 		5F66A05F20FDC25C00FAA4A8 /* YouKuPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A05E20FDC25C00FAA4A8 /* YouKuPlayButton.m */; };
 		5F66A06A20FDC94600FAA4A8 /* YSUUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A06920FDC94600FAA4A8 /* YSUUtils.m */; };
 		5F66A06E20FDCA2000FAA4A8 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F66A06D20FDCA2000FAA4A8 /* NSString+Trim.m */; };
+		5F66A07120FDD4FF00FAA4A8 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F66A07020FDD4FF00FAA4A8 /* MediaPlayer.framework */; };
 		5F701F2820E502F6006E9E61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F701F2720E502F6006E9E61 /* AppDelegate.m */; };
 		5F701F3020E502F8006E9E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F701F2F20E502F8006E9E61 /* Assets.xcassets */; };
 		5F701F3620E502F8006E9E61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F701F3520E502F8006E9E61 /* main.m */; };
@@ -38,6 +39,7 @@
 		5F66A06920FDC94600FAA4A8 /* YSUUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUUtils.m; sourceTree = "<group>"; };
 		5F66A06C20FDCA2000FAA4A8 /* NSString+Trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
 		5F66A06D20FDCA2000FAA4A8 /* NSString+Trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
+		5F66A07020FDD4FF00FAA4A8 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		5F701F2320E502F6006E9E61 /* XSSuperDemo-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XSSuperDemo-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F701F2620E502F6006E9E61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F701F2720E502F6006E9E61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F66A07120FDD4FF00FAA4A8 /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,11 +185,20 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		5F66A06F20FDD4FF00FAA4A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F66A07020FDD4FF00FAA4A8 /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F701F1A20E502F6006E9E61 = {
 			isa = PBXGroup;
 			children = (
 				5F701F2520E502F6006E9E61 /* XSSuperDemo-OC */,
 				5F701F2420E502F6006E9E61 /* Products */,
+				5F66A06F20FDD4FF00FAA4A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
