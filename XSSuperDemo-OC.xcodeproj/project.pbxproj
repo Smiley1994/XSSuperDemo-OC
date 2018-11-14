@@ -99,10 +99,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB9EF37219C4D1A00B033B6 /* IJKMediaFramework.framework in Frameworks */,
 				5FB9EF35219C4C7200B033B6 /* AudioToolbox.framework in Frameworks */,
 				5FB9EF33219C4C6800B033B6 /* AVFoundation.framework in Frameworks */,
 				5FB9EF31219C4C1700B033B6 /* CoreGraphics.framework in Frameworks */,
-				5FB9EF37219C4D1A00B033B6 /* IJKMediaFramework.framework in Frameworks */,
 				5FB9EF2F219C4C0C00B033B6 /* CoreMedia.framework in Frameworks */,
 				5FB9EF2D219C4C0000B033B6 /* CoreVideo.framework in Frameworks */,
 				5FB9EF2B219C4BA600B033B6 /* libbz2.tbd in Frameworks */,
@@ -544,13 +544,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N87RCZ5LLU;
+				DEVELOPMENT_TEAM = NV9J896P7F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XSSuperDemo-OC/Library",
 				);
 				INFOPLIST_FILE = "XSSuperDemo-OC/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -568,13 +568,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N87RCZ5LLU;
+				DEVELOPMENT_TEAM = NV9J896P7F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XSSuperDemo-OC/Library",
 				);
 				INFOPLIST_FILE = "XSSuperDemo-OC/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
