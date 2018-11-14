@@ -22,7 +22,7 @@
     self.title = @"RTMP";
     self.view.backgroundColor = UIColor.whiteColor;
     
-    [self setupPlayer];
+    [self setupPlayer];                                                                                                                                                                                                           
     
 }
 
