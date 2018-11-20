@@ -258,7 +258,7 @@ static CGFloat animationDuration = 0.35f;
     }
     //更新动画执行状态
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW,  (animationDuration) * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
-        _isAnimating = false;
+        self->_isAnimating = false;
     });
 }
 /**
@@ -293,8 +293,8 @@ static CGFloat animationDuration = 0.35f;
     [self actionRotateAnimationClockwise:true];
     //收到一半再放直线
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW,  animationDuration/2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
-        [self strokeEndAnimationFrom:0 to:1 onLayer:_leftLineLayer name:nil duration:animationDuration/2 delegate:nil];
-        [self strokeEndAnimationFrom:0 to:1 onLayer:_rightLineLayer name:nil duration:animationDuration/2 delegate:nil];
+        [self strokeEndAnimationFrom:0 to:1 onLayer:self->_leftLineLayer name:nil duration:animationDuration/2 delegate:nil];
+        [self strokeEndAnimationFrom:0 to:1 onLayer:self->_rightLineLayer name:nil duration:animationDuration/2 delegate:nil];
     });
 }
 
