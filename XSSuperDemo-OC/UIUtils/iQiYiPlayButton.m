@@ -165,7 +165,7 @@ static CGFloat positionDuration = 0.3f;
     //开始左侧线条缩短动画
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW,  animationDuration*0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
         //左侧竖线动画
-        [self strokeEndAnimationFrom:1 to:0 onLayer:_leftLineLayer name:nil duration:animationDuration/2 delegate:nil];
+        [self strokeEndAnimationFrom:1 to:0 onLayer:self->_leftLineLayer name:nil duration:animationDuration/2 delegate:nil];
     });
 }
 
@@ -184,9 +184,9 @@ static CGFloat positionDuration = 0.3f;
     //执行反向画弧和右侧放大动画
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW,  animationDuration*0.75 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
         //右侧竖线动画
-        [self strokeEndAnimationFrom:0 to:1 onLayer:_rightLineLayer name:RightLineAnimation duration:animationDuration/4 delegate:self];
+        [self strokeEndAnimationFrom:0 to:1 onLayer:self->_rightLineLayer name:RightLineAnimation duration:animationDuration/4 delegate:self];
         //圆弧动画
-        [self strokeEndAnimationFrom:1 to:0 onLayer:_circleLayer name:nil duration:animationDuration/4 delegate:nil];
+        [self strokeEndAnimationFrom:1 to:0 onLayer:self->_circleLayer name:nil duration:animationDuration/4 delegate:nil];
     });
 }
 
@@ -279,15 +279,15 @@ static CGFloat positionDuration = 0.3f;
         UIBezierPath *leftPath2 = [UIBezierPath bezierPath];
         [leftPath2 moveToPoint:CGPointMake(a*0.2,a*0.2)];
         [leftPath2 addLineToPoint:CGPointMake(a*0.2,a*0.8)];
-        _leftLineLayer.path = leftPath2.CGPath;
-        [_leftLineLayer addAnimation:[self pathAnimationWithDuration:positionDuration/2] forKey:nil];
+        self->_leftLineLayer.path = leftPath2.CGPath;
+        [self->_leftLineLayer addAnimation:[self pathAnimationWithDuration:positionDuration/2] forKey:nil];
         
         //右侧竖线缩放动画
         UIBezierPath *rightPath2 = [UIBezierPath bezierPath];
         [rightPath2 moveToPoint:CGPointMake(a*0.8,a*0.8)];
         [rightPath2 addLineToPoint:CGPointMake(a*0.8,a*0.2)];
-        _rightLineLayer.path = rightPath2.CGPath;
-        [_rightLineLayer addAnimation:[self pathAnimationWithDuration:positionDuration/2] forKey:nil];
+        self->_rightLineLayer.path = rightPath2.CGPath;
+        [self->_rightLineLayer addAnimation:[self pathAnimationWithDuration:positionDuration/2] forKey:nil];
     });
 }
 
@@ -314,15 +314,15 @@ static CGFloat positionDuration = 0.3f;
         UIBezierPath *leftPath2 = [UIBezierPath bezierPath];
         [leftPath2 moveToPoint:CGPointMake(a*0.2,0)];
         [leftPath2 addLineToPoint:CGPointMake(a*0.2,a)];
-        _leftLineLayer.path = leftPath2.CGPath;
-        [_leftLineLayer addAnimation:[self pathAnimationWithDuration:positionDuration/2] forKey:nil];
+        self->_leftLineLayer.path = leftPath2.CGPath;
+        [self->_leftLineLayer addAnimation:[self pathAnimationWithDuration:positionDuration/2] forKey:nil];
         
         //右侧竖线缩放动画
         UIBezierPath *rightPath2 = [UIBezierPath bezierPath];
         [rightPath2 moveToPoint:CGPointMake(a*0.8,a)];
         [rightPath2 addLineToPoint:CGPointMake(a*0.8,0)];
-        _rightLineLayer.path = rightPath2.CGPath;
-        [_rightLineLayer addAnimation:[self pathAnimationWithDuration:positionDuration/2] forKey:nil];
+        self->_rightLineLayer.path = rightPath2.CGPath;
+        [self->_rightLineLayer addAnimation:[self pathAnimationWithDuration:positionDuration/2] forKey:nil];
     });
 }
 
@@ -366,7 +366,7 @@ static CGFloat positionDuration = 0.3f;
     }
     //更新动画执行状态
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW,  (positionDuration + animationDuration) * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
-        _isAnimating = false;
+        self->_isAnimating = false;
     });
 }
 
