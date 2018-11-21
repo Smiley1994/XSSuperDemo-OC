@@ -11,6 +11,7 @@
 #import "XSIndexCell.h"
 #import "XSIndexModel.h"
 #import "XSMediaViewController.h"
+#import "Masonry.h"
 
 @interface XSIndexViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -47,13 +48,17 @@
 
 - (void)createTaleView {
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] init];
+    self.tableView.backgroundColor = UIColor.blackColor;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = 60;
     [self.tableView registerClass:[XSIndexCell class] forCellReuseIdentifier:@"IndexCell"];
     [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).with.inset(0);
+    }];
     
 }
 

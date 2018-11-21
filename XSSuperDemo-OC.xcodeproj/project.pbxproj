@@ -39,9 +39,11 @@
 		5FB9EF33219C4C6800B033B6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF32219C4C6800B033B6 /* AVFoundation.framework */; };
 		5FB9EF35219C4C7200B033B6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */; };
 		5FB9EF37219C4D1A00B033B6 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF36219C4D1A00B033B6 /* IJKMediaFramework.framework */; };
+		930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14EDE4667BD2D04E7A244544 /* Pods-XSSuperDemo-OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSSuperDemo-OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC.release.xcconfig"; sourceTree = "<group>"; };
 		5F0EE93320EA546200854D72 /* XSSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSSplashViewController.h; sourceTree = "<group>"; };
 		5F0EE93420EA546200854D72 /* XSSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSSplashViewController.m; sourceTree = "<group>"; };
 		5F16E75720EA778600D30798 /* XSRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSRootViewController.h; sourceTree = "<group>"; };
@@ -92,6 +94,8 @@
 		5FB9EF32219C4C6800B033B6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5FB9EF36219C4D1A00B033B6 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSSuperDemo_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCE51447A990D50895BD2D20 /* Pods-XSSuperDemo-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSSuperDemo-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +118,22 @@
 				5FB9EF1F219C4B5A00B033B6 /* libz.tbd in Frameworks */,
 				5FB9EF1D219C4B5000B033B6 /* libc++.tbd in Frameworks */,
 				5F66A07120FDD4FF00FAA4A8 /* MediaPlayer.framework in Frameworks */,
+				930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30D2D9197715F485376DF2DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCE51447A990D50895BD2D20 /* Pods-XSSuperDemo-OC.debug.xcconfig */,
+				14EDE4667BD2D04E7A244544 /* Pods-XSSuperDemo-OC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5F0EE93120EA508E00854D72 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +256,7 @@
 				5FB9EF1E219C4B5A00B033B6 /* libz.tbd */,
 				5FB9EF1C219C4B4F00B033B6 /* libc++.tbd */,
 				5F66A07020FDD4FF00FAA4A8 /* MediaPlayer.framework */,
+				91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,6 +267,7 @@
 				5F701F2520E502F6006E9E61 /* XSSuperDemo-OC */,
 				5F701F2420E502F6006E9E61 /* Products */,
 				5F66A06F20FDD4FF00FAA4A8 /* Frameworks */,
+				30D2D9197715F485376DF2DB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -343,9 +359,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F701F4F20E502F8006E9E61 /* Build configuration list for PBXNativeTarget "XSSuperDemo-OC" */;
 			buildPhases = (
+				919F238B8DF20D4949B81E62 /* [CP] Check Pods Manifest.lock */,
 				5F701F1F20E502F6006E9E61 /* Sources */,
 				5F701F2020E502F6006E9E61 /* Frameworks */,
 				5F701F2120E502F6006E9E61 /* Resources */,
+				1155FB1251711E80C1DE4E95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +417,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1155FB1251711E80C1DE4E95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		919F238B8DF20D4949B81E62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XSSuperDemo-OC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F701F1F20E502F6006E9E61 /* Sources */ = {
@@ -539,12 +596,13 @@
 		};
 		5F701F5020E502F8006E9E61 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCE51447A990D50895BD2D20 /* Pods-XSSuperDemo-OC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZS7ZWB69B7;
+				DEVELOPMENT_TEAM = NV9J896P7F;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -557,7 +615,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "Smiley.XSSuperDemo-OC.sun";
+				PRODUCT_BUNDLE_IDENTIFIER = "Smiley.XSSuperDemo-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -565,12 +623,13 @@
 		};
 		5F701F5120E502F8006E9E61 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14EDE4667BD2D04E7A244544 /* Pods-XSSuperDemo-OC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZS7ZWB69B7;
+				DEVELOPMENT_TEAM = NV9J896P7F;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -583,7 +642,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "Smiley.XSSuperDemo-OC.sun";
+				PRODUCT_BUNDLE_IDENTIFIER = "Smiley.XSSuperDemo-OC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
