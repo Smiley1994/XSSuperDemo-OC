@@ -12,6 +12,8 @@
 #import "XSMediaCell.h"
 #import "XSIndexModel.h"
 
+#import "Masonry.h"
+
 @interface XSMediaViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -47,13 +49,24 @@
 
 - (void)createTaleView {
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.rowHeight = 60;
     [self.tableView registerClass:[XSMediaCell class] forCellReuseIdentifier:@"MediaCell"];
     [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view).with.inset(0);
+    }];
+//    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
+//    [self.tableView addConstraints:@[[NSLayoutConstraint constraintWithItem:_tableView
+//                                     attribute:NSLayoutAttributeTop
+//                                     relatedBy:NSLayoutRelationEqual
+//                                     toItem:self.view
+//                                     attribute:NSLayoutAttributeTop
+//                                     multiplier:1.0
+//                                     constant:padding.top],]];
     
 }
 
