@@ -19,7 +19,7 @@
 }
 
 - (void) createSubView {
-    self.contentView.backgroundColor = UIColor.redColor;
+    self.contentView.backgroundColor = UIColor.whiteColor;
 }
 
 

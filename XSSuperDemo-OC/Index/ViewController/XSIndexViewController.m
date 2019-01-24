@@ -39,6 +39,11 @@
     mediaModel.type = MEDIA_CELL;
     [self.dataArray addObject:mediaModel];
     
+    XSIndexModel *webModel = [[XSIndexModel alloc] init];
+    webModel.title = @"WebView";
+    webModel.type = WEB_CELL;
+    [self.dataArray addObject:webModel];
+    
     XSIndexModel *otherModel = [[XSIndexModel alloc] init];
     otherModel.title = @"Other";
     otherModel.type = OTHER_CELL;
@@ -50,7 +55,7 @@
 - (void)createTaleView {
     
     self.tableView = [[UITableView alloc] init];
-    self.tableView.backgroundColor = UIColor.blackColor;
+    self.tableView.backgroundColor = UIColor.whiteColor;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -85,7 +90,7 @@
             [ self openMediaViewController];
             break;
             
-        case OTHER_CELL:
+        case WEB_CELL:
             [self openWebViewController];
             break;
             
@@ -104,7 +109,7 @@
 
 - (void)openWebViewController {
     RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
-    
+    webView.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:webView animated:YES];
 }
 
