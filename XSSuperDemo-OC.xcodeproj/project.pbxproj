@@ -40,6 +40,7 @@
 		5FB9EF31219C4C1700B033B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF30219C4C1700B033B6 /* CoreGraphics.framework */; };
 		5FB9EF33219C4C6800B033B6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF32219C4C6800B033B6 /* AVFoundation.framework */; };
 		5FB9EF35219C4C7200B033B6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */; };
+		5FEAB93421F9ABA10030E5FB /* XSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEAB93321F9ABA10030E5FB /* XSCommon.framework */; };
 		930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		5FB9EF30219C4C1700B033B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5FB9EF32219C4C6800B033B6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5FEAB93321F9ABA10030E5FB /* XSCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XSCommon.framework; sourceTree = "<group>"; };
 		91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSSuperDemo_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE51447A990D50895BD2D20 /* Pods-XSSuperDemo-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSSuperDemo-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 			files = (
 				5FB9EF35219C4C7200B033B6 /* AudioToolbox.framework in Frameworks */,
 				5FB9EF33219C4C6800B033B6 /* AVFoundation.framework in Frameworks */,
+				5FEAB93421F9ABA10030E5FB /* XSCommon.framework in Frameworks */,
 				5FB9EF31219C4C1700B033B6 /* CoreGraphics.framework in Frameworks */,
 				5F08B3B221E5A15100A56558 /* IJKMediaFramework.framework in Frameworks */,
 				5FB9EF2F219C4C0C00B033B6 /* CoreMedia.framework in Frameworks */,
@@ -352,6 +355,7 @@
 		5FB9EF19219C48B100B033B6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				5FEAB93321F9ABA10030E5FB /* XSCommon.framework */,
 				5F08B3B121E5A15000A56558 /* IJKMediaFramework.framework */,
 			);
 			path = Library;

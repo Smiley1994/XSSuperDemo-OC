@@ -12,6 +12,7 @@
 #import "XSIndexModel.h"
 #import "XSMediaViewController.h"
 #import "Masonry.h"
+#import <XSCommon/XSCommon.h>
 
 @interface XSIndexViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -85,7 +86,7 @@
             break;
             
         case OTHER_CELL:
-            
+            [self openWebViewController];
             break;
             
         default:
@@ -100,6 +101,12 @@
     [self.navigationController pushViewController:mediaViewController animated:YES];
 }
 
+
+- (void)openWebViewController {
+    RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
+    
+    [self.navigationController pushViewController:webView animated:YES];
+}
 
 
 @end
