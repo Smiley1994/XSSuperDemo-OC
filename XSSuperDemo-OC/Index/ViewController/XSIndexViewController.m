@@ -11,6 +11,7 @@
 #import "XSIndexCell.h"
 #import "XSIndexModel.h"
 #import "XSMediaViewController.h"
+#import "XSCardViewController.h"
 #import "Masonry.h"
 #import <XSCommon/XSCommon.h>
 
@@ -43,6 +44,11 @@
     webModel.title = @"WebView";
     webModel.type = WEB_CELL;
     [self.dataArray addObject:webModel];
+    
+    XSIndexModel *cardModel = [[XSIndexModel alloc] init];
+    cardModel.title = @"Card";
+    cardModel.type = CARD_CELL;
+    [self.dataArray addObject:cardModel];
     
     XSIndexModel *otherModel = [[XSIndexModel alloc] init];
     otherModel.title = @"Other";
@@ -93,10 +99,19 @@
         case WEB_CELL:
             [self openWebViewController];
             break;
+        case CARD_CELL:
+            [self openCardViewController];
+            break;
             
         default:
             break;
     }
+}
+
+- (void)openCardViewController {
+    XSCardViewController *cardViewController = [[XSCardViewController alloc] init];
+    cardViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:cardViewController animated:YES];
 }
 
 - (void)openMediaViewController {
