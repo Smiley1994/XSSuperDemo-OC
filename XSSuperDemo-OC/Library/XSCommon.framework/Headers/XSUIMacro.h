@@ -1,9 +1,9 @@
 //
 //  XSUIMacro.h
-//  XSSuperDemo-OC
+//  XSCommon
 //
-//  Created by 晓松 on 2018/7/17.
-//  Copyright © 2018年 GoodMorning. All rights reserved.
+//  Created by 晓松 on 2019/1/22.
+//  Copyright © 2019 smiley. All rights reserved.
 //
 
 #ifndef XSUIMacro_h
@@ -15,10 +15,6 @@
 #define WINDOW [[UIApplication sharedApplication] keyWindow]
 #define SCALE_SIZE   ([UIScreen mainScreen].bounds.size.width / 375.0)//适配尺寸宏
 #define NAVIGATION_HEIGHT 64.0
-
-//适配机型比例
-#define WidthScale (SCREEN_WIDTH / 375.0)
-#define HeightScale (SCREEN_HEIGHT / 667.0)
 
 #pragma mark - CGRect
 #define RECT_X(f) f.origin.x
@@ -50,7 +46,6 @@
 green:((c >> 8) & 0xFF) / 255.0  \
 blue:(c & 0xFF) / 255.0         \
 alpha:1.0]
-
 
 
 #endif /* XSUIMacro_h */

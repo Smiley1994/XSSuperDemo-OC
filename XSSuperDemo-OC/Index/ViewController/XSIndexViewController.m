@@ -11,7 +11,9 @@
 #import "XSIndexCell.h"
 #import "XSIndexModel.h"
 #import "XSMediaViewController.h"
+#import "XSCardViewController.h"
 #import "Masonry.h"
+#import <XSCommon/XSCommon.h>
 
 @interface XSIndexViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -38,6 +40,16 @@
     mediaModel.type = MEDIA_CELL;
     [self.dataArray addObject:mediaModel];
     
+    XSIndexModel *webModel = [[XSIndexModel alloc] init];
+    webModel.title = @"WebView";
+    webModel.type = WEB_CELL;
+    [self.dataArray addObject:webModel];
+    
+    XSIndexModel *cardModel = [[XSIndexModel alloc] init];
+    cardModel.title = @"Card";
+    cardModel.type = CARD_CELL;
+    [self.dataArray addObject:cardModel];
+    
     XSIndexModel *otherModel = [[XSIndexModel alloc] init];
     otherModel.title = @"Other";
     otherModel.type = OTHER_CELL;
@@ -49,7 +61,7 @@
 - (void)createTaleView {
     
     self.tableView = [[UITableView alloc] init];
-    self.tableView.backgroundColor = UIColor.blackColor;
+    self.tableView.backgroundColor = UIColor.whiteColor;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -84,13 +96,22 @@
             [ self openMediaViewController];
             break;
             
-        case OTHER_CELL:
-            
+        case WEB_CELL:
+            [self openWebViewController];
+            break;
+        case CARD_CELL:
+            [self openCardViewController];
             break;
             
         default:
             break;
     }
+}
+
+- (void)openCardViewController {
+    XSCardViewController *cardViewController = [[XSCardViewController alloc] init];
+    cardViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:cardViewController animated:YES];
 }
 
 - (void)openMediaViewController {
@@ -100,6 +121,12 @@
     [self.navigationController pushViewController:mediaViewController animated:YES];
 }
 
+
+- (void)openWebViewController {
+    RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
+    webView.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:webView animated:YES];
+}
 
 
 @end

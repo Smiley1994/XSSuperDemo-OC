@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 static NSInteger const MEDIA_CELL = 0;
 static NSInteger const OTHER_CELL = 1;
+static NSInteger const WEB_CELL = 2;
+static NSInteger const CARD_CELL = 3;
 
 @interface XSIndexModel : NSObject
 
