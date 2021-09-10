@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "XSSplashViewController.h"
 
+#import "ShadowBase.h"
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()
 
@@ -27,10 +29,21 @@
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = UIColor.whiteColor;
     
+    [self setupShadowBase:launchOptions];
+    [self setupBugly];
     
     return YES;
 }
 
+- (void)setupShadowBase:(NSDictionary *)launchOptions {
+    
+    [[ShadowBase shareInstance] enableExceptionTrack];
+    [[ShadowBase shareInstance] startWithAppKey:@"tempappkey" launchOptions:launchOptions];
+}
+
+- (void)setupBugly {
+    [Bugly startWithAppId:@"663e2a47f8"];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B4B62AB26EB415400060E44 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4B62AA26EB415400060E44 /* Bugly.framework */; };
+		0BFBEF5326E86CDB00FC52A4 /* ShadowBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBEF5226E86CDB00FC52A4 /* ShadowBase.m */; };
+		0BFBEF5626E86F5400FC52A4 /* XSDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBEF5426E86F5400FC52A4 /* XSDeviceInfo.m */; };
+		0BFBEF5926E86F7D00FC52A4 /* XSLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBEF5826E86F7C00FC52A4 /* XSLocationManager.m */; };
+		0BFBEF5C26E8A07300FC52A4 /* ShadowBaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBEF5B26E8A07300FC52A4 /* ShadowBaseConfig.m */; };
+		0BFBEF6026E8C01000FC52A4 /* XSSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFBEF5F26E8C01000FC52A4 /* XSSwizzle.m */; };
 		5F0570EB21B5582F003BE787 /* XSSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0570EA21B5582F003BE787 /* XSSlider.m */; };
-		5F08B3B221E5A15100A56558 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F08B3B121E5A15000A56558 /* IJKMediaFramework.framework */; };
 		5F0EE93520EA546200854D72 /* XSSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F0EE93420EA546200854D72 /* XSSplashViewController.m */; };
 		5F16E75920EA778600D30798 /* XSRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F16E75820EA778600D30798 /* XSRootViewController.m */; };
 		5F16E76620EA799C00D30798 /* XSUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F16E76520EA799C00D30798 /* XSUserViewController.m */; };
@@ -45,15 +50,25 @@
 		5FB9EF31219C4C1700B033B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF30219C4C1700B033B6 /* CoreGraphics.framework */; };
 		5FB9EF33219C4C6800B033B6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF32219C4C6800B033B6 /* AVFoundation.framework */; };
 		5FB9EF35219C4C7200B033B6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */; };
-		5FEAB93421F9ABA10030E5FB /* XSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FEAB93321F9ABA10030E5FB /* XSCommon.framework */; };
 		930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B4B62AA26EB415400060E44 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		0BFBEF5026E86A8500FC52A4 /* SBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLog.h; sourceTree = "<group>"; };
+		0BFBEF5126E86CDB00FC52A4 /* ShadowBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadowBase.h; sourceTree = "<group>"; };
+		0BFBEF5226E86CDB00FC52A4 /* ShadowBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShadowBase.m; sourceTree = "<group>"; };
+		0BFBEF5426E86F5400FC52A4 /* XSDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSDeviceInfo.m; sourceTree = "<group>"; };
+		0BFBEF5526E86F5400FC52A4 /* XSDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSDeviceInfo.h; sourceTree = "<group>"; };
+		0BFBEF5726E86F7C00FC52A4 /* XSLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSLocationManager.h; sourceTree = "<group>"; };
+		0BFBEF5826E86F7C00FC52A4 /* XSLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSLocationManager.m; sourceTree = "<group>"; };
+		0BFBEF5A26E8A07300FC52A4 /* ShadowBaseConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadowBaseConfig.h; sourceTree = "<group>"; };
+		0BFBEF5B26E8A07300FC52A4 /* ShadowBaseConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShadowBaseConfig.m; sourceTree = "<group>"; };
+		0BFBEF5E26E8C01000FC52A4 /* XSSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSSwizzle.h; sourceTree = "<group>"; };
+		0BFBEF5F26E8C01000FC52A4 /* XSSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XSSwizzle.m; sourceTree = "<group>"; };
 		14EDE4667BD2D04E7A244544 /* Pods-XSSuperDemo-OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSSuperDemo-OC.release.xcconfig"; path = "Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC.release.xcconfig"; sourceTree = "<group>"; };
 		5F0570E921B5582F003BE787 /* XSSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSSlider.h; sourceTree = "<group>"; };
 		5F0570EA21B5582F003BE787 /* XSSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSSlider.m; sourceTree = "<group>"; };
-		5F08B3B121E5A15000A56558 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		5F0EE93320EA546200854D72 /* XSSplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSSplashViewController.h; sourceTree = "<group>"; };
 		5F0EE93420EA546200854D72 /* XSSplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSSplashViewController.m; sourceTree = "<group>"; };
 		5F16E75720EA778600D30798 /* XSRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSRootViewController.h; sourceTree = "<group>"; };
@@ -113,7 +128,6 @@
 		5FB9EF30219C4C1700B033B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5FB9EF32219C4C6800B033B6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		5FEAB93321F9ABA10030E5FB /* XSCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XSCommon.framework; sourceTree = "<group>"; };
 		91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSSuperDemo_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE51447A990D50895BD2D20 /* Pods-XSSuperDemo-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSSuperDemo-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,9 +139,7 @@
 			files = (
 				5FB9EF35219C4C7200B033B6 /* AudioToolbox.framework in Frameworks */,
 				5FB9EF33219C4C6800B033B6 /* AVFoundation.framework in Frameworks */,
-				5FEAB93421F9ABA10030E5FB /* XSCommon.framework in Frameworks */,
 				5FB9EF31219C4C1700B033B6 /* CoreGraphics.framework in Frameworks */,
-				5F08B3B221E5A15100A56558 /* IJKMediaFramework.framework in Frameworks */,
 				5FB9EF2F219C4C0C00B033B6 /* CoreMedia.framework in Frameworks */,
 				5FB9EF2D219C4C0000B033B6 /* CoreVideo.framework in Frameworks */,
 				5FB9EF2B219C4BA600B033B6 /* libbz2.tbd in Frameworks */,
@@ -139,6 +151,7 @@
 				5FB9EF1F219C4B5A00B033B6 /* libz.tbd in Frameworks */,
 				5FB9EF1D219C4B5000B033B6 /* libc++.tbd in Frameworks */,
 				5F66A07120FDD4FF00FAA4A8 /* MediaPlayer.framework in Frameworks */,
+				0B4B62AB26EB415400060E44 /* Bugly.framework in Frameworks */,
 				930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +159,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BFBEF4E26E74E3400FC52A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F0EE93220EA542300854D72 /* BaseViewControlelr */,
+				5F16E74F20EA751E00D30798 /* Index */,
+				5FB9EF09219C13C800B033B6 /* SubController */,
+				5F16E75A20EA793200D30798 /* User */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0BFBEF4F26E869EC00FC52A4 /* ShadowBase */ = {
+			isa = PBXGroup;
+			children = (
+				0BFBEF6126E8C03100FC52A4 /* Utils */,
+				0BFBEF5D26E8BD6300FC52A4 /* AutoTrack */,
+				0BFBEF5126E86CDB00FC52A4 /* ShadowBase.h */,
+				0BFBEF5226E86CDB00FC52A4 /* ShadowBase.m */,
+				0BFBEF5A26E8A07300FC52A4 /* ShadowBaseConfig.h */,
+				0BFBEF5B26E8A07300FC52A4 /* ShadowBaseConfig.m */,
+			);
+			path = ShadowBase;
+			sourceTree = "<group>";
+		};
+		0BFBEF5D26E8BD6300FC52A4 /* AutoTrack */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AutoTrack;
+			sourceTree = "<group>";
+		};
+		0BFBEF6126E8C03100FC52A4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0BFBEF5526E86F5400FC52A4 /* XSDeviceInfo.h */,
+				0BFBEF5426E86F5400FC52A4 /* XSDeviceInfo.m */,
+				0BFBEF5726E86F7C00FC52A4 /* XSLocationManager.h */,
+				0BFBEF5826E86F7C00FC52A4 /* XSLocationManager.m */,
+				0BFBEF5E26E8C01000FC52A4 /* XSSwizzle.h */,
+				0BFBEF5F26E8C01000FC52A4 /* XSSwizzle.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		30D2D9197715F485376DF2DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,12 +257,12 @@
 			children = (
 				5FB9EF13219C262200B033B6 /* Model */,
 				5FB9EF05219C07ED00B033B6 /* View */,
-				5F16E75020EA753A00D30798 /* ViewController */,
+				5F16E75020EA753A00D30798 /* Controller */,
 			);
 			path = Index;
 			sourceTree = "<group>";
 		};
-		5F16E75020EA753A00D30798 /* ViewController */ = {
+		5F16E75020EA753A00D30798 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5FB9EEFF219AF68200B033B6 /* XSIndexViewController.h */,
@@ -213,24 +270,24 @@
 				5F6F7536221FA5360045A3BC /* XSCardViewController.h */,
 				5F6F7537221FA5360045A3BC /* XSCardViewController.m */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5F16E75A20EA793200D30798 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				5F16E76320EA798300D30798 /* ViewController */,
+				5F16E76320EA798300D30798 /* Controller */,
 			);
 			path = User;
 			sourceTree = "<group>";
 		};
-		5F16E76320EA798300D30798 /* ViewController */ = {
+		5F16E76320EA798300D30798 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				5F16E76420EA799C00D30798 /* XSUserViewController.h */,
 				5F16E76520EA799C00D30798 /* XSUserViewController.m */,
 			);
-			path = ViewController;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5F66A05920FDC22C00FAA4A8 /* UIUtils */ = {
@@ -249,6 +306,7 @@
 		5F66A06120FDC88700FAA4A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0BFBEF5026E86A8500FC52A4 /* SBLog.h */,
 				5F66A06820FDC94600FAA4A8 /* YSUUtils.h */,
 				5F66A06920FDC94600FAA4A8 /* YSUUtils.m */,
 			);
@@ -318,16 +376,14 @@
 		5F701F2520E502F6006E9E61 /* XSSuperDemo-OC */ = {
 			isa = PBXGroup;
 			children = (
-				5FB9EF19219C48B100B033B6 /* Library */,
 				5F0EE93120EA508E00854D72 /* AppDelegate */,
-				5F0EE93220EA542300854D72 /* BaseViewControlelr */,
 				5F66A06B20FDCA0700FAA4A8 /* Category */,
-				5F16E74F20EA751E00D30798 /* Index */,
-				5FB9EF09219C13C800B033B6 /* SubController */,
+				0BFBEF4E26E74E3400FC52A4 /* Controller */,
+				5FB9EF19219C48B100B033B6 /* Library */,
 				5F16E74D20EA743400D30798 /* Other */,
 				5F16E74E20EA744500D30798 /* Reasource */,
+				0BFBEF4F26E869EC00FC52A4 /* ShadowBase */,
 				5F66A05920FDC22C00FAA4A8 /* UIUtils */,
-				5F16E75A20EA793200D30798 /* User */,
 				5F66A06120FDC88700FAA4A8 /* Utils */,
 			);
 			path = "XSSuperDemo-OC";
@@ -388,8 +444,7 @@
 		5FB9EF19219C48B100B033B6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				5FEAB93321F9ABA10030E5FB /* XSCommon.framework */,
-				5F08B3B121E5A15000A56558 /* IJKMediaFramework.framework */,
+				0B4B62AA26EB415400060E44 /* Bugly.framework */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -406,6 +461,7 @@
 				5F701F2020E502F6006E9E61 /* Frameworks */,
 				5F701F2120E502F6006E9E61 /* Resources */,
 				1155FB1251711E80C1DE4E95 /* [CP] Embed Pods Frameworks */,
+				0B4B62AC26EB516500060E44 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -423,7 +479,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = XS;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = GoodMorning;
 				TargetAttributes = {
 					5F701F2220E502F6006E9E61 = {
@@ -461,6 +517,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B4B62AC26EB516500060E44 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
 		1155FB1251711E80C1DE4E95 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,10 +581,14 @@
 				5FB9EF01219AF68200B033B6 /* XSIndexViewController.m in Sources */,
 				5F6F7541221FA5570045A3BC /* QiCardView.m in Sources */,
 				5FB9EF12219C1F6B00B033B6 /* XSMediaViewController.m in Sources */,
+				0BFBEF5C26E8A07300FC52A4 /* ShadowBaseConfig.m in Sources */,
 				5FB9EF17219C46E200B033B6 /* XSMediaCell.m in Sources */,
 				5F6F753B221FA54B0045A3BC /* QiDataModel.m in Sources */,
+				0BFBEF5626E86F5400FC52A4 /* XSDeviceInfo.m in Sources */,
 				5F66A06A20FDC94600FAA4A8 /* YSUUtils.m in Sources */,
 				5FB9EF0F219C183600B033B6 /* XSIndexModel.m in Sources */,
+				0BFBEF5926E86F7D00FC52A4 /* XSLocationManager.m in Sources */,
+				0BFBEF5326E86CDB00FC52A4 /* ShadowBase.m in Sources */,
 				5F66A05C20FDC24D00FAA4A8 /* iQiYiPlayButton.m in Sources */,
 				5F66A05F20FDC25C00FAA4A8 /* YouKuPlayButton.m in Sources */,
 				5FB9EEFE219AF66200B033B6 /* XSBaseViewController.m in Sources */,
@@ -519,6 +596,7 @@
 				5F6F7545221FA5A10045A3BC /* QiCardItemCell.m in Sources */,
 				5FB9EF08219C081500B033B6 /* XSIndexCell.m in Sources */,
 				5F0570EB21B5582F003BE787 /* XSSlider.m in Sources */,
+				0BFBEF6026E8C01000FC52A4 /* XSSwizzle.m in Sources */,
 				5FB9EF0C219C15CC00B033B6 /* XSRtmpViewController.m in Sources */,
 				5F6F7538221FA5360045A3BC /* XSCardViewController.m in Sources */,
 				5F701F3620E502F8006E9E61 /* main.m in Sources */,
@@ -558,6 +636,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -583,7 +662,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -616,6 +695,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -635,7 +715,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -650,20 +730,21 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N87RCZ5LLU;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZS7ZWB69B7;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XSSuperDemo-OC/Library",
 				);
 				INFOPLIST_FILE = "XSSuperDemo-OC/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "Smiley.XSSuperDemo-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.macrolor.superdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -677,20 +758,20 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N87RCZ5LLU;
+				DEVELOPMENT_TEAM = ZS7ZWB69B7;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/XSSuperDemo-OC/Library",
 				);
 				INFOPLIST_FILE = "XSSuperDemo-OC/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "Smiley.XSSuperDemo-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.macrolor.superdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

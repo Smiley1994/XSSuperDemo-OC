@@ -1,6 +1,0 @@
-framework module XSCommon {
-  umbrella header "XSCommon.h"
-
-  export *
-  module * { export * }
-}
