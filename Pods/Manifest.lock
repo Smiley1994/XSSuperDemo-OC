@@ -1,16 +1,31 @@
 PODS:
   - Masonry (1.1.0)
+  - Sentry (7.3.0):
+    - Sentry/Core (= 7.3.0)
+  - Sentry/Core (7.3.0)
 
 DEPENDENCIES:
   - Masonry
+  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `7.3.0`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Masonry
+
+EXTERNAL SOURCES:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 7.3.0
+
+CHECKOUT OPTIONS:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 7.3.0
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  Sentry: 9a4e621430e2dae4477d791f2f7e905720b6efbf
 
-PODFILE CHECKSUM: 848d06df85ce2ac4e488e33b488b2a8e7828fa0d
+PODFILE CHECKSUM: cfc3f78e47242e431d5b632d3d3a7c4eec4b8221
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.2

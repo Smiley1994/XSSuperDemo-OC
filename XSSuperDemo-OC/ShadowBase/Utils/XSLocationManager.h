@@ -11,20 +11,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ZGLocationSuccess) (double lng,double lat);
-typedef void(^ZGLocationFailed) (NSError *error);
+typedef void(^XSLocationSuccess) (double lng,double lat);
+typedef void(^XSLocationFailed) (NSError *error);
 
 @interface XSLocationManager : NSObject<CLLocationManagerDelegate> {
     
     CLLocationManager *manager;
-    ZGLocationSuccess successCallBack;
-    ZGLocationFailed failedCallBack;
+    XSLocationSuccess successCallBack;
+    XSLocationFailed failedCallBack;
     
 }
 
 + (XSLocationManager *)sharedManager;
 
-+ (void)getZGLocationWithSuccess:(ZGLocationSuccess)success failed:(ZGLocationFailed)failed;
++ (void)getZGLocationWithSuccess:(XSLocationSuccess)success failed:(XSLocationFailed)failed;
 
 + (void)stop;
 

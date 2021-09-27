@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XSIndexCell : UITableViewCell
 
+@property (nonatomic, strong) UIButton *testButton;
+
 @end
 
 NS_ASSUME_NONNULL_END

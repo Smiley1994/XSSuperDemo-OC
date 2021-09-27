@@ -12,6 +12,7 @@
 #import "XSIndexModel.h"
 #import "XSMediaViewController.h"
 #import "XSCardViewController.h"
+#import "XSCrashViewController.h"
 #import "Masonry.h"
 
 @interface XSIndexViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -50,7 +51,7 @@
     [self.dataArray addObject:cardModel];
     
     XSIndexModel *crashModel = [[XSIndexModel alloc] init];
-    crashModel.title = @"点击崩溃";
+    crashModel.title = @"CRASH";
     crashModel.type = CRASH_CELL;
     [self.dataArray addObject:crashModel];
     
@@ -107,7 +108,7 @@
             [self openCardViewController];
             break;
         case CRASH_CELL:
-            [self crash];
+            [self openCrashViewController];
             break;
             
         default:
@@ -138,6 +139,12 @@
 //    RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
 //    webView.hidesBottomBarWhenPushed = YES;
 //    [self.navigationController pushViewController:webView animated:YES];
+}
+
+-(void)openCrashViewController {
+    XSCrashViewController *crashViewController = [[XSCrashViewController alloc] init];
+    crashViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:crashViewController animated:YES];
 }
 
 

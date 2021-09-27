@@ -44,7 +44,7 @@
     return self;
 }
 
-- (void) getZGLocationWithSuccess:(ZGLocationSuccess)succsess failed:(ZGLocationFailed)failed {
+- (void) getZGLocationWithSuccess:(XSLocationSuccess)succsess failed:(XSLocationFailed)failed {
     successCallBack = [succsess copy];
     failedCallBack  = [failed copy];
     
@@ -53,7 +53,7 @@
     [manager startUpdatingLocation];
 }
 
-+ (void)getZGLocationWithSuccess:(ZGLocationSuccess)success failed:(ZGLocationFailed)failed {
++ (void)getZGLocationWithSuccess:(XSLocationSuccess)success failed:(XSLocationFailed)failed {
     [[XSLocationManager sharedManager] getZGLocationWithSuccess:success failed:failed];
 }
 

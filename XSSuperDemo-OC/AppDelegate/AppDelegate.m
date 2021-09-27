@@ -9,9 +9,6 @@
 #import "AppDelegate.h"
 #import "XSSplashViewController.h"
 
-#import "ShadowBase.h"
-#import <Bugly/Bugly.h>
-
 @interface AppDelegate ()
 
 @end
@@ -30,7 +27,8 @@
     self.window.backgroundColor = UIColor.whiteColor;
     
     [self setupShadowBase:launchOptions];
-    [self setupBugly];
+//    [self setupBugly];
+    [self setupSenty];
     
     return YES;
 }
@@ -38,11 +36,24 @@
 - (void)setupShadowBase:(NSDictionary *)launchOptions {
     
     [[ShadowBase shareInstance] enableExceptionTrack];
-    [[ShadowBase shareInstance] startWithAppKey:@"tempappkey" launchOptions:launchOptions];
+    [[ShadowBase shareInstance] startWithAppKey:@"appkey" launchOptions:launchOptions];
+    
+    
 }
 
 - (void)setupBugly {
     [Bugly startWithAppId:@"663e2a47f8"];
+}
+
+- (void)setupSenty {
+    
+    [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {
+        options.dsn = @"https://49fbfb5373254e4e90094205ebcdf9d9@appsentry.6.cn/6";
+        options.debug = YES;
+        options.sessionTrackingIntervalMillis = [@5000 unsignedIntegerValue];
+        // Sampling 100% - In Production you probably want to adjust this
+        options.tracesSampleRate = @1.0;
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

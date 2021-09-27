@@ -7,6 +7,7 @@
 //
 
 #import "ShadowBase.h"
+#import "XSDeviceInfo.h"
 #import "SBLog.h"
 
 
@@ -14,6 +15,7 @@
 
 @property (nonatomic, strong) ShadowBaseConfig *config;
 @property (nonatomic, strong) NSString *appkey;
+@property (nonatomic, strong) NSException *exception;
 
 @end
 
@@ -42,6 +44,8 @@ static NSUncaughtExceptionHandler *previousHandler;
         previousHandler = NSGetUncaughtExceptionHandler();
         NSSetUncaughtExceptionHandler(&shadowBaseUncaughtExceptionHandler);
     }
+    
+    [self buildDeviceInfo];
     
     if (self.config.enableAutoTrack) {
         
@@ -90,12 +94,20 @@ void shadowBaseUncaughtExceptionHandler(NSException * exception){
 
 - (void)trackException:(NSException *)exception {
     
-    NSArray<NSString *> *symbols = [exception callStackSymbols];
-    NSString *reason = [exception reason];
-    NSDictionary *userInfo = [exception userInfo];
-    NSString *name = [exception name];
+//    NSArray<NSString *> *symbols = [exception callStackSymbols];
+//    NSString *reason = [exception reason];
+//    NSDictionary *userInfo = [exception userInfo];
+//    NSString *name = [exception name];
     
-    SBLogError(@"exception callStackSymbols == %@",symbols);
+//    SBLogError(@"exception callStackSymbols == %@",symbols);
+    
+    
+    
+}
+
+- (void)buildDeviceInfo {
+    
+    NSLog(@"appTakeUpMemory == %@", XSDeviceInfo.appUpdateDate);
     
 }
 

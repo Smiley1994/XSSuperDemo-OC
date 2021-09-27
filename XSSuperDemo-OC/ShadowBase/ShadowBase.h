@@ -50,6 +50,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)autoTrack:(NSDictionary *)properties;
 
 /**
+ * @param exception 抛出的异常
+ */
+- (void)trackException:(NSException *)exception;
+
+/**
  * 将信息写入日志系统。
  * @param message   需写入的信息
  */
