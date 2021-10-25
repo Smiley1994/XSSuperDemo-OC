@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "XSSplashViewController.h"
+//#import "Sentry.h"
+#import "ShadowBase.h"
 
 @interface AppDelegate ()
 
@@ -42,18 +44,18 @@
 }
 
 - (void)setupBugly {
-    [Bugly startWithAppId:@"663e2a47f8"];
+//    [Bugly startWithAppId:@"663e2a47f8"];
 }
 
 - (void)setupSenty {
     
-    [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {
-        options.dsn = @"https://49fbfb5373254e4e90094205ebcdf9d9@appsentry.6.cn/6";
-        options.debug = YES;
-        options.sessionTrackingIntervalMillis = [@5000 unsignedIntegerValue];
-        // Sampling 100% - In Production you probably want to adjust this
-        options.tracesSampleRate = @1.0;
-    }];
+//    [SentrySDK startWithConfigureOptions:^(SentryOptions *options) {
+//        options.dsn = @"https://49fbfb5373254e4e90094205ebcdf9d9@appsentry.6.cn/6";
+//        options.debug = YES;
+//        options.sessionTrackingIntervalMillis = [@5000 unsignedIntegerValue];
+//        // Sampling 100% - In Production you probably want to adjust this
+//        options.tracesSampleRate = @1.0;
+//    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -8,7 +8,6 @@
 
 #import "XSCrashViewController.h"
 #import <Masonry/Masonry.h>
-#import <Sentry/Sentry.h>
 
 @interface XSCrashViewController ()
 
@@ -47,7 +46,7 @@
 
 
 - (void)sentryCrash {
-    [SentrySDK crash];
+//    [SentrySDK crash];
 }
 
 - (void)crash {

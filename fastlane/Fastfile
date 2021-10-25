@@ -1,0 +1,41 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  # desc "Description of what the lane does"
+  # lane :custom_lane do
+  #   # add actions here: https://docs.fastlane.tools/actions
+  desc "upload .dSYM to v6sentry"
+  lane :upload_symbols do
+  sentry_api_host = "http://172.16.5.7:9011"
+  org_slug = "v6_sentry"
+  project_slug = "superdemo-oc"
+  auth_token = "5ff0c424b4da4d70a90aa45b8141a30a43ad140ce92f4cb9af0692ace2b9ce01"
+  #download_dsyms
+  gym(
+      scheme: "YOUR_SCHEME",
+      workspace: "xxxx.xcworkspace",
+      include_bitcode: false #根据项目bitcode设置情况
+      )
+  sentry_upload_dsym(
+    url: "#{sentry_api_host}",
+    auth_token: "#{auth_token}",
+    org_slug: "#{org_slug}",
+    project_slug: "#{project_slug}"
+  )
+  end
+end
