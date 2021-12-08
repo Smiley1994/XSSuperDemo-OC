@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+typedef void(^sendValue)(NSString *text);
 
 @interface XSCrashViewController : UIViewController
+
+@property (nonatomic, copy)sendValue sendValueBlock;
 
 @end
 

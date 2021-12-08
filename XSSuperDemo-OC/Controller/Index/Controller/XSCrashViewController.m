@@ -35,8 +35,8 @@
     }];
     
     UIButton *crashButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [crashButton setTitle:@"crash" forState:UIControlStateNormal];
-    [crashButton addTarget:self action:@selector(crash) forControlEvents:UIControlEventTouchUpInside];
+    [crashButton setTitle:@"返回上一页" forState:UIControlStateNormal];
+    [crashButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:crashButton];
     [crashButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
@@ -44,6 +44,10 @@
     }];;
 }
 
+- (void)back {
+    self.sendValueBlock(@"aaaaaa");
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)sentryCrash {
 //    [SentrySDK crash];

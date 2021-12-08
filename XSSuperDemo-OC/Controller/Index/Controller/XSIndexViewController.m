@@ -13,6 +13,7 @@
 #import "XSMediaViewController.h"
 #import "XSCardViewController.h"
 #import "XSCrashViewController.h"
+#import "XSTestViewController.h"
 #import "Masonry.h"
 
 @interface XSIndexViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -110,6 +111,9 @@
         case CRASH_CELL:
             [self openCrashViewController];
             break;
+        case OTHER_CELL:
+            [self openTestViewController];
+            break;
             
         default:
             break;
@@ -144,7 +148,20 @@
 -(void)openCrashViewController {
     XSCrashViewController *crashViewController = [[XSCrashViewController alloc] init];
     crashViewController.hidesBottomBarWhenPushed = YES;
+//    __weak XSIndexViewController *firstVC = self;
+    
+    crashViewController.sendValueBlock = ^(NSString * _Nonnull text) {
+        NSLog(@"text == %@",text);
+    };
+    
     [self.navigationController pushViewController:crashViewController animated:YES];
+}
+
+- (void)openTestViewController {
+    
+    XSTestViewController *test = [[XSTestViewController alloc] init];
+    test.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:test animated:YES];
 }
 
 
