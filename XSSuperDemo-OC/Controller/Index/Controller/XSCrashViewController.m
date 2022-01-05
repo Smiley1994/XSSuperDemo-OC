@@ -41,7 +41,7 @@
     [crashButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.top.equalTo(sentryCrashButton.mas_bottom).offset(15);
-    }];;
+    }];
 }
 
 - (void)back {

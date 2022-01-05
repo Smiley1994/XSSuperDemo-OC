@@ -7,6 +7,11 @@
 //
 
 #import "XSTestViewController.h"
+#import "XSUIUtils.h"
+#import <Masonry/Masonry.h>
+
+#import "RoomToolboxUnfoldView.h"
+#import "HFPopView.h"
 
 @interface XSTestViewController ()
 
@@ -22,6 +27,40 @@
 
 -(void)setupUI {
     
+    
+    UIButton *crashButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    crashButton.frame = CGRectMake(10, 100, 100, 50);
+    [crashButton setTitle:@"click" forState:UIControlStateNormal];
+    [crashButton addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:crashButton];
+    
+}
+
+- (void)click {
+    RoomToolboxUnfoldView *toolboxView = [[RoomToolboxUnfoldView alloc] initWithFrame:CGRectMake(0, 150, 110, 297)];
+    toolboxView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+//    [self.view addSubview:toolboxView];
+    
+    HFPopView *popView = [HFPopView initWithCustomView:toolboxView
+                                              parentView:self.view
+                                                popStyle:HFPopStyleSmoothFromRight
+                                            dismissStyle:LSTDismissStyleSmoothToRight];
+    popView.hemStyle = LSTHemStyleRight;
+    LSTPopViewWK(popView)
+    popView.popDuration = 0.5;
+    popView.dismissDuration = 0.5;
+    popView.isClickFeedback = YES;
+    popView.bgClickBlock = ^{
+        NSLog(@"点击了背景");
+        [wk_popView dismiss];
+    };
+    [popView pop];
+}
+
+
+
+- (void)testWaterImage {
+    
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height)];
     
     NSDictionary *attr = @{
@@ -29,45 +68,11 @@
         NSForegroundColorAttributeName : [UIColor whiteColor]   //设置字体颜色
     };
     
-    UIImage *image = [self waterImageWithImage:[UIImage imageNamed:@"bg"] text:@"我的邀请码 ：666666" textPoint:CGPointMake(169, 689.5) attributedString:attr];
+    UIImage *image = [XSUIUtils waterImageWithImage:[UIImage imageNamed:@"bg"] text:@"我的邀请码 ：666666" textPoint:CGPointMake(169, 689.5) attributedString:attr];
     imageView.image = image;
 //    imageView.image = [UIImage imageNamed:@"bg"];
     [self.view addSubview:imageView];
-}
-
-// 给图片添加文字水印：
-- (UIImage *)waterImageWithImage:(UIImage *)image text:(NSString *)text textPoint:(CGPoint)point attributedString:(NSDictionary * )attributed{
-    //1.开启上下文
-    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
-    //2.绘制图片
-    [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
-    //添加水印文字
-    [text drawAtPoint:point withAttributes:attributed];
-    //3.从上下文中获取新图片
-    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
-    //4.关闭图形上下文
-    UIGraphicsEndImageContext();
-    //返回图片
-    return newImage;
-}
-
-// 给图片添加图片水印
-+ (UIImage *)waterImageWithImage:(UIImage *)image waterImage:(UIImage *)waterImage waterImageRect:(CGRect)rect{
     
-    //1.获取图片
-    
-    //2.开启上下文
-    UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
-    //3.绘制背景图片
-    [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
-    //绘制水印图片到当前上下文
-    [waterImage drawInRect:rect];
-    //4.从上下文中获取新图片
-    UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
-    //5.关闭图形上下文
-    UIGraphicsEndImageContext();
-    //返回图片
-    return newImage;
 }
 
 /*
