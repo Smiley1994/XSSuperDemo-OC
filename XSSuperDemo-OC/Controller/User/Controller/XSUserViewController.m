@@ -7,6 +7,7 @@
 //
 
 #import "XSUserViewController.h"
+#import "XSPlayingLineView.h"
 
 @interface XSUserViewController ()
 
@@ -16,6 +17,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    void (^block)(void) = ^() {
+        int i = 1;
+        i ++;
+    };
+    
+    block();
+    
+    
+    
+    XSPlayingLineView *lineView = [[XSPlayingLineView alloc] initWithFrame:CGRectMake(50, 100, 9, 9) lineWidth:1.5 lineColor:[UIColor redColor]];
+    [self.view addSubview:lineView];
+    
+//    CAReplicatorLayer *replicatorLayer = [[CAReplicatorLayer alloc] init];
+//    replicatorLayer.frame = CGRectMake(0, 100, 375, 200);
+//    replicatorLayer.instanceCount = 16;
+//    replicatorLayer.instanceTransform  = CATransform3DMakeTranslation(20, 0, 0);
+//    replicatorLayer.instanceDelay = 0.2;
+//    replicatorLayer.masksToBounds = YES;
+//    replicatorLayer.backgroundColor = [UIColor blackColor].CGColor;
+//
+//    CALayer *layer = [CALayer layer];
+//    layer.frame = CGRectMake(14, 200, 10, 100);
+//    layer.backgroundColor = [UIColor redColor].CGColor;
+//    [replicatorLayer addSublayer:layer];
+//    [self.view.layer addSublayer:replicatorLayer];
+//
+//    CABasicAnimation *animation = [CABasicAnimation animation];
+//    animation.keyPath = @"position.y";
+//    animation.duration = 0.5;
+//    animation.fromValue = @200;
+//    animation.toValue = @150;
+//    animation.autoreverses = YES;
+//    animation.repeatCount = MAXFLOAT;
+//    [layer addAnimation:animation forKey:nil];
     
 }
 //1.通过手机越狱后增加的越狱文件判断

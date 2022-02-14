@@ -15,6 +15,7 @@
 #import "XSCrashViewController.h"
 #import "XSTestViewController.h"
 #import "Masonry.h"
+#import "MJRefresh.h"
 
 @interface XSIndexViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -31,6 +32,27 @@
     [self setupData];
     [self createTaleView];
     
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+    
+    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    
+}
+
+- (void)refreshData {
+    
+    // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 结束刷新
+        [self.tableView.mj_header endRefreshing];
+    });
+}
+
+- (void)loadMoreData {
+    // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 结束刷新
+        [self.tableView.mj_footer endRefreshing];
+    });
 }
 
 - (void)setupData {
@@ -62,6 +84,10 @@
     [self.dataArray addObject:otherModel];
     
     [self.tableView reloadData];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //刷新完成
+    });
 }
 
 - (void)createTaleView {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B43603D27A0E46800D1BEC0 /* XSPlayingLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B43603C27A0E46800D1BEC0 /* XSPlayingLineView.m */; };
 		0B4B62AB26EB415400060E44 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4B62AA26EB415400060E44 /* Bugly.framework */; };
 		0B4B62C626F198BA00060E44 /* XSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B62C326F198BA00060E44 /* XSReachability.m */; };
 		0B4B62C726F198BA00060E44 /* UIDevice+XSDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4B62C426F198BA00060E44 /* UIDevice+XSDeviceInfo.m */; };
@@ -66,6 +67,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B43603B27A0E46800D1BEC0 /* XSPlayingLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSPlayingLineView.h; sourceTree = "<group>"; };
+		0B43603C27A0E46800D1BEC0 /* XSPlayingLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSPlayingLineView.m; sourceTree = "<group>"; };
 		0B4B62AA26EB415400060E44 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
 		0B4B62BF26F198BA00060E44 /* UIDevice+XSDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+XSDeviceInfo.h"; sourceTree = "<group>"; };
 		0B4B62C026F198BA00060E44 /* XSReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XSReachability.h; sourceTree = "<group>"; };
@@ -401,6 +404,8 @@
 				5F0570EA21B5582F003BE787 /* XSSlider.m */,
 				0BEDE7432760930B00528024 /* XSUIUtils.h */,
 				0BEDE7442760930B00528024 /* XSUIUtils.m */,
+				0B43603B27A0E46800D1BEC0 /* XSPlayingLineView.h */,
+				0B43603C27A0E46800D1BEC0 /* XSPlayingLineView.m */,
 			);
 			path = UIUtils;
 			sourceTree = "<group>";
@@ -683,6 +688,7 @@
 				5F66A05F20FDC25C00FAA4A8 /* YouKuPlayButton.m in Sources */,
 				0B507FB627633934000883F2 /* UIView+Category.m in Sources */,
 				5FB9EEFE219AF66200B033B6 /* XSBaseViewController.m in Sources */,
+				0B43603D27A0E46800D1BEC0 /* XSPlayingLineView.m in Sources */,
 				5F0EE93520EA546200854D72 /* XSSplashViewController.m in Sources */,
 				5F6F7545221FA5A10045A3BC /* QiCardItemCell.m in Sources */,
 				0BEDE74B27609F7300528024 /* RoomToolboxUnfoldCellModel.m in Sources */,

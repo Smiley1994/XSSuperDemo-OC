@@ -1,16 +1,22 @@
 PODS:
   - Masonry (1.1.0)
+  - MJRefresh (3.7.5)
   - Sentry (7.3.0):
     - Sentry/Core (= 7.3.0)
   - Sentry/Core (7.3.0)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Masonry
+  - MJRefresh
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `7.3.0`)
+  - YYModel
 
 SPEC REPOS:
   trunk:
     - Masonry
+    - MJRefresh
+    - YYModel
 
 EXTERNAL SOURCES:
   Sentry:
@@ -24,8 +30,10 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Sentry: 9a4e621430e2dae4477d791f2f7e905720b6efbf
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: cfc3f78e47242e431d5b632d3d3a7c4eec4b8221
+PODFILE CHECKSUM: ebc48bafd5e6db9783bb6c3787a1d871a7b2cd08
 
 COCOAPODS: 1.10.2
