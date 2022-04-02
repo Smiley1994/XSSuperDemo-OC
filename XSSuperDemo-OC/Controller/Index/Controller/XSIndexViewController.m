@@ -15,6 +15,7 @@
 #import "XSCrashViewController.h"
 #import "XSTestViewController.h"
 #import "XSCategoryViewController.h"
+#import "XSCategoryViewCellTypeViewController.h"
 #import "Masonry.h"
 #import "MJRefresh.h"
 
@@ -150,7 +151,7 @@
             [self openTestViewController];
             break;
         case CATEGORY_CELL:
-            [self openTestViewController];
+            [self openCategoryViewController];
             break;
             
         default:
@@ -193,6 +194,12 @@
     };
     
     [self.navigationController pushViewController:crashViewController animated:YES];
+}
+
+- (void)openCategoryViewController {
+    XSCategoryViewCellTypeViewController *category = [[XSCategoryViewCellTypeViewController alloc] init];
+    category.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:category animated:YES];
 }
 
 - (void)openTestViewController {

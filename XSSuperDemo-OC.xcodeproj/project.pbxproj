@@ -23,6 +23,7 @@
 		0BBA80CB27001BF10085ACB9 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA80CA27001BF10085ACB9 /* NSString+Trim.m */; };
 		0BBA80D027001C250085ACB9 /* UIView+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA80CC27001C250085ACB9 /* UIView+Action.m */; };
 		0BBA80D127001C250085ACB9 /* UIView+ExtraTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA80CD27001C250085ACB9 /* UIView+ExtraTag.m */; };
+		0BE3648527F84EC70068A367 /* XSCategoryViewCellTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3648427F84EC70068A367 /* XSCategoryViewCellTypeViewController.m */; };
 		0BEDE73B2758E39400528024 /* XSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDE73A2758E39400528024 /* XSTestViewController.m */; };
 		0BEDE7452760930B00528024 /* XSUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDE7442760930B00528024 /* XSUIUtils.m */; };
 		0BEDE7482760951800528024 /* RoomToolboxUnfoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDE7472760951800528024 /* RoomToolboxUnfoldView.m */; };
@@ -109,6 +110,8 @@
 		0BBA80CD27001C250085ACB9 /* UIView+ExtraTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ExtraTag.m"; sourceTree = "<group>"; };
 		0BBA80CE27001C250085ACB9 /* UIView+ExtraTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ExtraTag.h"; sourceTree = "<group>"; };
 		0BBA80CF27001C250085ACB9 /* UIView+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Action.h"; sourceTree = "<group>"; };
+		0BE3648327F84EC70068A367 /* XSCategoryViewCellTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSCategoryViewCellTypeViewController.h; sourceTree = "<group>"; };
+		0BE3648427F84EC70068A367 /* XSCategoryViewCellTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSCategoryViewCellTypeViewController.m; sourceTree = "<group>"; };
 		0BEDE7392758E39400528024 /* XSTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTestViewController.h; sourceTree = "<group>"; };
 		0BEDE73A2758E39400528024 /* XSTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSTestViewController.m; sourceTree = "<group>"; };
 		0BEDE7432760930B00528024 /* XSUIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSUIUtils.h; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 			children = (
 				0B8B126F27F7F6470041B825 /* XSCategoryViewController.h */,
 				0B8B127027F7F6470041B825 /* XSCategoryViewController.m */,
+				0BE3648327F84EC70068A367 /* XSCategoryViewCellTypeViewController.h */,
+				0BE3648427F84EC70068A367 /* XSCategoryViewCellTypeViewController.m */,
 			);
 			path = TestCategoryView;
 			sourceTree = "<group>";
@@ -739,6 +744,7 @@
 				0BEDE73B2758E39400528024 /* XSTestViewController.m in Sources */,
 				0B507FB727633934000883F2 /* HFPopView.m in Sources */,
 				0B4B62C626F198BA00060E44 /* XSReachability.m in Sources */,
+				0BE3648527F84EC70068A367 /* XSCategoryViewCellTypeViewController.m in Sources */,
 				0BEDE7452760930B00528024 /* XSUIUtils.m in Sources */,
 				0BBA80D027001C250085ACB9 /* UIView+Action.m in Sources */,
 				0BFBEF5326E86CDB00FC52A4 /* ShadowBase.m in Sources */,
