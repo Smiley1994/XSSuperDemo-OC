@@ -89,34 +89,46 @@
  */
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
-@property (nonatomic, assign) NSInteger defaultSelectedIndex;   //修改初始化的时候默认选择的index
+/// 修改初始化的时候默认选择的index
+@property (nonatomic, assign) NSInteger defaultSelectedIndex;
 
 @property (nonatomic, assign, readonly) NSInteger selectedIndex;
 
-@property (nonatomic, assign, getter=isContentScrollViewClickTransitionAnimationEnabled) BOOL contentScrollViewClickTransitionAnimationEnabled;    //点击cell进行contentScrollView切换时是否需要动画。默认为YES
+/// 点击cell进行contentScrollView切换时是否需要动画。默认为YES
+@property (nonatomic, assign, getter=isContentScrollViewClickTransitionAnimationEnabled) BOOL contentScrollViewClickTransitionAnimationEnabled;
 
-@property (nonatomic, assign) CGFloat contentEdgeInsetLeft;     //整体内容的左边距，默认HFCategoryViewAutomaticDimension（等于cellSpacing）
+/// 整体内容的左边距，默认HFCategoryViewAutomaticDimension（等于cellSpacing）
+@property (nonatomic, assign) CGFloat contentEdgeInsetLeft;
 
-@property (nonatomic, assign) CGFloat contentEdgeInsetRight;    //整体内容的右边距，默认HFCategoryViewAutomaticDimension（等于cellSpacing）
+/// 整体内容的右边距，默认HFCategoryViewAutomaticDimension（等于cellSpacing）
+@property (nonatomic, assign) CGFloat contentEdgeInsetRight;
 
-@property (nonatomic, assign) CGFloat cellWidth;    //默认HFCategoryViewAutomaticDimension
+/// 默认HFCategoryViewAutomaticDimension
+@property (nonatomic, assign) CGFloat cellWidth;
 
-@property (nonatomic, assign) CGFloat cellWidthIncrement;    //cell宽度补偿。默认：0
+/// cell宽度补偿。默认：0
+@property (nonatomic, assign) CGFloat cellWidthIncrement;
 
-@property (nonatomic, assign) CGFloat cellSpacing;    //cell之间的间距，默认20
+/// cell之间的间距，默认20
+@property (nonatomic, assign) CGFloat cellSpacing;
 
-@property (nonatomic, assign, getter=isAverageCellSpacingEnabled) BOOL averageCellSpacingEnabled;     //当collectionView.contentSize.width小于HFCategoryBaseView的宽度，是否将cellSpacing均分。默认为YES。
+/// 当collectionView.contentSize.width小于HFCategoryBaseView的宽度，是否将cellSpacing均分。默认为YES。
+@property (nonatomic, assign, getter=isAverageCellSpacingEnabled) BOOL averageCellSpacingEnabled;
 
-//cell宽度是否缩放
-@property (nonatomic, assign, getter=isCellWidthZoomEnabled) BOOL cellWidthZoomEnabled;     //默认为NO
+/// cell宽度是否缩放 ，默认为NO
+@property (nonatomic, assign, getter=isCellWidthZoomEnabled) BOOL cellWidthZoomEnabled;
 
-@property (nonatomic, assign, getter=isCellWidthZoomScrollGradientEnabled) BOOL cellWidthZoomScrollGradientEnabled;     //手势滚动过程中，是否需要更新cell的宽度。默认为YES
+/// 手势滚动过程中，是否需要更新cell的宽度。默认为YES
+@property (nonatomic, assign, getter=isCellWidthZoomScrollGradientEnabled) BOOL cellWidthZoomScrollGradientEnabled;
 
-@property (nonatomic, assign) CGFloat cellWidthZoomScale;    //默认1.2，cellWidthZoomEnabled为YES才生效
+/// 默认1.2，cellWidthZoomEnabled为YES才生效
+@property (nonatomic, assign) CGFloat cellWidthZoomScale;
 
-@property (nonatomic, assign, getter=isSelectedAnimationEnabled) BOOL selectedAnimationEnabled;    //是否开启点击或代码选中动画。默认为NO。自定义的cell选中动画需要自己实现。（仅点击或调用selectItemAtIndex选中才有效，滚动选中无效）
+/// 是否开启点击或代码选中动画。默认为NO。自定义的cell选中动画需要自己实现。（仅点击或调用selectItemAtIndex选中才有效，滚动选中无效）
+@property (nonatomic, assign, getter=isSelectedAnimationEnabled) BOOL selectedAnimationEnabled;
 
-@property (nonatomic, assign) NSTimeInterval selectedAnimationDuration;     //cell选中动画的时间。默认0.25
+/// cell选中动画的时间。默认0.25
+@property (nonatomic, assign) NSTimeInterval selectedAnimationDuration;
 
 /**
  选中目标index的item

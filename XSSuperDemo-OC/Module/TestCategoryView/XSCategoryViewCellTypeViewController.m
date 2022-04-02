@@ -46,35 +46,35 @@
     NSArray *selectedImageNames = @[@"crab_selected", @"lobster_selected", @"apple_selected", @"carrot_selected", @"grape_selected", @"watermelon_selected"];
     
     // 文字 + 图片
-//    self.categoryView = [[HFCategoryTitleImageView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGHT, SCREEN_WIDTH, 50)];
-//    self.categoryView.titles = titles;
-//    self.categoryView.imageNames = imageNames;
-//    self.categoryView.selectedImageNames = selectedImageNames;
-//    self.categoryView.imageZoomEnabled = YES;
-//    self.categoryView.imageZoomScale = 1.3;
-//    self.categoryView.delegate = self;
-//    self.categoryView.averageCellSpacingEnabled = NO;
-//
-//    self.categoryView.indicators = @[lineView];
-//
-//    [self.view addSubview:self.categoryView];
+    self.categoryView = [[HFCategoryTitleImageView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGHT, SCREEN_WIDTH, 50)];
+    self.categoryView.titles = titles;
+    self.categoryView.imageNames = imageNames;
+    self.categoryView.selectedImageNames = selectedImageNames;
+    self.categoryView.imageZoomEnabled = YES;
+    self.categoryView.imageZoomScale = 1.3;
+    self.categoryView.delegate = self;
+    self.categoryView.averageCellSpacingEnabled = NO;
+
+    self.categoryView.indicators = @[lineView];
+
+    [self.view addSubview:self.categoryView];
     
     
     // 只显示文字
-    HFCategoryTitleView *titleCategoryView = [[HFCategoryTitleView alloc] init];
-    titleCategoryView.frame = CGRectMake(0, NAVIGATION_HEIGHT, SCREEN_WIDTH, 50);
-    titleCategoryView.delegate = self;
-    titleCategoryView.titles = titles;
-    titleCategoryView.titleColorGradientEnabled = YES;
-    titleCategoryView.titleLabelZoomEnabled = YES;
-    titleCategoryView.titleLabelZoomScale = 1.1;
-    titleCategoryView.titleLabelStrokeWidthEnabled = YES;
-    titleCategoryView.selectedAnimationEnabled = YES;
-    titleCategoryView.cellWidthZoomEnabled = YES;
-    titleCategoryView.cellWidthZoomScale = 1.1;
-    titleCategoryView.indicators = @[lineView];
+//    HFCategoryTitleView *titleCategoryView = [[HFCategoryTitleView alloc] init];
+//    titleCategoryView.frame = CGRectMake(0, NAVIGATION_HEIGHT, SCREEN_WIDTH, 50);
+//    titleCategoryView.delegate = self;
+//    titleCategoryView.titles = titles;
+//    titleCategoryView.titleColorGradientEnabled = YES;
+//    titleCategoryView.titleLabelZoomEnabled = YES;
+//    titleCategoryView.titleLabelZoomScale = 1.1;
+//    titleCategoryView.titleLabelStrokeWidthEnabled = YES;
+//    titleCategoryView.selectedAnimationEnabled = YES;
+//    titleCategoryView.cellWidthZoomEnabled = YES;
+//    titleCategoryView.cellWidthZoomScale = 1.1;
+//    titleCategoryView.indicators = @[lineView];
     
-    [self.view addSubview:titleCategoryView];
+//    [self.view addSubview:titleCategoryView];
     
     
     
