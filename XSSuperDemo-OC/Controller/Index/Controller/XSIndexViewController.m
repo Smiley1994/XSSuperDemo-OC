@@ -14,8 +14,12 @@
 #import "XSCardViewController.h"
 #import "XSCrashViewController.h"
 #import "XSTestViewController.h"
+#import "XSCategoryViewController.h"
 #import "Masonry.h"
 #import "MJRefresh.h"
+
+#import "YSUIntent.h"
+#import "UIViewController+Intent.h"
 
 @interface XSIndexViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -67,6 +71,11 @@
     webModel.title = @"WebView";
     webModel.type = WEB_CELL;
     [self.dataArray addObject:webModel];
+    
+    XSIndexModel *categoryModel = [[XSIndexModel alloc] init];
+    categoryModel.title = @"CategoryView";
+    categoryModel.type = CATEGORY_CELL;
+    [self.dataArray addObject:categoryModel];
     
     XSIndexModel *cardModel = [[XSIndexModel alloc] init];
     cardModel.title = @"Card";
@@ -140,6 +149,9 @@
         case OTHER_CELL:
             [self openTestViewController];
             break;
+        case CATEGORY_CELL:
+            [self openTestViewController];
+            break;
             
         default:
             break;
@@ -155,6 +167,7 @@
     XSCardViewController *cardViewController = [[XSCardViewController alloc] init];
     cardViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:cardViewController animated:YES];
+    
 }
 
 - (void)openMediaViewController {
@@ -163,7 +176,6 @@
     mediaViewController.hidesBottomBarWhenPushed = YES;                                                                                                                                                                                        
     [self.navigationController pushViewController:mediaViewController animated:YES];
 }
-
 
 - (void)openWebViewController {
 //    RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
@@ -185,10 +197,40 @@
 
 - (void)openTestViewController {
     
-    XSTestViewController *test = [[XSTestViewController alloc] init];
-    test.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:test animated:YES];
+//    XSTestViewController *test = [[XSTestViewController alloc] init];
+//    test.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:test animated:YES];
+    
+    YSUIntent *intent = [[YSUIntent alloc] initWithClassName:@"XSTestViewController"];
+    [intent setObject:@"aaaa" forKey:@"Key1"];
+    [intent setObject:@"bbbb" forKey:@"Key2"];
+    intent.hidesBottomBarWhenPushed = YES;
+    [self openIntent:intent withRequestCode:99];
 }
+
+#pragma mark - Intent 
+
+//- (YSUError *)willOpenViewController:(__kindof UIViewController *)viewController withIntent:(YSUIntent *)intent {
+//    if ([intent.className isEqualToString:@"TempController"]) {
+//        
+//        return [YSUError ok];
+//    }
+//    
+//    return [super willOpenViewController:viewController withIntent:intent];
+//}
+//
+//- (void)willCloseViewController:(__kindof UIViewController *)viewController withIntent:(YSUIntent *)intent {
+//    
+//}
+//
+//- (void)onViewController:(__kindof UIViewController *)viewController ofRequestCode:(NSInteger)requestCode finshedWithResult:(NSInteger)resultCode andResultData:(NSDictionary *)resultData {
+//    if ( resultCode == RESULT_OK) {
+//        
+//        
+//    }else {
+//        [super onViewController:viewController ofRequestCode:requestCode finshedWithResult:resultCode andResultData:resultData];
+//    }
+//}
 
 
 @end

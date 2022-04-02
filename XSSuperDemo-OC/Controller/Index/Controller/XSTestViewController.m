@@ -2,7 +2,7 @@
 //  XSTestViewController.m
 //  XSTestViewController
 //
-//  Created by Macrolor on 2021/12/2.
+//  Created by Macrolor  on 2021/12/2.
 //  Copyright © 2021 GoodMorning. All rights reserved.
 //
 
@@ -12,6 +12,9 @@
 
 #import "RoomToolboxUnfoldView.h"
 #import "HFPopView.h"
+
+#import "YSUIntent.h"
+#import "UIViewController+Intent.h"
 
 @interface XSTestViewController ()
 
@@ -37,24 +40,9 @@
 }
 
 - (void)click {
-    RoomToolboxUnfoldView *toolboxView = [[RoomToolboxUnfoldView alloc] initWithFrame:CGRectMake(0, 150, 110, 297)];
-    toolboxView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
-//    [self.view addSubview:toolboxView];
     
-    HFPopView *popView = [HFPopView initWithCustomView:toolboxView
-                                              parentView:self.view
-                                                popStyle:HFPopStyleSmoothFromRight
-                                            dismissStyle:LSTDismissStyleSmoothToRight];
-    popView.hemStyle = LSTHemStyleRight;
-    LSTPopViewWK(popView)
-    popView.popDuration = 0.5;
-    popView.dismissDuration = 0.5;
-    popView.isClickFeedback = YES;
-    popView.bgClickBlock = ^{
-        NSLog(@"点击了背景");
-        [wk_popView dismiss];
-    };
-    [popView pop];
+    [self finishWithResultCode:RESULT_OK andResultData:@{@"aaa":@"111"}];
+//    [self cancel];
 }
 
 
@@ -74,15 +62,5 @@
     [self.view addSubview:imageView];
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -8,6 +8,12 @@ target 'XSSuperDemo-OC' do
   pod 'MJRefresh'
   pod 'Masonry'	
   pod 'Sentry', :git => 'https://github.com/getsentry/sentry-cocoa.git', :tag => '7.3.0'
+  
+  
+  #
+  pod 'XSIntent', :path => 'Module/XSIntent/'
+  pod 'HFCategoryView', :path => 'Module/HFCategoryView/'
+  
   # Pods for XSSuperDemo-OC
 
 end

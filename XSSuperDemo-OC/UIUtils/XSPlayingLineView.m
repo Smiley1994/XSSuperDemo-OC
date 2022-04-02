@@ -2,7 +2,7 @@
 //  XSPlayingLineView.m
 //  XSPlayingLineView
 //
-//  Created by Macrolor on 2022/1/26.
+//  Created by Macrolor  on 2022/1/26.
 //  Copyright © 2022 GoodMorning. All rights reserved.
 //
 

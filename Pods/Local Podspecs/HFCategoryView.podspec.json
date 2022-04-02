@@ -1,0 +1,26 @@
+{
+  "name": "HFCategoryView",
+  "version": "0.0.1",
+  "summary": "a common ui component of category view",
+  "description": "自定义分类选择 View",
+  "homepage": "http://EXAMPLE/HFCategoryView",
+  "license": "MIT",
+  "authors": {
+    "Macrolor ": "smileysun1994@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Smiley1994/HFCategoryView.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "Classes",
+    "Classes/**/*.{h,m}"
+  ],
+  "exclude_files": "Classes/Exclude",
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  }
+}

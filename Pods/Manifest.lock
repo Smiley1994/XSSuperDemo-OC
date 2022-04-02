@@ -1,15 +1,19 @@
 PODS:
+  - HFCategoryView (0.0.1)
   - Masonry (1.1.0)
   - MJRefresh (3.7.5)
   - Sentry (7.3.0):
     - Sentry/Core (= 7.3.0)
   - Sentry/Core (7.3.0)
+  - XSIntent (0.0.1)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - HFCategoryView (from `Module/HFCategoryView/`)
   - Masonry
   - MJRefresh
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `7.3.0`)
+  - XSIntent (from `Module/XSIntent/`)
   - YYModel
 
 SPEC REPOS:
@@ -19,9 +23,13 @@ SPEC REPOS:
     - YYModel
 
 EXTERNAL SOURCES:
+  HFCategoryView:
+    :path: Module/HFCategoryView/
   Sentry:
     :git: https://github.com/getsentry/sentry-cocoa.git
     :tag: 7.3.0
+  XSIntent:
+    :path: Module/XSIntent/
 
 CHECKOUT OPTIONS:
   Sentry:
@@ -29,11 +37,13 @@ CHECKOUT OPTIONS:
     :tag: 7.3.0
 
 SPEC CHECKSUMS:
+  HFCategoryView: 0a665f69ace233b98a90e4f77c1f1644af0f378b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Sentry: 9a4e621430e2dae4477d791f2f7e905720b6efbf
+  XSIntent: 39902b2eed07df1b8754c61e82bd651e34d12dc9
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: ebc48bafd5e6db9783bb6c3787a1d871a7b2cd08
+PODFILE CHECKSUM: d154c35214df3298cc62eef5a5f779ee0232acd6
 
 COCOAPODS: 1.10.2
