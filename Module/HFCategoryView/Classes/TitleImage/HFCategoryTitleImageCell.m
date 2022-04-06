@@ -41,7 +41,11 @@
     self.imageViewHeightConstraint.active = YES;
 
     _stackView = [[UIStackView alloc] init];
-    self.stackView.alignment = UIStackViewAlignmentCenter;
+    if (@available(iOS 9.0, *)) {
+        self.stackView.alignment = UIStackViewAlignmentCenter;
+    } else {
+        // Fallback on earlier versions
+    }
     [self.contentView addSubview:self.stackView];
     self.stackView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.stackView.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor].active = YES;

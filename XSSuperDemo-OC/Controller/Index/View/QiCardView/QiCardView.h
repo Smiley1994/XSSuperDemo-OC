@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "QiCardViewCell.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class QiCardView;
 
 @protocol QiCardViewDataSource<NSObject>
@@ -63,5 +65,7 @@
 
 //! 移除最上层cell
 - (void)removeTopCardViewFromSwipe:(QiCardCellSwipeDirection)direction;
+
+NS_ASSUME_NONNULL_END
 
 @end

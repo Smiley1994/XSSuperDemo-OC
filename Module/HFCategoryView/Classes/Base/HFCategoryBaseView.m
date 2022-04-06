@@ -364,7 +364,11 @@ struct DelegateFlags {
         }
     }
     if ([RTLManager supportRTL]) {
-        self.collectionView.semanticContentAttribute = UISemanticContentAttributeForceLeftToRight;
+        if (@available(iOS 9.0, *)) {
+            self.collectionView.semanticContentAttribute = UISemanticContentAttributeForceLeftToRight;
+        } else {
+            // Fallback on earlier versions
+        }
         [RTLManager horizontalFlipView:self.collectionView];
     }
     [self addSubview:self.collectionView];

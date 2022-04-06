@@ -24,6 +24,8 @@
 		0BBA80D027001C250085ACB9 /* UIView+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA80CC27001C250085ACB9 /* UIView+Action.m */; };
 		0BBA80D127001C250085ACB9 /* UIView+ExtraTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA80CD27001C250085ACB9 /* UIView+ExtraTag.m */; };
 		0BE3648527F84EC70068A367 /* XSCategoryViewCellTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3648427F84EC70068A367 /* XSCategoryViewCellTypeViewController.m */; };
+		0BE935F427FD38AE00281DC1 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE935F327FD38AE00281DC1 /* CoreServices.framework */; };
+		0BE935F627FD38D700281DC1 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BE935F527FD38D700281DC1 /* Metal.framework */; };
 		0BEDE73B2758E39400528024 /* XSTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDE73A2758E39400528024 /* XSTestViewController.m */; };
 		0BEDE7452760930B00528024 /* XSUIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDE7442760930B00528024 /* XSUIUtils.m */; };
 		0BEDE7482760951800528024 /* RoomToolboxUnfoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEDE7472760951800528024 /* RoomToolboxUnfoldView.m */; };
@@ -61,8 +63,6 @@
 		5FB9EF21219C4B6D00B033B6 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF20219C4B6D00B033B6 /* VideoToolbox.framework */; };
 		5FB9EF23219C4B7500B033B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF22219C4B7500B033B6 /* UIKit.framework */; };
 		5FB9EF25219C4B8200B033B6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF24219C4B8200B033B6 /* QuartzCore.framework */; };
-		5FB9EF27219C4B8A00B033B6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF26219C4B8A00B033B6 /* OpenGLES.framework */; };
-		5FB9EF29219C4B9900B033B6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF28219C4B9900B033B6 /* MobileCoreServices.framework */; };
 		5FB9EF2B219C4BA600B033B6 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF2A219C4BA600B033B6 /* libbz2.tbd */; };
 		5FB9EF2D219C4C0000B033B6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF2C219C4C0000B033B6 /* CoreVideo.framework */; };
 		5FB9EF2F219C4C0C00B033B6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF2E219C4C0C00B033B6 /* CoreMedia.framework */; };
@@ -112,6 +112,8 @@
 		0BBA80CF27001C250085ACB9 /* UIView+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Action.h"; sourceTree = "<group>"; };
 		0BE3648327F84EC70068A367 /* XSCategoryViewCellTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSCategoryViewCellTypeViewController.h; sourceTree = "<group>"; };
 		0BE3648427F84EC70068A367 /* XSCategoryViewCellTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSCategoryViewCellTypeViewController.m; sourceTree = "<group>"; };
+		0BE935F327FD38AE00281DC1 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		0BE935F527FD38D700281DC1 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		0BEDE7392758E39400528024 /* XSTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSTestViewController.h; sourceTree = "<group>"; };
 		0BEDE73A2758E39400528024 /* XSTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSTestViewController.m; sourceTree = "<group>"; };
 		0BEDE7432760930B00528024 /* XSUIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSUIUtils.h; sourceTree = "<group>"; };
@@ -206,8 +208,6 @@
 				5FB9EF2F219C4C0C00B033B6 /* CoreMedia.framework in Frameworks */,
 				5FB9EF2D219C4C0000B033B6 /* CoreVideo.framework in Frameworks */,
 				5FB9EF2B219C4BA600B033B6 /* libbz2.tbd in Frameworks */,
-				5FB9EF29219C4B9900B033B6 /* MobileCoreServices.framework in Frameworks */,
-				5FB9EF27219C4B8A00B033B6 /* OpenGLES.framework in Frameworks */,
 				5FB9EF25219C4B8200B033B6 /* QuartzCore.framework in Frameworks */,
 				5FB9EF23219C4B7500B033B6 /* UIKit.framework in Frameworks */,
 				5FB9EF21219C4B6D00B033B6 /* VideoToolbox.framework in Frameworks */,
@@ -216,6 +216,8 @@
 				5F66A07120FDD4FF00FAA4A8 /* MediaPlayer.framework in Frameworks */,
 				0B4B62AB26EB415400060E44 /* Bugly.framework in Frameworks */,
 				930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */,
+				0BE935F627FD38D700281DC1 /* Metal.framework in Frameworks */,
+				0BE935F427FD38AE00281DC1 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +496,8 @@
 		5F66A06F20FDD4FF00FAA4A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BE935F527FD38D700281DC1 /* Metal.framework */,
+				0BE935F327FD38AE00281DC1 /* CoreServices.framework */,
 				5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */,
 				5FB9EF32219C4C6800B033B6 /* AVFoundation.framework */,
 				5FB9EF30219C4C1700B033B6 /* CoreGraphics.framework */,
@@ -909,7 +913,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XSSuperDemo-OC/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "XSSuperDemo-OC/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -940,7 +944,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XSSuperDemo-OC/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "XSSuperDemo-OC/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

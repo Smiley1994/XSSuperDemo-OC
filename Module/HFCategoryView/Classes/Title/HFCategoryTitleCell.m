@@ -29,19 +29,35 @@
     self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:self.titleLabel];
 
-    self.titleLabelCenterX = [self.titleLabel.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor constant:0];
-    self.titleLabelCenterY = [self.titleLabel.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor constant:0];
+    if (@available(iOS 9.0, *)) {
+        self.titleLabelCenterX = [self.titleLabel.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor constant:0];
+    } else {
+        // Fallback on earlier versions
+    }
+    if (@available(iOS 9.0, *)) {
+        self.titleLabelCenterY = [self.titleLabel.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor constant:0];
+    } else {
+        // Fallback on earlier versions
+    }
 
     _titleMaskLayer = [CALayer layer];
     self.titleMaskLayer.backgroundColor = [UIColor redColor].CGColor;
-
+    if (@available(iOS 9.0, *)) {
+        
+    } else {
+        // Fallback on earlier versions
+    }
     _maskTitleLabel = [[UILabel alloc] init];
     self.maskTitleLabel.hidden = YES;
     self.maskTitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.maskTitleLabel.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.maskTitleLabel];
 
-    self.maskTitleLabelCenterX = [self.maskTitleLabel.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor];
+    if (@available(iOS 9.0, *)) {
+        self.maskTitleLabelCenterX = [self.maskTitleLabel.centerXAnchor constraintEqualToAnchor:self.contentView.centerXAnchor];
+    } else {
+        // Fallback on earlier versions
+    }
     self.maskTitleLabelCenterY = [self.maskTitleLabel.centerYAnchor constraintEqualToAnchor:self.contentView.centerYAnchor];
 
     _maskTitleMaskLayer = [CALayer layer];

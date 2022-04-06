@@ -32,10 +32,26 @@
     self.numberLabel.layer.masksToBounds = YES;
     [self.contentView addSubview:self.numberLabel];
     self.numberLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.numberCenterXConstraint = [self.numberLabel.centerXAnchor constraintEqualToAnchor:self.titleLabel.trailingAnchor];
-    self.numberCenterYConstraint = [self.numberLabel.centerYAnchor constraintEqualToAnchor:self.titleLabel.topAnchor];
-    self.numberHeightConstraint = [self.numberLabel.heightAnchor constraintEqualToConstant:0];
-    self.numberWidthConstraint = [self.numberLabel.widthAnchor constraintEqualToConstant:0];
+    if (@available(iOS 9.0, *)) {
+        self.numberCenterXConstraint = [self.numberLabel.centerXAnchor constraintEqualToAnchor:self.titleLabel.trailingAnchor];
+    } else {
+        // Fallback on earlier versions
+    }
+    if (@available(iOS 9.0, *)) {
+        self.numberCenterYConstraint = [self.numberLabel.centerYAnchor constraintEqualToAnchor:self.titleLabel.topAnchor];
+    } else {
+        // Fallback on earlier versions
+    }
+    if (@available(iOS 9.0, *)) {
+        self.numberHeightConstraint = [self.numberLabel.heightAnchor constraintEqualToConstant:0];
+    } else {
+        // Fallback on earlier versions
+    }
+    if (@available(iOS 9.0, *)) {
+        self.numberWidthConstraint = [self.numberLabel.widthAnchor constraintEqualToConstant:0];
+    } else {
+        // Fallback on earlier versions
+    }
     [NSLayoutConstraint activateConstraints:@[self.numberCenterXConstraint, self.numberCenterYConstraint, self.numberWidthConstraint, self.numberHeightConstraint]];
 }
 

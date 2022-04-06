@@ -75,15 +75,15 @@ static NSString * const qiCardCellId = @"QiCardCellId";
 }
 
 - (void)cardView:(QiCardView *)cardView didRemoveCell:(QiCardViewCell *)cell forRowAtIndex:(NSInteger)index {
-    NSLog(@"didRemoveCell forRowAtIndex = %ld", index);
+    NSLog(@"didRemoveCell forRowAtIndex = %ld", (long)index);
 }
 
 - (void)cardView:(QiCardView *)cardView didDisplayCell:(QiCardViewCell *)cell forRowAtIndex:(NSInteger)index {
     
-    NSLog(@"didDisplayCell forRowAtIndex = %ld", index);
+    NSLog(@"didDisplayCell forRowAtIndex = %ld", (long)index);
     
-    NSLog(@"currentFirstIndex = %ld",cardView.currentFirstIndex);
-    NSLog(@"%ld",index);
+    NSLog(@"currentFirstIndex = %ld",(long)cardView.currentFirstIndex);
+    NSLog(@"%ld",(long)index);
 }
 
 - (void)cardView:(QiCardView *)cardView didMoveCell:(QiCardViewCell *)cell forMovePoint:(CGPoint)point {

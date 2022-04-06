@@ -31,31 +31,71 @@
     self.dot.backgroundColor = myCellModel.dotColor;
     self.dot.layer.cornerRadius = myCellModel.dotCornerRadius;
     [NSLayoutConstraint deactivateConstraints:self.dot.constraints];
-    [self.dot.widthAnchor constraintEqualToConstant:myCellModel.dotSize.width].active = YES;
-    [self.dot.heightAnchor constraintEqualToConstant:myCellModel.dotSize.height].active = YES;
+    if (@available(iOS 9.0, *)) {
+        [self.dot.widthAnchor constraintEqualToConstant:myCellModel.dotSize.width].active = YES;
+    } else {
+        // Fallback on earlier versions
+    }
+    if (@available(iOS 9.0, *)) {
+        [self.dot.heightAnchor constraintEqualToConstant:myCellModel.dotSize.height].active = YES;
+    } else {
+        // Fallback on earlier versions
+    }
     switch (myCellModel.relativePosition) {
         case HFCategoryDotRelativePosition_TopLeft:
         {
-            [self.dot.centerXAnchor constraintEqualToAnchor:self.titleLabel.leadingAnchor constant:myCellModel.dotOffset.x].active = YES;
-            [self.dot.centerYAnchor constraintEqualToAnchor:self.titleLabel.topAnchor constant:myCellModel.dotOffset.y].active = YES;
+            if (@available(iOS 9.0, *)) {
+                [self.dot.centerXAnchor constraintEqualToAnchor:self.titleLabel.leadingAnchor constant:myCellModel.dotOffset.x].active = YES;
+            } else {
+                // Fallback on earlier versions
+            }
+            if (@available(iOS 9.0, *)) {
+                [self.dot.centerYAnchor constraintEqualToAnchor:self.titleLabel.topAnchor constant:myCellModel.dotOffset.y].active = YES;
+            } else {
+                // Fallback on earlier versions
+            }
         }
             break;
         case HFCategoryDotRelativePosition_TopRight:
         {
-            [self.dot.centerXAnchor constraintEqualToAnchor:self.titleLabel.trailingAnchor constant:myCellModel.dotOffset.x].active = YES;
-            [self.dot.centerYAnchor constraintEqualToAnchor:self.titleLabel.topAnchor constant:myCellModel.dotOffset.y].active = YES;
+            if (@available(iOS 9.0, *)) {
+                [self.dot.centerXAnchor constraintEqualToAnchor:self.titleLabel.trailingAnchor constant:myCellModel.dotOffset.x].active = YES;
+            } else {
+                // Fallback on earlier versions
+            }
+            if (@available(iOS 9.0, *)) {
+                [self.dot.centerYAnchor constraintEqualToAnchor:self.titleLabel.topAnchor constant:myCellModel.dotOffset.y].active = YES;
+            } else {
+                // Fallback on earlier versions
+            }
         }
             break;
         case HFCategoryDotRelativePosition_BottomLeft:
         {
-            [self.dot.centerXAnchor constraintEqualToAnchor:self.titleLabel.leadingAnchor constant:myCellModel.dotOffset.x].active = YES;
-            [self.dot.centerYAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:myCellModel.dotOffset.y].active = YES;
+            if (@available(iOS 9.0, *)) {
+                [self.dot.centerXAnchor constraintEqualToAnchor:self.titleLabel.leadingAnchor constant:myCellModel.dotOffset.x].active = YES;
+            } else {
+                // Fallback on earlier versions
+            }
+            if (@available(iOS 9.0, *)) {
+                [self.dot.centerYAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:myCellModel.dotOffset.y].active = YES;
+            } else {
+                // Fallback on earlier versions
+            }
         }
             break;
         case HFCategoryDotRelativePosition_BottomRight:
         {
-            [self.dot.centerXAnchor constraintEqualToAnchor:self.titleLabel.trailingAnchor constant:myCellModel.dotOffset.x].active = YES;
-            [self.dot.centerYAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:myCellModel.dotOffset.y].active = YES;
+            if (@available(iOS 9.0, *)) {
+                [self.dot.centerXAnchor constraintEqualToAnchor:self.titleLabel.trailingAnchor constant:myCellModel.dotOffset.x].active = YES;
+            } else {
+                // Fallback on earlier versions
+            }
+            if (@available(iOS 9.0, *)) {
+                [self.dot.centerYAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:myCellModel.dotOffset.y].active = YES;
+            } else {
+                // Fallback on earlier versions
+            }
         }
             break;
     }
