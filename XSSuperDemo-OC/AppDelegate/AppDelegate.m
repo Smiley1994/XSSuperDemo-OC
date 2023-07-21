@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "XSSplashViewController.h"
+
+#import "QiCallTrace.h"
 //#import "Sentry.h"
 #import "ShadowBase.h"
 
@@ -21,6 +23,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [QiCallTrace start];
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     XSSplashViewController *splashViewcontroller = [[XSSplashViewController alloc] init];
     UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:splashViewcontroller];
@@ -31,6 +35,9 @@
     [self setupShadowBase:launchOptions];
 //    [self setupBugly];
     [self setupSenty];
+    
+    [QiCallTrace stop];
+    [QiCallTrace save];
     
     return YES;
 }

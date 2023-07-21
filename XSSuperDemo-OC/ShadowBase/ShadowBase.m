@@ -107,7 +107,7 @@ void shadowBaseUncaughtExceptionHandler(NSException * exception){
 
 - (void)buildDeviceInfo {
     
-    NSLog(@"appTakeUpMemory == %@", XSDeviceInfo.appUpdateDate);
+    SBLogInfo(@"appTakeUpMemory == %@", XSDeviceInfo.appUpdateDate);
     
 }
 

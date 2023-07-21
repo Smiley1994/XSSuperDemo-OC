@@ -38,12 +38,16 @@
 - (void)createCategoryView {
     
     HFCategoryIndicatorLineView *lineView = [[HFCategoryIndicatorLineView alloc] init];
-//    lineView.indicatorColor = [UIColor blackColor];
+    lineView.indicatorColor = [UIColor greenColor];
     lineView.indicatorWidth = 20;
     
+    HFCategoryIndicatorLineView *line2View = [[HFCategoryIndicatorLineView alloc] init];
+    line2View.indicatorColor = [UIColor blackColor];
+    line2View.indicatorWidth = 20;
+    
     NSArray *titles = @[@"螃蟹", @"小龙虾", @"苹果", @"胡萝卜", @"葡萄", @"西瓜"];
-    NSArray *imageNames = @[@"crab", @"lobster", @"apple", @"carrot", @"grape", @"watermelon"];
-    NSArray *selectedImageNames = @[@"crab_selected", @"lobster_selected", @"apple_selected", @"carrot_selected", @"grape_selected", @"watermelon_selected"];
+    NSArray *imageNames = @[@"crab", @"lobster", @"apple", @"carrot", @"", @""];
+    NSArray *selectedImageNames = @[@"crab_selected", @"lobster_selected", @"apple_selected", @"carrot_selected", @"", @""];
     
     // 文字 + 图片
     self.categoryView = [[HFCategoryTitleImageView alloc] initWithFrame:CGRectMake(0, NAVIGATION_HEIGHT, SCREEN_WIDTH, 50)];
@@ -55,7 +59,7 @@
     self.categoryView.delegate = self;
     self.categoryView.averageCellSpacingEnabled = NO;
 
-    self.categoryView.indicators = @[lineView];
+    self.categoryView.indicators = @[lineView,line2View];
 
     [self.view addSubview:self.categoryView];
     

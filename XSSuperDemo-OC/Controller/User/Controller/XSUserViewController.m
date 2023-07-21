@@ -7,7 +7,11 @@
 //
 
 #import "XSUserViewController.h"
+
 #import "XSPlayingLineView.h"
+#import "YYFPSLabel.h"
+
+#import "XSUIMacro.h"
 
 @interface XSUserViewController ()
 
@@ -30,6 +34,9 @@
     
     XSPlayingLineView *lineView = [[XSPlayingLineView alloc] initWithFrame:CGRectMake(50, 100, 9, 9) lineWidth:1.5 lineColor:[UIColor redColor]];
     [self.view addSubview:lineView];
+    
+    YYFPSLabel *fpsLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 100, NAVIGATION_HEIGHT, 100, 20)];
+    [self.view addSubview:fpsLabel];
     
 //    CAReplicatorLayer *replicatorLayer = [[CAReplicatorLayer alloc] init];
 //    replicatorLayer.frame = CGRectMake(0, 100, 375, 200);

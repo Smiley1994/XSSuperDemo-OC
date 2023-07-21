@@ -7,6 +7,8 @@
 //
 
 #import "XSIndexViewController.h"
+#import "RxWebViewController.h"
+
 #import "XSUIMacro.h"
 #import "XSIndexCell.h"
 #import "XSIndexModel.h"
@@ -179,9 +181,12 @@
 }
 
 - (void)openWebViewController {
-//    RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
-//    webView.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:webView animated:YES];
+    RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
+    
+    if (webView.webView.canGoBack) {
+        [webView.webView goBack];
+    }
+    [self.navigationController pushViewController:webView animated:YES];
 }
 
 -(void)openCrashViewController {
@@ -203,10 +208,6 @@
 }
 
 - (void)openTestViewController {
-    
-//    XSTestViewController *test = [[XSTestViewController alloc] init];
-//    test.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:test animated:YES];
     
     YSUIntent *intent = [[YSUIntent alloc] initWithClassName:@"XSTestViewController"];
     [intent setObject:@"aaaa" forKey:@"Key1"];

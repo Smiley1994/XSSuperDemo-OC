@@ -6,6 +6,11 @@
 //  Copyright © 2021 GoodMorning. All rights reserved.
 //
 
+/**
+ * 埋点工具
+ *
+ */
+
 #import <Foundation/Foundation.h>
 #import "ShadowBaseConfig.h"
 

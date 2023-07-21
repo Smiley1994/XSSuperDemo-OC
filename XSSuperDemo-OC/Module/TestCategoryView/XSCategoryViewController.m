@@ -7,7 +7,6 @@
 //
 
 #import "XSCategoryViewController.h"
-#import <HFCategoryView.h>
 
 @interface XSCategoryViewController ()
 
