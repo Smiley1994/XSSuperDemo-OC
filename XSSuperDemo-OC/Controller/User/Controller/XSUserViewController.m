@@ -30,8 +30,6 @@
     
     block();
     
-    
-    
     XSPlayingLineView *lineView = [[XSPlayingLineView alloc] initWithFrame:CGRectMake(50, 100, 9, 9) lineWidth:1.5 lineColor:[UIColor redColor]];
     [self.view addSubview:lineView];
     

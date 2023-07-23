@@ -29,6 +29,11 @@
 		0B8DFEE62A6A4DFA009DB391 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEE12A6A4DFA009DB391 /* NJKWebViewProgressView.m */; };
 		0B8DFEE72A6A4DFA009DB391 /* RxWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEE22A6A4DFA009DB391 /* RxWebViewController.m */; };
 		0B8DFEE92A6A4F24009DB391 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B8DFEE82A6A4F24009DB391 /* README.md */; };
+		0B8DFEEC2A6AFAA2009DB391 /* XSPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEEB2A6AFAA2009DB391 /* XSPeople.m */; };
+		0B8DFEEF2A6AFAAE009DB391 /* XSSubPeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEEE2A6AFAAE009DB391 /* XSSubPeople.m */; };
+		0B8DFEF22A6AFAEE009DB391 /* XSPeople+Eat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEF12A6AFAEE009DB391 /* XSPeople+Eat.m */; };
+		0B8DFEF52A6AFBC4009DB391 /* XSPeople+Speak.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEF42A6AFBC4009DB391 /* XSPeople+Speak.m */; };
+		0B8DFEFA2A6CDBE7009DB391 /* FJReplayKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEF92A6CDBE7009DB391 /* FJReplayKit.m */; };
 		0B9EED6227E964EE001656EA /* UIViewController+Intent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED5F27E964EE001656EA /* UIViewController+Intent.m */; };
 		0B9EED6327E964EE001656EA /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED6127E964EE001656EA /* NSObject+Swizzling.m */; };
 		0B9EED6727E965C8001656EA /* YSUIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED6627E965C8001656EA /* YSUIntent.m */; };
@@ -131,6 +136,18 @@
 		0B8DFEE12A6A4DFA009DB391 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 		0B8DFEE22A6A4DFA009DB391 /* RxWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxWebViewController.m; sourceTree = "<group>"; };
 		0B8DFEE82A6A4F24009DB391 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0B8DFEEA2A6AFAA2009DB391 /* XSPeople.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSPeople.h; sourceTree = "<group>"; };
+		0B8DFEEB2A6AFAA2009DB391 /* XSPeople.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSPeople.m; sourceTree = "<group>"; };
+		0B8DFEED2A6AFAAE009DB391 /* XSSubPeople.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSSubPeople.h; sourceTree = "<group>"; };
+		0B8DFEEE2A6AFAAE009DB391 /* XSSubPeople.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSSubPeople.m; sourceTree = "<group>"; };
+		0B8DFEF02A6AFAEE009DB391 /* XSPeople+Eat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSPeople+Eat.h"; sourceTree = "<group>"; };
+		0B8DFEF12A6AFAEE009DB391 /* XSPeople+Eat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XSPeople+Eat.m"; sourceTree = "<group>"; };
+		0B8DFEF32A6AFBC4009DB391 /* XSPeople+Speak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSPeople+Speak.h"; sourceTree = "<group>"; };
+		0B8DFEF42A6AFBC4009DB391 /* XSPeople+Speak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "XSPeople+Speak.m"; sourceTree = "<group>"; };
+		0B8DFEF62A6B80F9009DB391 /* XSPeople+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XSPeople+Test.h"; sourceTree = "<group>"; };
+		0B8DFEF72A6CDBE7009DB391 /* FJReplayKitNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJReplayKitNote.h; sourceTree = "<group>"; };
+		0B8DFEF82A6CDBE7009DB391 /* FJReplayKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJReplayKit.h; sourceTree = "<group>"; };
+		0B8DFEF92A6CDBE7009DB391 /* FJReplayKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJReplayKit.m; sourceTree = "<group>"; };
 		0B9EED5E27E964EE001656EA /* UIViewController+Intent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Intent.h"; sourceTree = "<group>"; };
 		0B9EED5F27E964EE001656EA /* UIViewController+Intent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Intent.m"; sourceTree = "<group>"; };
 		0B9EED6027E964EE001656EA /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
@@ -405,6 +422,16 @@
 			path = NJKWebViewProgress;
 			sourceTree = "<group>";
 		};
+		0B8DFEFB2A6CDBEB009DB391 /* FJReplayKit */ = {
+			isa = PBXGroup;
+			children = (
+				0B8DFEF82A6CDBE7009DB391 /* FJReplayKit.h */,
+				0B8DFEF92A6CDBE7009DB391 /* FJReplayKit.m */,
+				0B8DFEF72A6CDBE7009DB391 /* FJReplayKitNote.h */,
+			);
+			path = FJReplayKit;
+			sourceTree = "<group>";
+		};
 		0B9EED5D27E9646B001656EA /* YSUIntent */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +526,15 @@
 			children = (
 				5F701F2620E502F6006E9E61 /* AppDelegate.h */,
 				5F701F2720E502F6006E9E61 /* AppDelegate.m */,
+				0B8DFEEA2A6AFAA2009DB391 /* XSPeople.h */,
+				0B8DFEEB2A6AFAA2009DB391 /* XSPeople.m */,
+				0B8DFEF62A6B80F9009DB391 /* XSPeople+Test.h */,
+				0B8DFEF32A6AFBC4009DB391 /* XSPeople+Speak.h */,
+				0B8DFEF42A6AFBC4009DB391 /* XSPeople+Speak.m */,
+				0B8DFEF02A6AFAEE009DB391 /* XSPeople+Eat.h */,
+				0B8DFEF12A6AFAEE009DB391 /* XSPeople+Eat.m */,
+				0B8DFEED2A6AFAAE009DB391 /* XSSubPeople.h */,
+				0B8DFEEE2A6AFAAE009DB391 /* XSSubPeople.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -600,6 +636,7 @@
 		5F66A06120FDC88700FAA4A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0B8DFEFB2A6CDBEB009DB391 /* FJReplayKit */,
 				0BFBEF5026E86A8500FC52A4 /* SBLog.h */,
 				5F66A06820FDC94600FAA4A8 /* YSUUtils.h */,
 				5F66A06920FDC94600FAA4A8 /* YSUUtils.m */,
@@ -859,6 +896,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B8DFEF22A6AFAEE009DB391 /* XSPeople+Eat.m in Sources */,
 				0B8B127127F7F6470041B825 /* XSCategoryViewController.m in Sources */,
 				0B9EED6227E964EE001656EA /* UIViewController+Intent.m in Sources */,
 				5F16E75920EA778600D30798 /* XSRootViewController.m in Sources */,
@@ -881,10 +919,13 @@
 				5F66A06A20FDC94600FAA4A8 /* YSUUtils.m in Sources */,
 				5FB9EF0F219C183600B033B6 /* XSIndexModel.m in Sources */,
 				0BFBEF5926E86F7D00FC52A4 /* XSLocationManager.m in Sources */,
+				0B8DFEF52A6AFBC4009DB391 /* XSPeople+Speak.m in Sources */,
 				0BEDE73B2758E39400528024 /* XSTestViewController.m in Sources */,
 				0B34041B2A6A355800EC1104 /* QiLagDB.m in Sources */,
 				0B507FB727633934000883F2 /* HFPopView.m in Sources */,
+				0B8DFEFA2A6CDBE7009DB391 /* FJReplayKit.m in Sources */,
 				0B4B62C626F198BA00060E44 /* XSReachability.m in Sources */,
+				0B8DFEEF2A6AFAAE009DB391 /* XSSubPeople.m in Sources */,
 				0BE3648527F84EC70068A367 /* XSCategoryViewCellTypeViewController.m in Sources */,
 				0BEDE7452760930B00528024 /* XSUIUtils.m in Sources */,
 				0BBA80D027001C250085ACB9 /* UIView+Action.m in Sources */,
@@ -906,6 +947,7 @@
 				5F0570EB21B5582F003BE787 /* XSSlider.m in Sources */,
 				0BFBEF6026E8C01000FC52A4 /* XSSwizzle.m in Sources */,
 				5FB9EF0C219C15CC00B033B6 /* XSRtmpViewController.m in Sources */,
+				0B8DFEEC2A6AFAA2009DB391 /* XSPeople.m in Sources */,
 				0BBA80CB27001BF10085ACB9 /* NSString+Trim.m in Sources */,
 				0B9EED6727E965C8001656EA /* YSUIntent.m in Sources */,
 				0B8DFEE52A6A4DFA009DB391 /* NJKWebViewProgress.m in Sources */,

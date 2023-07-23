@@ -13,6 +13,9 @@
 //#import "Sentry.h"
 #import "ShadowBase.h"
 
+#import "XSPeople.h"
+#import "XSSubPeople.h"
+
 @interface AppDelegate ()
 
 @end
@@ -23,21 +26,37 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [QiCallTrace start];
+    XSSubPeople *people = [[XSSubPeople alloc] init];
+//    XSSubPeople *people2 = [[XSSubPeople alloc] init];
     
-    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    XSSplashViewController *splashViewcontroller = [[XSSplashViewController alloc] init];
-    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:splashViewcontroller];
-    self.window.rootViewController = navigationViewController;
-    [self.window makeKeyAndVisible];
-    self.window.backgroundColor = UIColor.whiteColor;
     
-    [self setupShadowBase:launchOptions];
-//    [self setupBugly];
-    [self setupSenty];
+//    NSString *testString = [people valueForKey:@"testStringaaaa"];
     
-    [QiCallTrace stop];
-    [QiCallTrace save];
+    if ([people respondsToSelector:@selector(testString)]) {
+    
+        NSString *testString = [people valueForKeyPath:@"testString"];
+        
+        NSLog(@"%@",testString);
+    }
+    
+//    NSString *testString = people val
+    
+//    NSLog(@"%@",testString);
+//    [QiCallTrace start];
+//
+//    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    XSSplashViewController *splashViewcontroller = [[XSSplashViewController alloc] init];
+//    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:splashViewcontroller];
+//    self.window.rootViewController = navigationViewController;
+//    [self.window makeKeyAndVisible];
+//    self.window.backgroundColor = UIColor.whiteColor;
+//
+//    [self setupShadowBase:launchOptions];
+////    [self setupBugly];
+//    [self setupSenty];
+//
+//    [QiCallTrace stop];
+//    [QiCallTrace save];
     
     return YES;
 }
