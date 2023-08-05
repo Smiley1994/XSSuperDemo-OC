@@ -8,6 +8,8 @@
 
 #import "XSIndexViewController.h"
 #import "RxWebViewController.h"
+/// 导入这个类
+#import <NetworkExtension/NetworkExtension.h>
 
 #import "XSUIMacro.h"
 #import "XSIndexCell.h"
