@@ -14,7 +14,11 @@
 #import "XSRootViewController.h"
 #import <objc/objc.h>
 
-@interface XSSplashViewController () {
+#import "BeeHive.h"
+
+#import "XSSplashServerProtocol.h"
+
+@interface XSSplashViewController () <XSSplashServerProtocol>{
     
     iQiYiPlayButton *_iQiYiPlayButton;
     YouKuPlayButton *_youKuPlayButton;
@@ -22,6 +26,7 @@
 
 @end
 
+@BeeHiveService(XSSplashServerProtocol,XSSplashViewController)
 @implementation XSSplashViewController
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -48,54 +53,14 @@
     
     [self openRootViewController];
     
-//    char a = 10;
-//
-//    printf("修改前，a的值：%d\n", a);
-//
-//    char *p = &a;
-//
-//    *p = 9;
-//
-//    printf("修改前，a的值：%d\n", a);
-//
-//    char value = *p;
-//
-//    printf("que a的值：%d", value);
-    
-//    char a= 10, b = 20;
-    
-//    printf("更换前：a = %d, b = %d\n", a, b);
-//    swapA(10, 20);
-//    swapB(&a, &b);
-//    printf("更换后：a=%d, b=%d\n", a, b);
+}
+
+- (void)setupParameter:(NSDictionary *)dic {
     
 }
 
-int sumAndMinus(int v1, int v2, int sum) {
-    
-    return v1 + v2;
-}
 
-void swapA(char v1,char v2) {
-    printf("交换前：v1 = %d, v2 = %d \n",v1, v2);
-    char temp;
-    temp = v1;
-    v1 = v2;
-    v2 = temp;
-    printf("交换后：v1 = %d, v2 = %d \n",v1, v2);
-}
-
-void swapB(char *v1, char *v2) {
-    char temp;
-    
-    temp = *v1;
-    
-    *v1 = *v2;
-    
-    *v2 = temp;
-}
-
-- (void) openRootViewController {
+- (void)openRootViewController {
     XSRootViewController *rootViewController = [[XSRootViewController alloc] init];
     
     [UIApplication sharedApplication].keyWindow.rootViewController = rootViewController;

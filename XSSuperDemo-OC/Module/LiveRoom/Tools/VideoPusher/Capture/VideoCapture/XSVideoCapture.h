@@ -15,9 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol XSVideoCapturerDelegate <NSObject>
 
 /// 开始采集
+@optional
 - (void)startVideoCapture;
 
 /// 停止采集
+@optional
 - (void)stopVideoCapture;
 
 /// 摄像头采集数据输出
@@ -55,10 +57,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 代理
 @property (nonatomic, weak) id<XSVideoCapturerDelegate> delegate;
 
+#pragma mark - Initializer
+- (nullable instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (nullable instancetype)new UNAVAILABLE_ATTRIBUTE;
+
 /// 初始化方法
 /// @param param 参数
 /// @param error 报错信息
-- (instancetype)initWithCaptureParam:(XSVideoCapturerParam *)param error:(NSError **)error;
+- (nullable instancetype)initWithCaptureParam:(XSVideoCapturerParam *)param error:(NSError **)error NS_DESIGNATED_INITIALIZER;
 
 /// 开始采集
 - (NSError *)startCapture;

@@ -8,10 +8,15 @@
 
 #import "XSMediaViewController.h"
 #import "XSRtmpViewController.h"
+
+#import "XSLiveRoomServerProtocol.h"
+#import "XSLiveRoomViewController.h"
+
 #import "XSUIMacro.h"
 #import "XSMediaCell.h"
 #import "XSIndexModel.h"
 
+#import "BeeHive.h"
 #import "Masonry.h"
 
 @interface XSMediaViewController ()<UITableViewDelegate, UITableViewDataSource>
@@ -39,6 +44,11 @@
     rtmpModel.type = MEDIA_CELL;
     [self.dataArray addObject:rtmpModel];
     
+    XSIndexModel *liveRoomModel = [[XSIndexModel alloc] init];
+    liveRoomModel.title = @"LIVEROOM";
+    liveRoomModel.type = LIVE_ROOM_CELL;
+    [self.dataArray addObject:liveRoomModel];
+    
     XSIndexModel *otherModel = [[XSIndexModel alloc] init];
     otherModel.title = @"OTHER";
     otherModel.type = OTHER_CELL;
@@ -59,14 +69,6 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).with.inset(0);
     }];
-//    UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
-//    [self.tableView addConstraints:@[[NSLayoutConstraint constraintWithItem:_tableView
-//                                     attribute:NSLayoutAttributeTop
-//                                     relatedBy:NSLayoutRelationEqual
-//                                     toItem:self.view
-//                                     attribute:NSLayoutAttributeTop
-//                                     multiplier:1.0
-//                                     constant:padding.top],]];
     
 }
 
@@ -92,6 +94,10 @@
             [ self openRtmpViewController];
             break;
             
+        case LIVE_ROOM_CELL:
+            [ self openLiveRoomViewController];
+            break;
+            
         case OTHER_CELL:
             
             break;
@@ -106,6 +112,15 @@
     XSRtmpViewController *rtmpViewController = [[XSRtmpViewController alloc] init];
     rtmpViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:rtmpViewController animated:YES];
+}
+
+
+- (void)openLiveRoomViewController {
+    
+    id<XSLiveRoomServerProtocol> liveRoom = [[BeeHive shareInstance] createService:@protocol(XSLiveRoomServerProtocol)];
+    
+    [self.navigationController pushViewController:(UIViewController *)liveRoom animated:YES];
+    
 }
 
 

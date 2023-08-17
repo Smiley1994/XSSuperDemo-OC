@@ -7,7 +7,25 @@
 //
 
 #import "XSLiveRoomModule.h"
+#import "BeeHive.h"
+
+@interface XSLiveRoomModule () <BHModuleProtocol>
+
+@end
 
 @implementation XSLiveRoomModule
+
+
+- (void)modSetUp:(BHContext *)context {
+    
+}
+
+- (void)modWillEnterForeground:(BHContext *)context {
+    
+}
+
+- (void)modDidEnterBackground:(BHContext *)context {
+    
+}
 
 @end

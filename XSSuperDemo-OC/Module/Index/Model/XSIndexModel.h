@@ -16,6 +16,7 @@ static NSInteger const WEB_CELL = 2;
 static NSInteger const CARD_CELL = 3;
 static NSInteger const CRASH_CELL = 4;
 static NSInteger const CATEGORY_CELL = 5;
+static NSInteger const LIVE_ROOM_CELL = 6;
 
 @interface XSIndexModel : NSObject
 

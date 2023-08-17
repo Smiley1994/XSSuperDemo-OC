@@ -7,6 +7,7 @@
 //
 
 #import "SRMemoryLeakMonitor.h"
+#import <objc/runtime.h>
 
 @interface SRMemoryLeakMonitor ()
 

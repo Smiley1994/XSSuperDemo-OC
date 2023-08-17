@@ -41,28 +41,28 @@
     [self setupData];
     [self createTaleView];
     
-    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
-    
-    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+//    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+//
+//    self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     
 }
 
-- (void)refreshData {
-    
-    // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 结束刷新
-        [self.tableView.mj_header endRefreshing];
-    });
-}
-
-- (void)loadMoreData {
-    // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 结束刷新
-        [self.tableView.mj_footer endRefreshing];
-    });
-}
+//- (void)refreshData {
+//
+//    // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 结束刷新
+//        [self.tableView.mj_header endRefreshing];
+//    });
+//}
+//
+//- (void)loadMoreData {
+//    // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        // 结束刷新
+//        [self.tableView.mj_footer endRefreshing];
+//    });
+//}
 
 - (void)setupData {
     self.dataArray = [[NSMutableArray alloc]init];
@@ -134,7 +134,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%s------>%ld", __FUNCTION__,(long)indexPath.row);
+    
     XSIndexModel *model = self.dataArray[indexPath.row];
     
     switch (model.type) {

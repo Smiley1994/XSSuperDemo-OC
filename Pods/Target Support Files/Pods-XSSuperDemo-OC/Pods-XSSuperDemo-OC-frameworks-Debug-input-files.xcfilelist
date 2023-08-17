@@ -1,4 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BeeHive/BeeHive.framework
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
 ${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework
 ${BUILT_PRODUCTS_DIR}/HFCategoryView/HFCategoryView.framework
 ${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework

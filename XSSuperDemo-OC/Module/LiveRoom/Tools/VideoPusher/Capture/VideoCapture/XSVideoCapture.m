@@ -304,7 +304,7 @@
     
 }
 
-#pragma mark - Privte
+#pragma mark - Private
 
 - (NSError *)adjustFrameRate:(NSInteger)frameRate {
 

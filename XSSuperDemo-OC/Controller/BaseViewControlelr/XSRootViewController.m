@@ -31,7 +31,7 @@
     indexViewController.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_home_index"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     indexViewController.tabBarItem.title = @" ";
     indexViewController.tabBarItem.tag = 0;
-    [indexViewController.tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16], NSForegroundColorAttributeName : [UIColor clearColor]} forState:UIControlStateHighlighted];
+    [indexViewController.tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16], NSForegroundColorAttributeName : [UIColor clearColor]} forState:UIControlStateSelected];
     
     UINavigationController *indexNavigationController = [[UINavigationController alloc] initWithRootViewController:indexViewController];
     
@@ -40,7 +40,7 @@
     userViewController.tabBarItem.selectedImage = [[UIImage imageNamed:@"tab_user_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     userViewController.tabBarItem.title = @"user";
     userViewController.tabBarItem.tag = 1;
-    [userViewController.tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16], NSForegroundColorAttributeName : [UIColor redColor                                                         ]} forState:UIControlStateHighlighted];
+    [userViewController.tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16], NSForegroundColorAttributeName : [UIColor redColor                                                         ]} forState:UIControlStateSelected];
     
     UINavigationController *userNavigationController = [[UINavigationController alloc] initWithRootViewController:userViewController];
     
@@ -51,7 +51,7 @@
     
 }
 
-- (void) tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     self.selectedIndex = item.tag;
 }
 

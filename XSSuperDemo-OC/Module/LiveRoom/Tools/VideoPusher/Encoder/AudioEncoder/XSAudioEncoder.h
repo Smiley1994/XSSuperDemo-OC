@@ -1,8 +1,8 @@
 //
-//  XSVideoEncoder.h
+//  XSAudioEncoder.h
 //  XSSuperDemo-OC
 //
-//  Created by GoodMorning on 2023/8/10.
+//  Created by GoodMorning on 2023/8/14.
 //  Copyright © 2023 GoodMorning. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XSVideoEncoder : NSObject
+@interface XSAudioEncoder : NSObject
 
 @end
 

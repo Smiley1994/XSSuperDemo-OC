@@ -1,4 +1,8 @@
 PODS:
+  - BeeHive (1.6.0)
+  - CocoaLumberjack (3.6.2):
+    - CocoaLumberjack/Core (= 3.6.2)
+  - CocoaLumberjack/Core (3.6.2)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
@@ -21,6 +25,8 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - BeeHive
+  - CocoaLumberjack (= 3.6.2)
   - FMDB
   - HFCategoryView (from `Module/HFCategoryView/`)
   - Masonry
@@ -32,6 +38,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - BeeHive
+    - CocoaLumberjack
     - FMDB
     - Masonry
     - MJRefresh
@@ -53,6 +61,8 @@ CHECKOUT OPTIONS:
     :tag: 7.3.0
 
 SPEC CHECKSUMS:
+  BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
+  CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   HFCategoryView: 0a665f69ace233b98a90e4f77c1f1644af0f378b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -62,6 +72,6 @@ SPEC CHECKSUMS:
   XSIntent: 39902b2eed07df1b8754c61e82bd651e34d12dc9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 7a8d5da121189da3bc1bb7a00458ae691d8ae902
+PODFILE CHECKSUM: a7d866bd29c68be172cea9d9690894894ceede82
 
 COCOAPODS: 1.11.3
