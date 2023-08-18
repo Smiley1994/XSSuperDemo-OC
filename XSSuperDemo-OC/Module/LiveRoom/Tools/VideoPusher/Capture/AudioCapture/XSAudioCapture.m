@@ -71,10 +71,18 @@
             
             // 开始采集。
             OSStatus startStatus = AudioOutputUnitStart(weakSelf.audioCaptureInstance);
+            
             if (startStatus != noErr) {
                 // 捕捉并回调开始采集时的错误。
                 [weakSelf callBackError:[NSError errorWithDomain:NSStringFromClass([XSAudioCapture class]) code:startStatus userInfo:nil]];
             }
+            
+            if (self.delegate && [self.delegate respondsToSelector:@selector(startAudioCapture)]) {
+                
+                [self.delegate startAudioCapture];
+                
+            }
+            
         });
     
 }
@@ -83,19 +91,27 @@
     
     if (self.isError) {
             return;
-        }
         
-        __weak typeof(self) weakSelf = self;
-        dispatch_async(_captureQueue, ^{
-            if (weakSelf.audioCaptureInstance) {
-                // 停止采集。
-                OSStatus stopStatus = AudioOutputUnitStop(weakSelf.audioCaptureInstance);
-                if (stopStatus != noErr) {
-                    // 捕捉并回调停止采集时的错误。
-                    [weakSelf callBackError:[NSError errorWithDomain:NSStringFromClass([XSAudioCapture class]) code:stopStatus userInfo:nil]];
-                }
+    }
+        
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(_captureQueue, ^{
+        if (weakSelf.audioCaptureInstance) {
+            // 停止采集。
+            OSStatus stopStatus = AudioOutputUnitStop(weakSelf.audioCaptureInstance);
+            if (stopStatus != noErr) {
+                // 捕捉并回调停止采集时的错误。
+                [weakSelf callBackError:[NSError errorWithDomain:NSStringFromClass([XSAudioCapture class]) code:stopStatus userInfo:nil]];
             }
-        });
+        }
+    });
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(stopAudioCapture)]) {
+        
+        [self.delegate stopAudioCapture];
+        
+    }
+    
     
 }
 
@@ -245,13 +261,21 @@ static OSStatus audioBufferCallBack(void *inRefCon,
         if (status == noErr) {
             // 使用工具方法将数据封装为 CMSampleBuffer。
             CMSampleBufferRef sampleBuffer = [XSAudioCapture sampleBufferFromAudioBufferList:buffers inTimeStamp:inTimeStamp inNumberFrames:inNumberFrames description:capture.audioFormat];
+            
             // 回调数据。
             if (capture.sampleBufferOutputCallBack) {
                 capture.sampleBufferOutputCallBack(sampleBuffer);
             }
+            
+            if (capture.delegate &&[capture.delegate respondsToSelector:@selector(audioCaptureOutputSampleBuffer:)]) {
+                
+                [capture.delegate audioCaptureOutputSampleBuffer:sampleBuffer];
+            }
+            
             if (sampleBuffer) {
                 CFRelease(sampleBuffer);
             }
+            
         }
         
         return status;

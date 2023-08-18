@@ -15,9 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol XSAudioCapturerDelegate <NSObject>
 
 /// 开始采集
+@optional
 - (void)startAudioCapture;
 
 /// 停止采集
+@optional
 - (void)stopAudioCapture;
 
 /// 摄像头采集数据输出
@@ -46,6 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void (^sampleBufferOutputCallBack)(CMSampleBufferRef sample);
 /// 音频采集错误回调
 @property (nonatomic, copy) void (^errorCallBack)(NSError *error);
+
+/// 代理
+@property (nonatomic, weak) id<XSAudioCapturerDelegate> delegate;
 
 #pragma mark - Initializer
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;

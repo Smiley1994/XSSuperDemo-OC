@@ -58,13 +58,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id<XSVideoCapturerDelegate> delegate;
 
 #pragma mark - Initializer
-- (nullable instancetype)init UNAVAILABLE_ATTRIBUTE;
-+ (nullable instancetype)new UNAVAILABLE_ATTRIBUTE;
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
 
 /// 初始化方法
 /// @param param 参数
 /// @param error 报错信息
-- (nullable instancetype)initWithCaptureParam:(XSVideoCapturerParam *)param error:(NSError **)error NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithCaptureParam:(XSVideoCapturerParam *)param error:(NSError **)error NS_DESIGNATED_INITIALIZER;
 
 /// 开始采集
 - (NSError *)startCapture;
