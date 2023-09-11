@@ -1,6 +1,17 @@
 # Uncomment the next line to define a global platform for your project
-#platform :ios, '9.0'
+platform :ios, '11.0'
 inhibit_all_warnings!
+
+post_install do |installer|
+  # 消除版本警告
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 11.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+      end
+    end
+  end
+end
 
 target 'XSSuperDemo-OC' do 
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -24,3 +35,4 @@ target 'XSSuperDemo-OC' do
   # Pods for XSSuperDemo-OC
 
 end
+

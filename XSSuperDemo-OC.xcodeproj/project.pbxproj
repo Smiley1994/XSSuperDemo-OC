@@ -104,6 +104,8 @@
 		5FB9EF35219C4C7200B033B6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */; };
 		71A8994A288652FE009391B5 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A89949288652FE009391B5 /* YYFPSLabel.m */; };
 		930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */; };
+		FC26CD082AAEDA27006F59E0 /* XSVideoListModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26CD072AAEDA27006F59E0 /* XSVideoListModule.m */; };
+		FC26CD0D2AAEDA86006F59E0 /* XSVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26CD0C2AAEDA86006F59E0 /* XSVideoListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -299,6 +301,11 @@
 		71A89949288652FE009391B5 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSSuperDemo_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE51447A990D50895BD2D20 /* Pods-XSSuperDemo-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSSuperDemo-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC.debug.xcconfig"; sourceTree = "<group>"; };
+		FC26CD062AAEDA27006F59E0 /* XSVideoListModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSVideoListModule.h; sourceTree = "<group>"; };
+		FC26CD072AAEDA27006F59E0 /* XSVideoListModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSVideoListModule.m; sourceTree = "<group>"; };
+		FC26CD092AAEDA5B006F59E0 /* XSVideoListServerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSVideoListServerProtocol.h; sourceTree = "<group>"; };
+		FC26CD0B2AAEDA86006F59E0 /* XSVideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSVideoListViewController.h; sourceTree = "<group>"; };
+		FC26CD0C2AAEDA86006F59E0 /* XSVideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSVideoListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -437,6 +444,7 @@
 		0B8B126E27F7F5F50041B825 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				FC26CD052AAED9E7006F59E0 /* VideoList */,
 				5F16E75A20EA793200D30798 /* User */,
 				5F16E74F20EA751E00D30798 /* Index */,
 				0BFFB7412A7E2425005427EE /* LiveRoom */,
@@ -991,6 +999,26 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		FC26CD052AAED9E7006F59E0 /* VideoList */ = {
+			isa = PBXGroup;
+			children = (
+				FC26CD092AAEDA5B006F59E0 /* XSVideoListServerProtocol.h */,
+				FC26CD062AAEDA27006F59E0 /* XSVideoListModule.h */,
+				FC26CD072AAEDA27006F59E0 /* XSVideoListModule.m */,
+				FC26CD0A2AAEDA64006F59E0 /* Controllers */,
+			);
+			path = VideoList;
+			sourceTree = "<group>";
+		};
+		FC26CD0A2AAEDA64006F59E0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC26CD0B2AAEDA86006F59E0 /* XSVideoListViewController.h */,
+				FC26CD0C2AAEDA86006F59E0 /* XSVideoListViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1185,6 +1213,7 @@
 				5F0570EB21B5582F003BE787 /* XSSlider.m in Sources */,
 				0BFBEF6026E8C01000FC52A4 /* XSSwizzle.m in Sources */,
 				5FB9EF0C219C15CC00B033B6 /* XSRtmpViewController.m in Sources */,
+				FC26CD0D2AAEDA86006F59E0 /* XSVideoListViewController.m in Sources */,
 				0B8DFEEC2A6AFAA2009DB391 /* XSPeople.m in Sources */,
 				0BBA80CB27001BF10085ACB9 /* NSString+Trim.m in Sources */,
 				0B9EED6727E965C8001656EA /* YSUIntent.m in Sources */,
@@ -1192,6 +1221,7 @@
 				5F6F7538221FA5360045A3BC /* XSCardViewController.m in Sources */,
 				0BBA80D127001C250085ACB9 /* UIView+ExtraTag.m in Sources */,
 				5F701F3620E502F8006E9E61 /* main.m in Sources */,
+				FC26CD082AAEDA27006F59E0 /* XSVideoListModule.m in Sources */,
 				0B8DFEE72A6A4DFA009DB391 /* RxWebViewController.m in Sources */,
 				0BCA05752A87B91100DFCB25 /* XSVideoDecoder.m in Sources */,
 				5F6F7542221FA5570045A3BC /* QiCardViewCell.m in Sources */,
