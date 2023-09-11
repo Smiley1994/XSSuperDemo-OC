@@ -81,6 +81,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 旋转
 - (void)rotate;
 
+// reset 
+- (void)reset;
+
 @end
 
 NS_ASSUME_NONNULL_END

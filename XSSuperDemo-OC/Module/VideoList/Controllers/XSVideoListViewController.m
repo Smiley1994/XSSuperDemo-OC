@@ -22,7 +22,7 @@
 
 @property (nonatomic, strong) MTPlayerManager *playerManager;
 
-@property (nonatomic, strong) UIView *myView;
+@property (nonatomic, strong) UIButton *backButton;
 
 @end
 
@@ -55,10 +55,18 @@
     self.view.backgroundColor = [UIColor blackColor];
     
     [self.view addSubview:self.playerManager.verticalSortVideoScrollView];
-    
     [self.playerManager.verticalSortVideoScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
+    
+    self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.backButton.frame = CGRectMake(10, 20, 100, 30);
+    [self.backButton setTitle:@"返回" forState:UIControlStateNormal];
+    [self.backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.backButton addTarget:self action:@selector(backButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.backButton];
+    
+    
     
 }
 
@@ -95,11 +103,24 @@
     
 }
 
+- (void)backButtonClick {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
 - (MTPlayerManager *)playerManager {
     if(!_playerManager) {
         _playerManager = [[MTPlayerManager alloc] init];
     }
     return _playerManager;
+}
+
+- (void)dealloc {
+    
+    [self.playerManager reset];
+    self.playerManager = nil;
+    
 }
 
 

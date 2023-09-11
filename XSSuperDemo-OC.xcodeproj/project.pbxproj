@@ -580,8 +580,8 @@
 		0B9E43A42AAF5CE000914E23 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				0B9E43A52AAF5CE000914E23 /* MTPlayerManager.m */,
 				0B9E43A62AAF5CE000914E23 /* MTPlayerManager.h */,
+				0B9E43A52AAF5CE000914E23 /* MTPlayerManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";

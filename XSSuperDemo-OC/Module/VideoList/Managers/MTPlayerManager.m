@@ -42,6 +42,10 @@
     [self stop];
 }
 
+- (void)reset {
+    [self stop];
+}
+
 - (void)initPlayer {
     // 初始化播放器
     ZFAVPlayerManager *manager = [[ZFAVPlayerManager alloc] init];
