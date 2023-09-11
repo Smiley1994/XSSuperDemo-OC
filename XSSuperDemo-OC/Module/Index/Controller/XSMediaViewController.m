@@ -12,6 +12,9 @@
 #import "XSLiveRoomServerProtocol.h"
 #import "XSLiveRoomViewController.h"
 
+#import "XSVideoListServerProtocol.h"
+#import "XSVideoListViewController.h"
+
 #import "XSUIMacro.h"
 #import "XSMediaCell.h"
 #import "XSIndexModel.h"
@@ -40,8 +43,8 @@
     self.dataArray = [[NSMutableArray alloc]init];
     
     XSIndexModel *rtmpModel = [[XSIndexModel alloc] init];
-    rtmpModel.title = @"RTMP Player";
-    rtmpModel.type = MEDIA_CELL;
+    rtmpModel.title = @"VideoList";
+    rtmpModel.type = VIDEO_LIST_CELL;
     [self.dataArray addObject:rtmpModel];
     
     XSIndexModel *liveRoomModel = [[XSIndexModel alloc] init];
@@ -86,12 +89,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%s------>%ld", __FUNCTION__,(long)indexPath.row);
+    
     XSIndexModel *model = self.dataArray[indexPath.row];
     
     switch (model.type) {
-        case MEDIA_CELL:
-            [ self openRtmpViewController];
+        case VIDEO_LIST_CELL:
+            [ self openVideoListViewController];
             break;
             
         case LIVE_ROOM_CELL:
@@ -120,6 +123,14 @@
     id<XSLiveRoomServerProtocol> liveRoom = [[BeeHive shareInstance] createService:@protocol(XSLiveRoomServerProtocol)];
     
     [self.navigationController pushViewController:(UIViewController *)liveRoom animated:YES];
+    
+}
+
+- (void)openVideoListViewController {
+    
+    id<XSVideoListServerProtocol> videoList = [[BeeHive shareInstance] createService:@protocol(XSVideoListServerProtocol)];
+    [videoList setupParameter:@{@"key":@"value"}];
+    [self.navigationController pushViewController:(XSVideoListViewController *)videoList animated:YES];
     
 }
 

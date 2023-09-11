@@ -7,7 +7,6 @@
 //
 
 #import "XSIndexViewController.h"
-#import "RxWebViewController.h"
 /// 导入这个类
 #import <NetworkExtension/NetworkExtension.h>
 
@@ -183,12 +182,12 @@
 }
 
 - (void)openWebViewController {
-    RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
-    
-    if (webView.webView.canGoBack) {
-        [webView.webView goBack];
-    }
-    [self.navigationController pushViewController:webView animated:YES];
+//    RxWebViewController *webView = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"https://github.com/Smiley1994"]];
+//
+//    if (webView.webView.canGoBack) {
+//        [webView.webView goBack];
+//    }
+//    [self.navigationController pushViewController:webView animated:YES];
 }
 
 -(void)openCrashViewController {

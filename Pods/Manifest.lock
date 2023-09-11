@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - BeeHive (1.6.0)
   - CocoaLumberjack (3.6.2):
     - CocoaLumberjack/Core (= 3.6.2)
@@ -23,8 +38,12 @@ PODS:
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
+  - ZFPlayer/AVPlayer (4.1.4):
+    - ZFPlayer/Core
+  - ZFPlayer/Core (4.1.4)
 
 DEPENDENCIES:
+  - AFNetworking
   - BeeHive
   - CocoaLumberjack (= 3.6.2)
   - FMDB
@@ -35,9 +54,11 @@ DEPENDENCIES:
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `7.3.0`)
   - XSIntent (from `Module/XSIntent/`)
   - YYKit
+  - ZFPlayer/AVPlayer
 
 SPEC REPOS:
   trunk:
+    - AFNetworking
     - BeeHive
     - CocoaLumberjack
     - FMDB
@@ -45,6 +66,7 @@ SPEC REPOS:
     - MJRefresh
     - ReactiveCocoa
     - YYKit
+    - ZFPlayer
 
 EXTERNAL SOURCES:
   HFCategoryView:
@@ -61,6 +83,7 @@ CHECKOUT OPTIONS:
     :tag: 7.3.0
 
 SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -71,7 +94,8 @@ SPEC CHECKSUMS:
   Sentry: 9a4e621430e2dae4477d791f2f7e905720b6efbf
   XSIntent: 39902b2eed07df1b8754c61e82bd651e34d12dc9
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZFPlayer: 5cf39e8d9f0c2394a014b0db4767b5b5a6bffe13
 
-PODFILE CHECKSUM: 1dabefde8969ab8d0c2931ab5e9881d446cfd776
+PODFILE CHECKSUM: a899b6e3b5d3fb5032ccb69acd8ffe9849b586f0
 
 COCOAPODS: 1.12.1

@@ -11,6 +11,9 @@
 #import "BHTimeProfiler.h"
 #import "BHModuleManager.h"
 #import "BHServiceManager.h"
+#import "GKRotationManager.h"
+#import <ZFPlayer/ZFLandscapeRotationManager.h>
+#import <mach-o/dyld.h>
 
 #import "XSSplashServerProtocol.h"
 #import "XSSplashViewController.h"
@@ -21,8 +24,6 @@
 
 #import "XSPeople.h"
 #import "XSSubPeople.h"
-
-#import <mach-o/dyld.h>
 
 @interface AppDelegate ()
 
@@ -243,6 +244,19 @@ void testAutoRelease(void){
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    GKInterfaceOrientationMask mask = [GKRotationManager supportedInterfaceOrientationsForWindow:window];
+    if (mask != GKInterfaceOrientationMaskUnknow) {
+        return (UIInterfaceOrientationMask)mask;
+    }
+    
+    ZFInterfaceOrientationMask orientationMask = [ZFLandscapeRotationManager supportedInterfaceOrientationsForWindow:window];
+    if (orientationMask != ZFInterfaceOrientationMaskUnknow) {
+        return (UIInterfaceOrientationMask)orientationMask;
+    }
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 

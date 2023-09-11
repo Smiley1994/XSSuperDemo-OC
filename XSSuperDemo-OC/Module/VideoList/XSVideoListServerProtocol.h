@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol XSVideoListServerProtocol <NSObject, BHServiceProtocol>
 
-
 - (void)setupParameter:(NSDictionary *)parameter;
 
 @end
