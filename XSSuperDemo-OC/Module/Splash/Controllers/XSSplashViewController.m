@@ -34,10 +34,22 @@
     [self.navigationController setNavigationBarHidden:YES];
 }
 
+void
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.backgroundColor = UIColor.whiteColor;
+    
+    auto int age = 10;
+    static int height = 20;
+    void (^block)(void) = ^{
+        NSLog(@"age is %d, height is %d",age,height);
+    };
+    age = 20;
+    height = 30;
+    
+    block();
     
     //创建播放按钮，需要初始化一个状态，即显示暂停还是播放状态
 //    _iQiYiPlayButton = [[iQiYiPlayButton alloc] initWithFrame:CGRectMake(0, 0, 60, 60) state:iQiYiPlayButtonStatePlay];

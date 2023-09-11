@@ -13,6 +13,7 @@
 
 @end
 
+@BeeHiveMod(XSLiveRoomModule)
 @implementation XSLiveRoomModule
 
 

@@ -35,6 +35,7 @@
 		0B8DFEF22A6AFAEE009DB391 /* XSPeople+Eat.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEF12A6AFAEE009DB391 /* XSPeople+Eat.m */; };
 		0B8DFEF52A6AFBC4009DB391 /* XSPeople+Speak.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEF42A6AFBC4009DB391 /* XSPeople+Speak.m */; };
 		0B8DFEFA2A6CDBE7009DB391 /* FJReplayKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8DFEF92A6CDBE7009DB391 /* FJReplayKit.m */; };
+		0B9E434D2A9CFE3000914E23 /* SMLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E434C2A9CFE3000914E23 /* SMLagMonitor.m */; };
 		0B9EED6227E964EE001656EA /* UIViewController+Intent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED5F27E964EE001656EA /* UIViewController+Intent.m */; };
 		0B9EED6327E964EE001656EA /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED6127E964EE001656EA /* NSObject+Swizzling.m */; };
 		0B9EED6727E965C8001656EA /* YSUIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED6627E965C8001656EA /* YSUIntent.m */; };
@@ -164,6 +165,8 @@
 		0B8DFEF72A6CDBE7009DB391 /* FJReplayKitNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJReplayKitNote.h; sourceTree = "<group>"; };
 		0B8DFEF82A6CDBE7009DB391 /* FJReplayKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJReplayKit.h; sourceTree = "<group>"; };
 		0B8DFEF92A6CDBE7009DB391 /* FJReplayKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJReplayKit.m; sourceTree = "<group>"; };
+		0B9E434B2A9CFE3000914E23 /* SMLagMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMLagMonitor.h; sourceTree = "<group>"; };
+		0B9E434C2A9CFE3000914E23 /* SMLagMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMLagMonitor.m; sourceTree = "<group>"; };
 		0B9EED5E27E964EE001656EA /* UIViewController+Intent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Intent.h"; sourceTree = "<group>"; };
 		0B9EED5F27E964EE001656EA /* UIViewController+Intent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Intent.m"; sourceTree = "<group>"; };
 		0B9EED6027E964EE001656EA /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
@@ -485,6 +488,15 @@
 				0B8DFEF72A6CDBE7009DB391 /* FJReplayKitNote.h */,
 			);
 			path = FJReplayKit;
+			sourceTree = "<group>";
+		};
+		0B9E434A2A9CFE0400914E23 /* SMLagMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				0B9E434B2A9CFE3000914E23 /* SMLagMonitor.h */,
+				0B9E434C2A9CFE3000914E23 /* SMLagMonitor.m */,
+			);
+			path = SMLagMonitor;
 			sourceTree = "<group>";
 		};
 		0B9EED5D27E9646B001656EA /* YSUIntent */ = {
@@ -848,6 +860,7 @@
 		5F66A06120FDC88700FAA4A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0B9E434A2A9CFE0400914E23 /* SMLagMonitor */,
 				0B9EED5D27E9646B001656EA /* YSUIntent */,
 				0B8259542A737F26008E5B67 /* cpuMonitor */,
 				0B8DFEFB2A6CDBEB009DB391 /* FJReplayKit */,
@@ -1123,6 +1136,7 @@
 				0B8DFEE62A6A4DFA009DB391 /* NJKWebViewProgressView.m in Sources */,
 				71A8994A288652FE009391B5 /* YYFPSLabel.m in Sources */,
 				0BFBEF5C26E8A07300FC52A4 /* ShadowBaseConfig.m in Sources */,
+				0B9E434D2A9CFE3000914E23 /* SMLagMonitor.m in Sources */,
 				0B34041F2A6A355800EC1104 /* QiCallTrace.m in Sources */,
 				0BCA05862A893F7E00DFCB25 /* XSAudioEncoder.m in Sources */,
 				0BCA058A2A89421E00DFCB25 /* XSFFMpegMuxTool.m in Sources */,
@@ -1330,6 +1344,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				ORDER_FILE = "$(SRCROOT)/test.order";
 				PRODUCT_BUNDLE_IDENTIFIER = com.macrolor.superdemo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1361,6 +1376,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				ORDER_FILE = "$(SRCROOT)/test.order";
 				PRODUCT_BUNDLE_IDENTIFIER = com.macrolor.superdemo.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
