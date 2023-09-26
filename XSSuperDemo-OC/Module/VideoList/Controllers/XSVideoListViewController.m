@@ -18,7 +18,7 @@
 #import <YYKit/YYKit.h>
 #import <MJRefresh/MJRefresh.h>
 
-@interface XSVideoListViewController ()<XSVideoListServerProtocol>
+@interface XSVideoListViewController ()<XSVideoListServerProtocol, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) MTPlayerManager *playerManager;
 
@@ -33,15 +33,22 @@
     [super viewDidLoad];
     
     [self.navigationController setNavigationBarHidden:YES];
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     
     [self setupUI];
     [self requestDatas];
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
+    
 }
 
 #pragma mark - XSVideoListServerProtocol

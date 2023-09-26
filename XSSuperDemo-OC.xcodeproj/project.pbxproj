@@ -117,6 +117,10 @@
 		930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */; };
 		FC26CD082AAEDA27006F59E0 /* XSVideoListModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26CD072AAEDA27006F59E0 /* XSVideoListModule.m */; };
 		FC26CD0D2AAEDA86006F59E0 /* XSVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26CD0C2AAEDA86006F59E0 /* XSVideoListViewController.m */; };
+		FC94A58A2AC27808001CFE61 /* KKCustomDismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = FC94A5882AC27808001CFE61 /* KKCustomDismissAnimator.m */; };
+		FC97F3712AB3024200D0F9A1 /* XSLocaServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97F3702AB3024200D0F9A1 /* XSLocaServerManager.m */; };
+		FCA0B55C2ABACE9800F471EF /* NSString+XSData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA0B55B2ABACE9800F471EF /* NSString+XSData.m */; };
+		FCA0B5602ABAD70E00F471EF /* XSFileHandleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA0B55F2ABAD70E00F471EF /* XSFileHandleTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -341,6 +345,14 @@
 		FC26CD092AAEDA5B006F59E0 /* XSVideoListServerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSVideoListServerProtocol.h; sourceTree = "<group>"; };
 		FC26CD0B2AAEDA86006F59E0 /* XSVideoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSVideoListViewController.h; sourceTree = "<group>"; };
 		FC26CD0C2AAEDA86006F59E0 /* XSVideoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSVideoListViewController.m; sourceTree = "<group>"; };
+		FC94A5882AC27808001CFE61 /* KKCustomDismissAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCustomDismissAnimator.m; sourceTree = "<group>"; };
+		FC94A5892AC27808001CFE61 /* KKCustomDismissAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCustomDismissAnimator.h; sourceTree = "<group>"; };
+		FC97F36F2AB3024200D0F9A1 /* XSLocaServerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSLocaServerManager.h; sourceTree = "<group>"; };
+		FC97F3702AB3024200D0F9A1 /* XSLocaServerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSLocaServerManager.m; sourceTree = "<group>"; };
+		FCA0B55A2ABACE9800F471EF /* NSString+XSData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+XSData.h"; sourceTree = "<group>"; };
+		FCA0B55B2ABACE9800F471EF /* NSString+XSData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+XSData.m"; sourceTree = "<group>"; };
+		FCA0B55E2ABAD70E00F471EF /* XSFileHandleTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSFileHandleTool.h; sourceTree = "<group>"; };
+		FCA0B55F2ABAD70E00F471EF /* XSFileHandleTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSFileHandleTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -582,6 +594,8 @@
 			children = (
 				0B9E43A62AAF5CE000914E23 /* MTPlayerManager.h */,
 				0B9E43A52AAF5CE000914E23 /* MTPlayerManager.m */,
+				FC97F36F2AB3024200D0F9A1 /* XSLocaServerManager.h */,
+				FC97F3702AB3024200D0F9A1 /* XSLocaServerManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -941,6 +955,7 @@
 		5F66A05920FDC22C00FAA4A8 /* UIUtils */ = {
 			isa = PBXGroup;
 			children = (
+				FC94A5872AC27808001CFE61 /* KKCustomDismissAnimator */,
 				0B507FAD276338CD000883F2 /* HFPopView */,
 				0B3404032A6A318A00EC1104 /* XSPlayingLineView */,
 				0BFD59BA276332EF0091FE46 /* Buttons */,
@@ -955,6 +970,7 @@
 		5F66A06120FDC88700FAA4A8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FCA0B55D2ABAD6B400F471EF /* XSFileHandleTool */,
 				0B9E434A2A9CFE0400914E23 /* SMLagMonitor */,
 				0B9EED5D27E9646B001656EA /* YSUIntent */,
 				0B8259542A737F26008E5B67 /* cpuMonitor */,
@@ -976,6 +992,8 @@
 				0BBA80CC27001C250085ACB9 /* UIView+Action.m */,
 				0BBA80CE27001C250085ACB9 /* UIView+ExtraTag.h */,
 				0BBA80CD27001C250085ACB9 /* UIView+ExtraTag.m */,
+				FCA0B55A2ABACE9800F471EF /* NSString+XSData.h */,
+				FCA0B55B2ABACE9800F471EF /* NSString+XSData.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1108,6 +1126,24 @@
 				FC26CD0C2AAEDA86006F59E0 /* XSVideoListViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC94A5872AC27808001CFE61 /* KKCustomDismissAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				FC94A5892AC27808001CFE61 /* KKCustomDismissAnimator.h */,
+				FC94A5882AC27808001CFE61 /* KKCustomDismissAnimator.m */,
+			);
+			path = KKCustomDismissAnimator;
+			sourceTree = "<group>";
+		};
+		FCA0B55D2ABAD6B400F471EF /* XSFileHandleTool */ = {
+			isa = PBXGroup;
+			children = (
+				FCA0B55E2ABAD70E00F471EF /* XSFileHandleTool.h */,
+				FCA0B55F2ABAD70E00F471EF /* XSFileHandleTool.m */,
+			);
+			path = XSFileHandleTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1244,12 +1280,15 @@
 				0B9E43B72AAF5CE000914E23 /* MTSortVideoViewCell.m in Sources */,
 				0B9EED6227E964EE001656EA /* UIViewController+Intent.m in Sources */,
 				5F16E75920EA778600D30798 /* XSRootViewController.m in Sources */,
+				FC97F3712AB3024200D0F9A1 /* XSLocaServerManager.m in Sources */,
+				FCA0B55C2ABACE9800F471EF /* NSString+XSData.m in Sources */,
 				5FB9EF01219AF68200B033B6 /* XSIndexViewController.m in Sources */,
 				5F6F7541221FA5570045A3BC /* QiCardView.m in Sources */,
 				0B9EED6A27E96628001656EA /* YSUError.m in Sources */,
 				0B9E43B82AAF5CE000914E23 /* MTPlayerManager.m in Sources */,
 				0BB3E8262701649500FC78F9 /* XSCrashViewController.m in Sources */,
 				0B9E43AA2AAF5CE000914E23 /* GKRotationManager_iOS_9_15.m in Sources */,
+				FC94A58A2AC27808001CFE61 /* KKCustomDismissAnimator.m in Sources */,
 				0B9E43B22AAF5CE000914E23 /* MTSortVideoPanGestureRecognizer.m in Sources */,
 				0B9E43AF2AAF5CE000914E23 /* MTSortVideoOperationView.m in Sources */,
 				0B3404202A6A355800EC1104 /* QiLagMonitor.m in Sources */,
@@ -1302,6 +1341,7 @@
 				0BFFB74E2A7E281E005427EE /* XSLiveRoomContentView.m in Sources */,
 				0B34041A2A6A355800EC1104 /* QiCallStackModel.m in Sources */,
 				5F66A05F20FDC25C00FAA4A8 /* YouKuPlayButton.m in Sources */,
+				FCA0B5602ABAD70E00F471EF /* XSFileHandleTool.m in Sources */,
 				0B507FB627633934000883F2 /* UIView+Category.m in Sources */,
 				5FB9EEFE219AF66200B033B6 /* XSBaseViewController.m in Sources */,
 				0B43603D27A0E46800D1BEC0 /* XSPlayingLineView.m in Sources */,
@@ -1477,7 +1517,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				ORDER_FILE = "$(SRCROOT)/test.order";
-				PRODUCT_BUNDLE_IDENTIFIER = com.macrolor.superdemo.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macrolor.superdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1509,7 +1549,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				ORDER_FILE = "$(SRCROOT)/test.order";
-				PRODUCT_BUNDLE_IDENTIFIER = com.macrolor.superdemo.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macrolor.superdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;

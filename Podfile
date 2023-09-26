@@ -26,6 +26,7 @@ target 'XSSuperDemo-OC' do
   pod 'CocoaLumberjack', '=3.6.2' # 日志框架
   pod "BeeHive"
   pod 'ZFPlayer/AVPlayer'
+  pod "GCDWebServer", "~> 3.0"
   
   #
   pod 'XSIntent', :path => 'Module/XSIntent/'

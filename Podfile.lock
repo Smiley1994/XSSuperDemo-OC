@@ -21,6 +21,9 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
   - HFCategoryView (0.0.1)
   - Masonry (1.1.0)
   - MJRefresh (3.7.5)
@@ -47,6 +50,7 @@ DEPENDENCIES:
   - BeeHive
   - CocoaLumberjack (= 3.6.2)
   - FMDB
+  - GCDWebServer (~> 3.0)
   - HFCategoryView (from `Module/HFCategoryView/`)
   - Masonry
   - MJRefresh
@@ -62,6 +66,7 @@ SPEC REPOS:
     - BeeHive
     - CocoaLumberjack
     - FMDB
+    - GCDWebServer
     - Masonry
     - MJRefresh
     - ReactiveCocoa
@@ -87,6 +92,7 @@ SPEC CHECKSUMS:
   BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   HFCategoryView: 0a665f69ace233b98a90e4f77c1f1644af0f378b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
@@ -96,6 +102,6 @@ SPEC CHECKSUMS:
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   ZFPlayer: 5cf39e8d9f0c2394a014b0db4767b5b5a6bffe13
 
-PODFILE CHECKSUM: a899b6e3b5d3fb5032ccb69acd8ffe9849b586f0
+PODFILE CHECKSUM: cbc81dad3592f6d308bae50fd2165c817dfc8ae4
 
 COCOAPODS: 1.12.1

@@ -11,6 +11,7 @@
 #import "MTSortVideoViewHorizontalCell.h"
 
 #import "GKRotationManager.h"
+#import "XSLocaServerManager.h"
 
 #import <AFNetworking/AFNetworking.h>
 #import <ZFPlayer/ZFPlayer.h>
@@ -32,6 +33,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        
         [self initPlayer];
     }
     return self;
