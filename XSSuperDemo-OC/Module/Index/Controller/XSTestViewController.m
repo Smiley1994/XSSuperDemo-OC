@@ -13,8 +13,7 @@
 #import "RoomToolboxUnfoldView.h"
 #import "HFPopView.h"
 
-#import "YSUIntent.h"
-#import "UIViewController+Intent.h"
+#import <XSIntent/IntentFace.h>
 
 @interface XSTestViewController ()
 
@@ -26,6 +25,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupUI];
+    
+    NSDictionary *data = self.intent.intentData;
+    
+    
 }
 
 -(void)setupUI {
@@ -41,8 +44,8 @@
 
 - (void)click {
     
-    [self finishWithResultCode:RESULT_OK andResultData:@{@"aaa":@"111"}];
-//    [self cancel];
+//    [self finishWithResultCode:RESULT_OK andResultData:@{@"aaa":@"111"}];
+    [self cancel];
 }
 
 

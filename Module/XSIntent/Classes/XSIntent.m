@@ -1,24 +1,22 @@
 //
-//  YSUIntent.m
-//  YiShop
+//  XSIntent.m
+//  XSIntent
 //
-//  Created by 孙晓松 on 2016/11/14.
-//  Copyright © 2016年 秦皇岛商之翼网络科技有限公司. All rights reserved.
+//  Created by mt230824 on 2023/10/9.
 //
 
-#import "YSUIntent.h"
+#import "XSIntent.h"
 
-@interface YSUIntent()
+@interface XSIntent ()
 
 @property (nonatomic,strong) NSMutableDictionary *data;
 
 @end
 
-@implementation YSUIntent
+@implementation XSIntent
 
 - (instancetype)initWithClassName:(NSString *)className {
-    self = [super init];
-    if(self){
+    if(self = [super init]){
         self.data = [[NSMutableDictionary alloc]init];
         self.method = OPEN_METHOD_PUSH;
         self.animated = YES;
@@ -29,24 +27,14 @@
 }
 
 + (instancetype)intentWithClassName:(NSString *)className {
-    return  [[YSUIntent alloc]initWithClassName:className];
-}
-
-- (instancetype)init {
-    self = [super init];
-    if(self){
-        self.data = [[NSMutableDictionary alloc]init];
-        self.method = OPEN_METHOD_PUSH;
-        self.animated = YES;
-    }
-    return self;
+    return  [[XSIntent alloc]initWithClassName:className];
 }
 
 - (void)setObject:(id)object forKey:(NSString *)key {
     [self.data setObject:object forKey:key];
 }
 
-- (NSDictionary *)getIntentData{
+- (NSDictionary *)intentData{
     return self.data;
 }
 

@@ -1,23 +1,31 @@
 //
-//  YSUError.h
-//  YiShop
+//  XSError.h
+//  XSIntent
 //
-//  Created by 孙晓松 on 2016/11/14.
-//  Copyright © 2016年 秦皇岛商之翼网络科技有限公司. All rights reserved.
+//  Created by mt230824 on 2023/10/9.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface YSUError : NSObject
 
+NS_ASSUME_NONNULL_BEGIN
+
+@interface XSError : NSObject
+
+/// error code
 @property (nonatomic, assign) NSInteger code;
-@property (nonatomic, strong) NSString *reason;
+
+/// error reason
+@property (nonatomic, strong) NSString * __nullable reason;
 
 - (instancetype)initWithCode:(NSInteger)code;
 - (instancetype)initWithCode:(NSInteger)code andReason:(NSString *)reason;
+
 + (instancetype)ok;
 + (instancetype)unknown;
 + (instancetype)errorWithCode:(NSInteger)code;
 + (instancetype)errorWithCode:(NSInteger)code andReason:(NSString *)reason;
 
 @end
+
+NS_ASSUME_NONNULL_END

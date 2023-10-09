@@ -1,0 +1,6 @@
+framework module XSIntent {
+  umbrella header "XSIntent-umbrella.h"
+
+  export *
+  module * { export * }
+}

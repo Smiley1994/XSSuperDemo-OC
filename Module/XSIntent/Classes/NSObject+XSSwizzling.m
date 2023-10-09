@@ -1,15 +1,13 @@
 //
-//  NSObject+Swizzling.m
-//  YiShop
+//  NSObject+XSSwizzling.m
+//  XSIntent
 //
-//  Created by 孙晓松 on 2016/11/12.
-//  Copyright © 2016年 秦皇岛商之翼网络科技有限公司. All rights reserved.
+//  Created by mt230824 on 2023/10/9.
 //
 
-#import "NSObject+Swizzling.h"
-#import <objc/runtime.h>
+#import "NSObject+XSSwizzling.h"
 
-@implementation NSObject(Swizzling)
+@implementation NSObject (XSSwizzling)
 
 + (void)swizzlingMethod:(SEL)originalSelector toMethod:(SEL)swizzledSelector {
     static dispatch_once_t onceToken;
@@ -28,4 +26,5 @@
         }
     });
 }
+
 @end

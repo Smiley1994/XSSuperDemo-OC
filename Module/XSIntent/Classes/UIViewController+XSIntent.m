@@ -1,56 +1,53 @@
 //
-//  UIViewController+Intent.m
-//  YiShop
+//  UIViewController+XSIntent.m
+//  XSIntent
 //
-//  Created by 孙晓松 on 2016/11/14.
-//  Copyright © 2016年 秦皇岛商之翼网络科技有限公司. All rights reserved.
+//  Created by mt230824 on 2023/10/9.
 //
 
-#import "UIViewController+Intent.h"
-#import "NSObject+Swizzling.h"
-#import "YSUErrorCode.h"
-#import "YSUBusiness.h"
+#import "UIViewController+XSIntent.h"
+#import "NSObject+XSSwizzling.h"
+#import "XSErrorCode.h"
 #import <objc/runtime.h>
 
 NSInteger const RESULT_OK = 0;
 NSInteger const RESULT_CANCELED = 1;
-NSInteger const RESULT_QUICK_BUY = 2;
 
 static void * KEY_INTNET = &KEY_INTNET;
 static void * KEY_IS_CLOSED = &KEY_IS_CLOSED;
 
-@implementation UIViewController(Intent)
+@implementation UIViewController (XSIntent)
 
-- (YSUError *)openClass:(NSString *)className {
-    YSUIntent*intent = [YSUIntent intentWithClassName:className];
+- (XSError *)openClass:(NSString *)className {
+    XSIntent *intent = [XSIntent intentWithClassName:className];
     return [self openIntent:intent];
 }
 
-- (YSUError *)openIntent:(YSUIntent*)intent {
+- (XSError *)openIntent:(XSIntent *)intent {
     return [self openIntent:intent withRequest:NO andRequestCode:0];
 }
 
-- (YSUError *)openIntent:(YSUIntent*)intent withRequestCode:(NSInteger)requestCode {
+- (XSError *)openIntent:(XSIntent *)intent withRequestCode:(NSInteger)requestCode {
     return [self openIntent:intent withRequest:YES andRequestCode:requestCode];
 }
 
-- (YSUError *)openIntent:(YSUIntent*)intent withRequest:(BOOL)request andRequestCode:(NSInteger)requestCode {
+- (XSError *)openIntent:(XSIntent *)intent withRequest:(BOOL)request andRequestCode:(NSInteger)requestCode {
     if (!intent) {
-        return [[YSUError alloc]initWithCode:YSU_ERROR_CLASS_NOT_FOUND andReason:LOCALIZE(@"intentIsEmpty")];
+        return [[XSError alloc]initWithCode:XS_ERROR_CLASS_NOT_FOUND andReason:@"intent is nil"];
     }
     
     if (!intent.className || intent.className.length == 0) {
-        return [[YSUError alloc]initWithCode:YSU_ERROR_CLASS_NOT_FOUND andReason:LOCALIZE(@"classNameIsEmpty")];
+        return [[XSError alloc]initWithCode:XS_ERROR_CLASS_NOT_FOUND andReason:@"class name is nil"];
     }
     
     Class class = NSClassFromString(intent.className);
     if (!class) {
-        return [[YSUError alloc]initWithCode:YSU_ERROR_CLASS_NOT_FOUND andReason:LOCALIZE_FORMAT(@"formatClassNotFound",intent.className)];
+        return [[XSError alloc]initWithCode:XS_ERROR_CLASS_NOT_FOUND andReason:[NSString stringWithFormat:@"%@ Class Not Found", intent.className]];
     }
     
     UIViewController *controller = [[class alloc]init];
     if (!controller && [controller isKindOfClass:[UIViewController class]]) {
-        return [[YSUError alloc]initWithCode:YSU_ERROR_CLASS_NOT_FOUND andReason:LOCALIZE_FORMAT(@"formatFailedToInitializeContrller",intent.className)];
+        return [[XSError alloc]initWithCode:XS_ERROR_CLASS_NOT_FOUND andReason:[NSString stringWithFormat:@"%@ Failed Initialize Contrller", intent.className]];
     }
     
     [intent setIsRequest:request];
@@ -65,6 +62,7 @@ static void * KEY_IS_CLOSED = &KEY_IS_CLOSED;
     }
     
     return [self willOpenViewController:controller withIntent:intent];
+    
 }
 
 - (void)cancel {
@@ -80,16 +78,16 @@ static void * KEY_IS_CLOSED = &KEY_IS_CLOSED;
 }
 
 - (void)finishWithResultCode:(NSInteger)resultCode andResultData:(NSDictionary *)resultData {
-    id delegate = [[self getIntent] delegate];
+    id delegate = [[self intent] delegate];
     if (!delegate){
         [self closeCurrentViewController];
         return;
     }
-    BOOL isRequest = [[self getIntent] isRequest];
-    NSInteger requestCode = [[self getIntent] requestCode];
+    BOOL isRequest = [[self intent] isRequest];
+    NSInteger requestCode = [[self intent] requestCode];
     
     if (delegate && [delegate respondsToSelector:@selector(willCloseViewController:withIntent:)]) {
-        [delegate willCloseViewController:self withIntent:[self getIntent]];
+        [delegate willCloseViewController:self withIntent:[self intent]];
     } else {
         [self closeCurrentViewController];
     }
@@ -100,15 +98,16 @@ static void * KEY_IS_CLOSED = &KEY_IS_CLOSED;
 }
 
 #pragma mark - UIViewControllerIntentDelegate
-- (YSUError *)willOpenViewController:(UIViewController *)controller withIntent:(YSUIntent *)intent {
+
+- (XSError *)willOpenViewController:(UIViewController *)controller withIntent:(XSIntent *)intent {
     
     if (!controller) {
-        return [YSUError errorWithCode:YSU_ERROR_NIL_VIEW_CONTROLLER andReason:LOCALIZE(@"viewControllerCannotBeNil")];
+        return [XSError errorWithCode:XS_ERROR_NIL_VIEW_CONTROLLER andReason:@"ViewController Cannot Be Nil"];
     }
     
     if (intent.method == OPEN_METHOD_PUSH){
         if(!self.navigationController){
-            return [[YSUError alloc]initWithCode:YSU_ERROR_CLASS_NOT_FOUND andReason:LOCALIZE(@"navigationControllerIsEmpty")];
+            return [[XSError alloc]initWithCode:XS_ERROR_CLASS_NOT_FOUND andReason:@"NavigationController Is Empty"];
         }
         
         controller.hidesBottomBarWhenPushed = intent.hidesBottomBarWhenPushed;
@@ -119,33 +118,33 @@ static void * KEY_IS_CLOSED = &KEY_IS_CLOSED;
         } else {
             [self.navigationController pushViewController:controller animated:intent.animated];
         }
-        return [YSUError ok];
+        return [XSError ok];
         
     } else if (intent.method == OPEN_METHOD_POP) {
         if (intent.useNavigationToPush) {
             UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:controller];
             [self presentViewController:navigationController animated:YES completion:NULL];
-            return [YSUError ok];
+            return [XSError ok];
         }
         controller.definesPresentationContext = YES;
         controller.modalPresentationStyle = UIModalPresentationCurrentContext;
         [self presentViewController:controller animated:intent.animated completion:NULL];
-        return [YSUError ok];
+        return [XSError ok];
         
     } else if (intent.method == OPEN_METHOD_SHOW) {
         controller.modalPresentationStyle = UIModalPresentationOverCurrentContext;
         controller.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         [self presentViewController:controller animated:intent.animated completion:NULL];
-        return [YSUError ok];
+        return [XSError ok];
     }
-    return [YSUError unknown];
+    return [XSError unknown];
 }
 
-- (void)onViewController:(UIViewController *)viewController ofRequestCode:(NSInteger)requestCode finshedWithResult:(NSInteger)resultCode andResultData:(YSUIntent *)data{
+- (void)onViewController:(UIViewController *)viewController ofRequestCode:(NSInteger)requestCode finshedWithResult:(NSInteger)resultCode andResultData:(XSIntent *)data{
     
 }
 
-- (void)willCloseViewController:(UIViewController*)viewController withIntent:(YSUIntent *)intent{
+- (void)willCloseViewController:(UIViewController*)viewController withIntent:(XSIntent *)intent{
     
     if (viewController.navigationController &&
         viewController.navigationController.viewControllers.count > 1) {
@@ -166,7 +165,9 @@ static void * KEY_IS_CLOSED = &KEY_IS_CLOSED;
     }
 }
 
-#pragma mark - Close current view controller.
+
+#pragma mark - Close current view controller
+
 - (void)closeCurrentViewController {
     [self.view endEditing:YES];
     if (self.presentingViewController) {
@@ -188,11 +189,11 @@ static void * KEY_IS_CLOSED = &KEY_IS_CLOSED;
 
 #pragma mark - Getters and setters
 
-- (void)setIntent:(YSUIntent *)intent {
+- (void)setIntent:(XSIntent *)intent {
     objc_setAssociatedObject(self, KEY_INTNET, intent, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (YSUIntent *)getIntent {
+- (XSIntent *)intent {
     return objc_getAssociatedObject(self, KEY_INTNET);
 }
 

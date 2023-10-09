@@ -47,10 +47,6 @@
 		0B9E43B72AAF5CE000914E23 /* MTSortVideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E43A12AAF5CE000914E23 /* MTSortVideoViewCell.m */; };
 		0B9E43B82AAF5CE000914E23 /* MTPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E43A52AAF5CE000914E23 /* MTPlayerManager.m */; };
 		0B9E43B92AAF5CE000914E23 /* MTVideoListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9E43A92AAF5CE000914E23 /* MTVideoListModel.m */; };
-		0B9EED6227E964EE001656EA /* UIViewController+Intent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED5F27E964EE001656EA /* UIViewController+Intent.m */; };
-		0B9EED6327E964EE001656EA /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED6127E964EE001656EA /* NSObject+Swizzling.m */; };
-		0B9EED6727E965C8001656EA /* YSUIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED6627E965C8001656EA /* YSUIntent.m */; };
-		0B9EED6A27E96628001656EA /* YSUError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B9EED6827E96628001656EA /* YSUError.m */; };
 		0BB3E8262701649500FC78F9 /* XSCrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BB3E8252701649500FC78F9 /* XSCrashViewController.m */; };
 		0BBA80CB27001BF10085ACB9 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA80CA27001BF10085ACB9 /* NSString+Trim.m */; };
 		0BBA80D027001C250085ACB9 /* UIView+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA80CC27001C250085ACB9 /* UIView+Action.m */; };
@@ -208,16 +204,6 @@
 		0B9E43A62AAF5CE000914E23 /* MTPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTPlayerManager.h; sourceTree = "<group>"; };
 		0B9E43A82AAF5CE000914E23 /* MTVideoListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVideoListModel.h; sourceTree = "<group>"; };
 		0B9E43A92AAF5CE000914E23 /* MTVideoListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVideoListModel.m; sourceTree = "<group>"; };
-		0B9EED5E27E964EE001656EA /* UIViewController+Intent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Intent.h"; sourceTree = "<group>"; };
-		0B9EED5F27E964EE001656EA /* UIViewController+Intent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Intent.m"; sourceTree = "<group>"; };
-		0B9EED6027E964EE001656EA /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
-		0B9EED6127E964EE001656EA /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
-		0B9EED6427E965A3001656EA /* YSUErrorCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUErrorCode.h; sourceTree = "<group>"; };
-		0B9EED6527E965C8001656EA /* YSUIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUIntent.h; sourceTree = "<group>"; };
-		0B9EED6627E965C8001656EA /* YSUIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUIntent.m; sourceTree = "<group>"; };
-		0B9EED6827E96628001656EA /* YSUError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSUError.m; sourceTree = "<group>"; };
-		0B9EED6927E96628001656EA /* YSUError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUError.h; sourceTree = "<group>"; };
-		0B9EED6B27E966E0001656EA /* YSUBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSUBusiness.h; sourceTree = "<group>"; };
 		0B9EED6C27E96885001656EA /* XSRegular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSRegular.h; sourceTree = "<group>"; };
 		0BB3E8242701649500FC78F9 /* XSCrashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSCrashViewController.h; sourceTree = "<group>"; };
 		0BB3E8252701649500FC78F9 /* XSCrashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XSCrashViewController.m; sourceTree = "<group>"; };
@@ -609,23 +595,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		0B9EED5D27E9646B001656EA /* YSUIntent */ = {
-			isa = PBXGroup;
-			children = (
-				0B9EED6027E964EE001656EA /* NSObject+Swizzling.h */,
-				0B9EED6127E964EE001656EA /* NSObject+Swizzling.m */,
-				0B9EED5E27E964EE001656EA /* UIViewController+Intent.h */,
-				0B9EED5F27E964EE001656EA /* UIViewController+Intent.m */,
-				0B9EED6B27E966E0001656EA /* YSUBusiness.h */,
-				0B9EED6927E96628001656EA /* YSUError.h */,
-				0B9EED6827E96628001656EA /* YSUError.m */,
-				0B9EED6427E965A3001656EA /* YSUErrorCode.h */,
-				0B9EED6527E965C8001656EA /* YSUIntent.h */,
-				0B9EED6627E965C8001656EA /* YSUIntent.m */,
-			);
-			path = YSUIntent;
-			sourceTree = "<group>";
-		};
 		0BCA05682A823D7100DFCB25 /* VideoCapture */ = {
 			isa = PBXGroup;
 			children = (
@@ -972,7 +941,6 @@
 			children = (
 				FCA0B55D2ABAD6B400F471EF /* XSFileHandleTool */,
 				0B9E434A2A9CFE0400914E23 /* SMLagMonitor */,
-				0B9EED5D27E9646B001656EA /* YSUIntent */,
 				0B8259542A737F26008E5B67 /* cpuMonitor */,
 				0B8DFEFB2A6CDBEB009DB391 /* FJReplayKit */,
 				0BFBEF5026E86A8500FC52A4 /* SBLog.h */,
@@ -1278,13 +1246,11 @@
 				0B8DFEF22A6AFAEE009DB391 /* XSPeople+Eat.m in Sources */,
 				0B8B127127F7F6470041B825 /* XSCategoryViewController.m in Sources */,
 				0B9E43B72AAF5CE000914E23 /* MTSortVideoViewCell.m in Sources */,
-				0B9EED6227E964EE001656EA /* UIViewController+Intent.m in Sources */,
 				5F16E75920EA778600D30798 /* XSRootViewController.m in Sources */,
 				FC97F3712AB3024200D0F9A1 /* XSLocaServerManager.m in Sources */,
 				FCA0B55C2ABACE9800F471EF /* NSString+XSData.m in Sources */,
 				5FB9EF01219AF68200B033B6 /* XSIndexViewController.m in Sources */,
 				5F6F7541221FA5570045A3BC /* QiCardView.m in Sources */,
-				0B9EED6A27E96628001656EA /* YSUError.m in Sources */,
 				0B9E43B82AAF5CE000914E23 /* MTPlayerManager.m in Sources */,
 				0BB3E8262701649500FC78F9 /* XSCrashViewController.m in Sources */,
 				0B9E43AA2AAF5CE000914E23 /* GKRotationManager_iOS_9_15.m in Sources */,
@@ -1350,7 +1316,6 @@
 				0BEDE74B27609F7300528024 /* RoomToolboxUnfoldCellModel.m in Sources */,
 				5FB9EF08219C081500B033B6 /* XSIndexCell.m in Sources */,
 				0B4B62C826F198BA00060E44 /* XSDeviceInfo.m in Sources */,
-				0B9EED6327E964EE001656EA /* NSObject+Swizzling.m in Sources */,
 				5F0570EB21B5582F003BE787 /* XSSlider.m in Sources */,
 				0BFBEF6026E8C01000FC52A4 /* XSSwizzle.m in Sources */,
 				5FB9EF0C219C15CC00B033B6 /* XSRtmpViewController.m in Sources */,
@@ -1358,7 +1323,6 @@
 				0B8DFEEC2A6AFAA2009DB391 /* XSPeople.m in Sources */,
 				0BBA80CB27001BF10085ACB9 /* NSString+Trim.m in Sources */,
 				0B9E43B12AAF5CE000914E23 /* MTSortVideoViewHorizontalCell.m in Sources */,
-				0B9EED6727E965C8001656EA /* YSUIntent.m in Sources */,
 				5F6F7538221FA5360045A3BC /* XSCardViewController.m in Sources */,
 				0BBA80D127001C250085ACB9 /* UIView+ExtraTag.m in Sources */,
 				5F701F3620E502F8006E9E61 /* main.m in Sources */,

@@ -1,21 +1,24 @@
 //
-//  YSUIntent.h
-//  YiShop
+//  XSIntent.h
+//  XSIntent
 //
-//  Created by 孙晓松 on 2016/11/14.
-//  Copyright © 2016年 秦皇岛商之翼网络科技有限公司. All rights reserved.
+//  Created by mt230824 on 2023/10/9.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@class YSUIntent;
-@class YSUError;
+@class XSIntent;
+@class XSError;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol UIViewControllerIntentDelegate <NSObject>
 
-- (void)willCloseViewController:(__kindof UIViewController *)viewController withIntent:(YSUIntent *)intent;
+@optional;
 
-- (YSUError*)willOpenViewController:(__kindof UIViewController *)viewController withIntent:(YSUIntent *)intent;
+- (void)willCloseViewController:(__kindof UIViewController *)viewController withIntent:(XSIntent *)intent;
+
+- (XSError*)willOpenViewController:(__kindof UIViewController *)viewController withIntent:(XSIntent *)intent;
 
 - (void)onViewController:(__kindof UIViewController *)viewController ofRequestCode:(NSInteger)requestCode finshedWithResult:(NSInteger)resultCode andResultData:(NSDictionary *)resultData;
 
@@ -27,25 +30,40 @@ typedef NS_ENUM(NSInteger,OpenViewControllerMethod){
     OPEN_METHOD_SHOW
 };
 
-@interface YSUIntent : NSObject
+@interface XSIntent : NSObject
 
+/// 是否 push 导航栏
 @property (nonatomic, assign) BOOL useNavigationToPush;
+/// 是否隐藏 TabBar
 @property (nonatomic, assign) BOOL hidesBottomBarWhenPushed;
+///
 @property (nonatomic, assign) BOOL isRequest;
+///
 @property (nonatomic, assign) NSInteger requestCode;
+/// 是否开启 push 动画
 @property (nonatomic, assign) BOOL animated;
+/// 类名
 @property (nonatomic, strong) NSString *className;
+/// 打开页面方式 push / present / show
 @property (nonatomic, assign) OpenViewControllerMethod method;
+/// intent delegate
 @property (nonatomic, weak) id<UIViewControllerIntentDelegate> delegate;
 
-- (NSDictionary *)getIntentData;
-
+/// intent data
+- (NSDictionary *)intentData;
+/// set intent data
 - (void)setObject:(id)object forKey:(NSString *)key;
-
+/// get intent data value
 - (id)objectForKey:(NSString *)key;
 
-- (instancetype)initWithClassName:(NSString *)className;
-
+/// init method
+- (instancetype)initWithClassName:(NSString *)className; //NS_DESIGNATED_INITIALIZER;
+/// init method
 + (instancetype)intentWithClassName:(NSString *)className;
 
+- (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
+
 @end
+
+NS_ASSUME_NONNULL_END

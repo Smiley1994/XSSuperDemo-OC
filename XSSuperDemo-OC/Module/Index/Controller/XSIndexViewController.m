@@ -22,8 +22,7 @@
 #import "Masonry.h"
 #import "MJRefresh.h"
 
-#import "YSUIntent.h"
-#import "UIViewController+Intent.h"
+#import <XSIntent/IntentFace.h>
 
 @interface XSIndexViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -210,36 +209,39 @@
 
 - (void)openTestViewController {
     
-    YSUIntent *intent = [[YSUIntent alloc] initWithClassName:@"XSTestViewController"];
+    XSIntent *intent = [[XSIntent alloc] initWithClassName:@"XSTestViewController"];
     [intent setObject:@"aaaa" forKey:@"Key1"];
     [intent setObject:@"bbbb" forKey:@"Key2"];
     intent.hidesBottomBarWhenPushed = YES;
     [self openIntent:intent withRequestCode:99];
+    
+    
 }
 
 #pragma mark - Intent 
 
-//- (YSUError *)willOpenViewController:(__kindof UIViewController *)viewController withIntent:(YSUIntent *)intent {
-//    if ([intent.className isEqualToString:@"TempController"]) {
-//        
-//        return [YSUError ok];
-//    }
-//    
-//    return [super willOpenViewController:viewController withIntent:intent];
-//}
-//
-//- (void)willCloseViewController:(__kindof UIViewController *)viewController withIntent:(YSUIntent *)intent {
-//    
-//}
-//
-//- (void)onViewController:(__kindof UIViewController *)viewController ofRequestCode:(NSInteger)requestCode finshedWithResult:(NSInteger)resultCode andResultData:(NSDictionary *)resultData {
-//    if ( resultCode == RESULT_OK) {
-//        
-//        
-//    }else {
-//        [super onViewController:viewController ofRequestCode:requestCode finshedWithResult:resultCode andResultData:resultData];
-//    }
-//}
+- (XSError *)willOpenViewController:(__kindof UIViewController *)viewController withIntent:(XSIntent *)intent {
+    if ([intent.className isEqualToString:@"TempController"]) {
+        
+        return [XSError ok];
+    }
+    
+    return [super willOpenViewController:viewController withIntent:intent];
+}
+
+- (void)willCloseViewController:(__kindof UIViewController *)viewController withIntent:(XSIntent *)intent {
+    
+    [viewController cancel];
+}
+
+- (void)onViewController:(__kindof UIViewController *)viewController ofRequestCode:(NSInteger)requestCode finshedWithResult:(NSInteger)resultCode andResultData:(NSDictionary *)resultData {
+    if ( resultCode == RESULT_OK) {
+        
+        
+    }else {
+        [super onViewController:viewController ofRequestCode:requestCode finshedWithResult:resultCode andResultData:resultData];
+    }
+}
 
 
 @end
