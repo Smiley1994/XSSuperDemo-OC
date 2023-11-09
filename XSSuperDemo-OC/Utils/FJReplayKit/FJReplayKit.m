@@ -71,19 +71,23 @@
 }
 -(void)ios_10{
      kWeakSelf(weakSelf);
-    [[RPScreenRecorder sharedRecorder] startRecordingWithHandler:^(NSError * _Nullable error) {
-        if (error) {
-            NSLog(@"FJReplayKit:开始录制error %@",error);
-            if ([weakSelf.delegate respondsToSelector:@selector(replayRecordFinishWithVC:errorInfo:)]) {
-                [weakSelf.delegate replayRecordFinishWithVC:nil errorInfo:[NSString stringWithFormat:@"FJReplayKit:开始录制error %@",error]];
+    if (@available(iOS 10.0, *)) {
+        [[RPScreenRecorder sharedRecorder] startRecordingWithHandler:^(NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"FJReplayKit:开始录制error %@",error);
+                if ([weakSelf.delegate respondsToSelector:@selector(replayRecordFinishWithVC:errorInfo:)]) {
+                    [weakSelf.delegate replayRecordFinishWithVC:nil errorInfo:[NSString stringWithFormat:@"FJReplayKit:开始录制error %@",error]];
+                }
+            }else{
+                NSLog(@"FJReplayKit:开始录制");
+                if ([weakSelf.delegate respondsToSelector:@selector(replayRecordStart)]) {
+                    [weakSelf.delegate replayRecordStart];
+                }
             }
-        }else{
-            NSLog(@"FJReplayKit:开始录制");
-            if ([weakSelf.delegate respondsToSelector:@selector(replayRecordStart)]) {
-                [weakSelf.delegate replayRecordStart];
-            }
-        }
-    }];
+        }];
+    } else {
+        // Fallback on earlier versions
+    }
 }
 -(void)ios9_ios10 API_DEPRECATED("Use microphoneEnabaled property", ios(9.0, 10.0)){
     

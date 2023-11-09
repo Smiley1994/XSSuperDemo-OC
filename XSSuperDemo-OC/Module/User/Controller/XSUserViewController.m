@@ -22,20 +22,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    void (^block)(void) = ^() {
-        int i = 1;
-        i ++;
-    };
-    
-    block();
-    
     XSPlayingLineView *lineView = [[XSPlayingLineView alloc] initWithFrame:CGRectMake(50, 100, 9, 9) lineWidth:1.5 lineColor:[UIColor redColor]];
     [self.view addSubview:lineView];
     
     YYFPSLabel *fpsLabel = [[YYFPSLabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 100, NAVIGATION_HEIGHT, 100, 20)];
     [self.view addSubview:fpsLabel];
     
+    
+    __block int a = 0;
+    int (^__block block)(int num) = ^(int num) {
+        a += num;
+        if(a < 5) {
+            block(a);
+        }
+        
+        return a ++;
+    };
+    
+    NSLog(@"block == ", block(1));
 //    CAReplicatorLayer *replicatorLayer = [[CAReplicatorLayer alloc] init];
 //    replicatorLayer.frame = CGRectMake(0, 100, 375, 200);
 //    replicatorLayer.instanceCount = 16;
