@@ -110,6 +110,10 @@
 		5FB9EF33219C4C6800B033B6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF32219C4C6800B033B6 /* AVFoundation.framework */; };
 		5FB9EF35219C4C7200B033B6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */; };
 		71A8994A288652FE009391B5 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A89949288652FE009391B5 /* YYFPSLabel.m */; };
+		71AE42872B4E708F0012248B /* IIPSideDialogNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AE427F2B4E708F0012248B /* IIPSideDialogNavigationController.m */; };
+		71AE42882B4E708F0012248B /* IIPSideDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AE42802B4E708F0012248B /* IIPSideDialogController.m */; };
+		71AE42892B4E708F0012248B /* IIPFloatCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AE42832B4E708F0012248B /* IIPFloatCardController.m */; };
+		71AE428A2B4E708F0012248B /* UIViewController+IIPSideDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AE42862B4E708F0012248B /* UIViewController+IIPSideDialog.m */; };
 		930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */; };
 		FC26CD082AAEDA27006F59E0 /* XSVideoListModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26CD072AAEDA27006F59E0 /* XSVideoListModule.m */; };
 		FC26CD0D2AAEDA86006F59E0 /* XSVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26CD0C2AAEDA86006F59E0 /* XSVideoListViewController.m */; };
@@ -324,6 +328,14 @@
 		5FB9EF34219C4C7200B033B6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		71A89948288652FE009391B5 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		71A89949288652FE009391B5 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		71AE427F2B4E708F0012248B /* IIPSideDialogNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIPSideDialogNavigationController.m; sourceTree = "<group>"; };
+		71AE42802B4E708F0012248B /* IIPSideDialogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIPSideDialogController.m; sourceTree = "<group>"; };
+		71AE42812B4E708F0012248B /* IIPFloatCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIPFloatCardController.h; sourceTree = "<group>"; };
+		71AE42822B4E708F0012248B /* UIViewController+IIPSideDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+IIPSideDialog.h"; sourceTree = "<group>"; };
+		71AE42832B4E708F0012248B /* IIPFloatCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IIPFloatCardController.m; sourceTree = "<group>"; };
+		71AE42842B4E708F0012248B /* IIPSideDialogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIPSideDialogController.h; sourceTree = "<group>"; };
+		71AE42852B4E708F0012248B /* IIPSideDialogNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIPSideDialogNavigationController.h; sourceTree = "<group>"; };
+		71AE42862B4E708F0012248B /* UIViewController+IIPSideDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+IIPSideDialog.m"; sourceTree = "<group>"; };
 		91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSSuperDemo_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE51447A990D50895BD2D20 /* Pods-XSSuperDemo-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSSuperDemo-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC.debug.xcconfig"; sourceTree = "<group>"; };
 		FC26CD062AAEDA27006F59E0 /* XSVideoListModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSVideoListModule.h; sourceTree = "<group>"; };
@@ -924,6 +936,7 @@
 		5F66A05920FDC22C00FAA4A8 /* UIUtils */ = {
 			isa = PBXGroup;
 			children = (
+				71AE427E2B4E708F0012248B /* IIPSideDialogController */,
 				FC94A5872AC27808001CFE61 /* KKCustomDismissAnimator */,
 				0B507FAD276338CD000883F2 /* HFPopView */,
 				0B3404032A6A318A00EC1104 /* XSPlayingLineView */,
@@ -1070,6 +1083,21 @@
 				0B4B62AA26EB415400060E44 /* Bugly.framework */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		71AE427E2B4E708F0012248B /* IIPSideDialogController */ = {
+			isa = PBXGroup;
+			children = (
+				71AE42812B4E708F0012248B /* IIPFloatCardController.h */,
+				71AE42832B4E708F0012248B /* IIPFloatCardController.m */,
+				71AE42842B4E708F0012248B /* IIPSideDialogController.h */,
+				71AE42802B4E708F0012248B /* IIPSideDialogController.m */,
+				71AE42852B4E708F0012248B /* IIPSideDialogNavigationController.h */,
+				71AE427F2B4E708F0012248B /* IIPSideDialogNavigationController.m */,
+				71AE42822B4E708F0012248B /* UIViewController+IIPSideDialog.h */,
+				71AE42862B4E708F0012248B /* UIViewController+IIPSideDialog.m */,
+			);
+			path = IIPSideDialogController;
 			sourceTree = "<group>";
 		};
 		FC26CD052AAED9E7006F59E0 /* VideoList */ = {
@@ -1251,6 +1279,7 @@
 				FCA0B55C2ABACE9800F471EF /* NSString+XSData.m in Sources */,
 				5FB9EF01219AF68200B033B6 /* XSIndexViewController.m in Sources */,
 				5F6F7541221FA5570045A3BC /* QiCardView.m in Sources */,
+				71AE42892B4E708F0012248B /* IIPFloatCardController.m in Sources */,
 				0B9E43B82AAF5CE000914E23 /* MTPlayerManager.m in Sources */,
 				0BB3E8262701649500FC78F9 /* XSCrashViewController.m in Sources */,
 				0B9E43AA2AAF5CE000914E23 /* GKRotationManager_iOS_9_15.m in Sources */,
@@ -1267,6 +1296,7 @@
 				0B9E43B02AAF5CE000914E23 /* MTSortVideoHorizontalOperationView.m in Sources */,
 				0BFBEF5C26E8A07300FC52A4 /* ShadowBaseConfig.m in Sources */,
 				0B9E434D2A9CFE3000914E23 /* SMLagMonitor.m in Sources */,
+				71AE42872B4E708F0012248B /* IIPSideDialogNavigationController.m in Sources */,
 				0B34041F2A6A355800EC1104 /* QiCallTrace.m in Sources */,
 				0BCA05862A893F7E00DFCB25 /* XSAudioEncoder.m in Sources */,
 				0BCA058A2A89421E00DFCB25 /* XSFFMpegMuxTool.m in Sources */,
@@ -1283,6 +1313,7 @@
 				0B8DFEF52A6AFBC4009DB391 /* XSPeople+Speak.m in Sources */,
 				0B82595A2A737F26008E5B67 /* SRMemoryLeakMonitor.m in Sources */,
 				0BEDE73B2758E39400528024 /* XSTestViewController.m in Sources */,
+				71AE42882B4E708F0012248B /* IIPSideDialogController.m in Sources */,
 				0B34041B2A6A355800EC1104 /* QiLagDB.m in Sources */,
 				0B507FB727633934000883F2 /* HFPopView.m in Sources */,
 				0B9E43B42AAF5CE000914E23 /* MTVideoScrollView.m in Sources */,
@@ -1319,6 +1350,7 @@
 				5F0570EB21B5582F003BE787 /* XSSlider.m in Sources */,
 				0BFBEF6026E8C01000FC52A4 /* XSSwizzle.m in Sources */,
 				5FB9EF0C219C15CC00B033B6 /* XSRtmpViewController.m in Sources */,
+				71AE428A2B4E708F0012248B /* UIViewController+IIPSideDialog.m in Sources */,
 				FC26CD0D2AAEDA86006F59E0 /* XSVideoListViewController.m in Sources */,
 				0B8DFEEC2A6AFAA2009DB391 /* XSPeople.m in Sources */,
 				0BBA80CB27001BF10085ACB9 /* NSString+Trim.m in Sources */,
