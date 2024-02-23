@@ -17,6 +17,8 @@
 
 @interface XSTestViewController ()
 
+@property (nonatomic, strong) UIImageView *imageView;
+
 @end
 
 @implementation XSTestViewController
@@ -26,13 +28,16 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupUI];
     
-    NSDictionary *data = self.intent.intentData;
-    
-    
 }
 
 -(void)setupUI {
     
+    NSDictionary *data = self.intent.intentData;
+    UIImage *bgImage = [data objectForKey:@"bg"];
+    
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self.imageView.image = bgImage;
+    [self.view addSubview:self.imageView];
     
     UIButton *crashButton = [UIButton buttonWithType:UIButtonTypeSystem];
     crashButton.frame = CGRectMake(10, 100, 100, 50);

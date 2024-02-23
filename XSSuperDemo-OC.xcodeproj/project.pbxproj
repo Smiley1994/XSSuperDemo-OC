@@ -114,6 +114,7 @@
 		71AE42882B4E708F0012248B /* IIPSideDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AE42802B4E708F0012248B /* IIPSideDialogController.m */; };
 		71AE42892B4E708F0012248B /* IIPFloatCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AE42832B4E708F0012248B /* IIPFloatCardController.m */; };
 		71AE428A2B4E708F0012248B /* UIViewController+IIPSideDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AE42862B4E708F0012248B /* UIViewController+IIPSideDialog.m */; };
+		71AE42B22B60921E0012248B /* IMEntityBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71AE42B02B60921E0012248B /* IMEntityBaseModel.m */; };
 		930142483F576D0A955A8610 /* Pods_XSSuperDemo_OC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */; };
 		FC26CD082AAEDA27006F59E0 /* XSVideoListModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26CD072AAEDA27006F59E0 /* XSVideoListModule.m */; };
 		FC26CD0D2AAEDA86006F59E0 /* XSVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC26CD0C2AAEDA86006F59E0 /* XSVideoListViewController.m */; };
@@ -336,6 +337,9 @@
 		71AE42842B4E708F0012248B /* IIPSideDialogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIPSideDialogController.h; sourceTree = "<group>"; };
 		71AE42852B4E708F0012248B /* IIPSideDialogNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IIPSideDialogNavigationController.h; sourceTree = "<group>"; };
 		71AE42862B4E708F0012248B /* UIViewController+IIPSideDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+IIPSideDialog.m"; sourceTree = "<group>"; };
+		71AE42AF2B555C4B0012248B /* SRDelayedBlockHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDelayedBlockHandle.h; sourceTree = "<group>"; };
+		71AE42B02B60921E0012248B /* IMEntityBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMEntityBaseModel.m; sourceTree = "<group>"; };
+		71AE42B12B60921E0012248B /* IMEntityBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMEntityBaseModel.h; sourceTree = "<group>"; };
 		91E561F0CF363226FE05E2C5 /* Pods_XSSuperDemo_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XSSuperDemo_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCE51447A990D50895BD2D20 /* Pods-XSSuperDemo-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XSSuperDemo-OC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XSSuperDemo-OC/Pods-XSSuperDemo-OC.debug.xcconfig"; sourceTree = "<group>"; };
 		FC26CD062AAEDA27006F59E0 /* XSVideoListModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XSVideoListModule.h; sourceTree = "<group>"; };
@@ -852,6 +856,8 @@
 				0B8DFEF12A6AFAEE009DB391 /* XSPeople+Eat.m */,
 				0B8DFEED2A6AFAAE009DB391 /* XSSubPeople.h */,
 				0B8DFEEE2A6AFAAE009DB391 /* XSSubPeople.m */,
+				71AE42B12B60921E0012248B /* IMEntityBaseModel.h */,
+				71AE42B02B60921E0012248B /* IMEntityBaseModel.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -958,6 +964,7 @@
 				0B8DFEFB2A6CDBEB009DB391 /* FJReplayKit */,
 				0BFBEF5026E86A8500FC52A4 /* SBLog.h */,
 				5F66A06820FDC94600FAA4A8 /* YSUUtils.h */,
+				71AE42AF2B555C4B0012248B /* SRDelayedBlockHandle.h */,
 				5F66A06920FDC94600FAA4A8 /* YSUUtils.m */,
 				0B9EED6C27E96885001656EA /* XSRegular.h */,
 			);
@@ -1325,6 +1332,7 @@
 				0BCA05702A8401F500DFCB25 /* XSVideoEncoder.m in Sources */,
 				0B8DFEEF2A6AFAAE009DB391 /* XSSubPeople.m in Sources */,
 				0B8259592A737F26008E5B67 /* SRCpuMonitor.m in Sources */,
+				71AE42B22B60921E0012248B /* IMEntityBaseModel.m in Sources */,
 				0BE3648527F84EC70068A367 /* XSCategoryViewCellTypeViewController.m in Sources */,
 				0BEDE7452760930B00528024 /* XSUIUtils.m in Sources */,
 				0BCA057C2A88984500DFCB25 /* Shaders.metal in Sources */,

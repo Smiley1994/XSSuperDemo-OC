@@ -57,9 +57,7 @@ extern void _objc_autoreleasePoolPrint(void);
     
     id<XSSplashServerProtocol> plash = [[BeeHive shareInstance] createService:@protocol(XSSplashServerProtocol)];
     [plash setupParameter:@{@"key":@"value"}];
-    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-
     UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:(XSSplashViewController *)plash];
     self.window.rootViewController = navigationViewController;
     [self.window makeKeyAndVisible];
@@ -74,10 +72,76 @@ extern void _objc_autoreleasePoolPrint(void);
     
 //    [self testGCD];
 
+//    [self concurrentQueueBarrier];
+    
+    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(begin) object:nil];
+    [thread start];
+    
+    
+    NSArray *nums = @[@1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13];
+    NSInteger target = 9;
+    NSInteger result = [self binarySearch:nums target:target];
+    NSLog(@"result == %ld", result);
     
     return YES;
 }
 
+- (void)begin {
+    
+}
+
+- (NSInteger)binarySearch:(NSArray *)nums target:(NSInteger)target {
+    
+    NSInteger left = 0;
+    NSInteger right = nums.count - 1;
+    
+    while (left <= right) {
+        
+        NSInteger mid = (left + right) / 2;
+        
+        if ([nums[mid] integerValue] == target) {
+            return mid;
+        } else if ([nums[mid] integerValue] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    
+    return -1;
+}
+
+
+- (void)concurrentQueueBarrier{
+    //1 创建并发队列
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
+    
+    //2 向队列中添加任务
+    dispatch_async(concurrentQueue, ^{
+        NSLog(@"任务1,%@",[NSThread currentThread]);
+    });
+    dispatch_async(concurrentQueue, ^{
+        NSLog(@"任务2,%@",[NSThread currentThread]);
+    });
+    dispatch_async(concurrentQueue, ^{
+        NSLog(@"任务3,%@",[NSThread currentThread]);
+    });
+    dispatch_barrier_sync(concurrentQueue, ^{
+        [NSThread sleepForTimeInterval:1.0];
+        NSLog(@"我是barrier");
+    });
+    NSLog(@"aa");
+
+    dispatch_async(concurrentQueue, ^{
+        NSLog(@"任务4,%@",[NSThread currentThread]);
+    });
+    NSLog(@"bb");
+    dispatch_async(concurrentQueue, ^{
+        NSLog(@"任务5,%@",[NSThread currentThread]);
+    });
+    
+    
+}
 
 - (void)testGCD {
     
@@ -90,13 +154,13 @@ extern void _objc_autoreleasePoolPrint(void);
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
     
-//    dispatch_async(queueSerial, ^{    // 异步执行 + 串行队列
-//        dispatch_sync(queueSerial, ^{  // 同步执行 + 当前串行队列
-//            // 追加任务 1
-//            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-//            NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
-//        });
-//    });
+    dispatch_async(queueSerial, ^{    // 异步执行 + 串行队列
+        dispatch_sync(queueSerial, ^{  // 同步执行 + 当前串行队列
+            // 追加任务 1
+            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
+            NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        });
+    });
     /**
      执行上面的代码会导致 串行队列中追加的任务 和 串行队列中原有的任务 两者之间相互等待，阻塞了『串行队列』，最终造成了串行队列所在的线程（子线程）死锁问题。
      主队列造成死锁也是基于这个原因，所以，这也进一步说明了主队列其实并不特殊。
@@ -108,12 +172,12 @@ extern void _objc_autoreleasePoolPrint(void);
     NSLog(@"begin concurrent");
     
     
-    dispatch_sync(mainQueue, ^{
-        
-        [NSThread sleepForTimeInterval:2];
-        NSLog(@"1当前线程 == %@",[NSThread currentThread]);
-        
-    });
+//    dispatch_sync(mainQueue, ^{
+//
+//        [NSThread sleepForTimeInterval:2];
+//        NSLog(@"1当前线程 == %@",[NSThread currentThread]);
+//
+//    });
     
     dispatch_async(mainQueue, ^{
         

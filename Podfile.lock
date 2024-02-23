@@ -57,7 +57,7 @@ DEPENDENCIES:
   - ReactiveCocoa (= 2.3)
   - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `7.3.0`)
   - XSIntent (from `Module/XSIntent/`)
-  - YYKit
+  - YYKit (from `https://github.com/Smiley1994/YYKit.git`)
   - ZFPlayer/AVPlayer
 
 SPEC REPOS:
@@ -70,7 +70,6 @@ SPEC REPOS:
     - Masonry
     - MJRefresh
     - ReactiveCocoa
-    - YYKit
     - ZFPlayer
 
 EXTERNAL SOURCES:
@@ -81,11 +80,16 @@ EXTERNAL SOURCES:
     :tag: 7.3.0
   XSIntent:
     :path: Module/XSIntent/
+  YYKit:
+    :git: https://github.com/Smiley1994/YYKit.git
 
 CHECKOUT OPTIONS:
   Sentry:
     :git: https://github.com/getsentry/sentry-cocoa.git
     :tag: 7.3.0
+  YYKit:
+    :commit: ce497577f6fd5087ef4121980e6a0e15117a916c
+    :git: https://github.com/Smiley1994/YYKit.git
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
@@ -102,6 +106,6 @@ SPEC CHECKSUMS:
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
   ZFPlayer: 5cf39e8d9f0c2394a014b0db4767b5b5a6bffe13
 
-PODFILE CHECKSUM: cbc81dad3592f6d308bae50fd2165c817dfc8ae4
+PODFILE CHECKSUM: 4672668c0fd750f3abc9bcd74c824f508ad07bee
 
 COCOAPODS: 1.14.2

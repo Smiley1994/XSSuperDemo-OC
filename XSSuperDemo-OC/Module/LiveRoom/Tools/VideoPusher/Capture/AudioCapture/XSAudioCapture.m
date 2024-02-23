@@ -41,7 +41,6 @@
 - (instancetype)initWithCapturerParam:(XSAudioCapturerParam *)param {
     
     if (self = [super init]) {
-        
         _capturerParam = param;
         _captureQueue = dispatch_queue_create("com.pusher.audioCapture", DISPATCH_QUEUE_SERIAL);
         

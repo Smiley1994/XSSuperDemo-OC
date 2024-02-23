@@ -100,6 +100,14 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         //刷新完成
     });
+    
+    dispatch_group_t group = dispatch_group_create();
+    
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("com.example.concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.example.concurrentQueue", DISPATCH_QUEUE_SERIAL);
+
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(-10);
 }
 
 - (void)createTaleView {
@@ -210,6 +218,8 @@
 - (void)openTestViewController {
     
     XSIntent *intent = [[XSIntent alloc] initWithClassName:@"XSTestViewController"];
+    UIImage *image = [UIImage imageNamed:@"bg"];
+    [intent setObject:image forKey:@"bg"];
     [intent setObject:@"aaaa" forKey:@"Key1"];
     [intent setObject:@"bbbb" forKey:@"Key2"];
     intent.hidesBottomBarWhenPushed = YES;
@@ -231,7 +241,7 @@
 
 - (void)willCloseViewController:(__kindof UIViewController *)viewController withIntent:(XSIntent *)intent {
     
-    [viewController cancel];
+    
 }
 
 - (void)onViewController:(__kindof UIViewController *)viewController ofRequestCode:(NSInteger)requestCode finshedWithResult:(NSInteger)resultCode andResultData:(NSDictionary *)resultData {

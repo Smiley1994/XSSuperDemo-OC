@@ -9,7 +9,6 @@
 #import "UIViewController+IIPSideDialog.h"
 #import "IIPSideDialogNavigationController.h"
 #import "IIPFloatCardController.h"
-#import "UIColor+Wonderful.h"
 
 static NSTimeInterval const kIIPSideDialogAnimationDuration = 0.2f;
 
@@ -70,7 +69,7 @@ NSString *IIPSideDialogControllerDidChangeSizeNotification = @"IIPSideDialogCont
 - (void)setupVars {
     
     _corner = UIRectCornerAllCorners;
-    _contentBackgroundColor = [UIColor iipColor_1F232E];
+    _contentBackgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - Life cycles
@@ -139,12 +138,12 @@ NSString *IIPSideDialogControllerDidChangeSizeNotification = @"IIPSideDialogCont
 
 - (void)showSubViewController:(__kindof UIViewController *)subViewController direction:(EnumIIPSideDialogDirection)direction {
     
-    UIViewController *superViewController = [iip_application topViewController];
-    if (!superViewController) {
-        return;
-    }
-    
-    [self showInViewController:superViewController subViewController:subViewController direction:direction];
+//    UIViewController *superViewController = [iip_application topViewController];
+//    if (!superViewController) {
+//        return;
+//    }
+//    
+//    [self showInViewController:superViewController subViewController:subViewController direction:direction];
 }
 
 - (void)showInViewController:(__kindof UIViewController *)superViewController subViewController:(__kindof UIViewController *)subViewController direction:(EnumIIPSideDialogDirection)direction {

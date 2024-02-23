@@ -16,7 +16,7 @@ end
 target 'XSSuperDemo-OC' do 
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   use_frameworks!
-  pod 'YYKit', :inhibit_warnings => true
+  pod 'YYKit', :git => 'https://github.com/Smiley1994/YYKit.git'
   pod 'AFNetworking'
   pod 'MJRefresh'
   pod 'Masonry'	
